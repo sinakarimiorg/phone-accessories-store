@@ -41,6 +41,10 @@
         src: local("Morabba Bold"), url("/public/fonts/Morabba/woff2/Morabba-Bold.woff2") format("woff2");
         font-display: swap;
     }
+
+    html {
+        @apply text-neutral-900 font-Dana
+    }
 }
 
 @layer components {
@@ -54,6 +58,7 @@
 }
 
 @layer utilities {
+
     .flex-center {
         display: flex;
         align-items: center;

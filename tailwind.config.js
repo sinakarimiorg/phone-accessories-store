@@ -5,11 +5,18 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        "custom": {
+          "dark": "#131921",
+          "navy": "#232F3F"
+        },
         "Brown": {
           "100": "#ECE0D1",
           "300": "#DBC1AC",
           "600": "#967259",
           "900": "#634832"
+        },
+        "purple": {
+          "custom": "#9545ED"
         }
       },
       boxShadow: {
