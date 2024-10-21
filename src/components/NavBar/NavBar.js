@@ -30,7 +30,7 @@ export default function NavBar() {
           </Link>
 
           <Link className='hover:text-purple-300' to={'/'}>
-          <span class="block w-px h-10 bg-white/20 ml-2"></span>
+          <span className="block w-px h-10 bg-white/20 ml-2"></span>
             همکاری با ما
           </Link>
           <Link className='hover:text-purple-300' to={'/'}>
