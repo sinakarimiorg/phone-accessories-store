@@ -16,7 +16,7 @@ import { MdOutlineShoppingBag } from "react-icons/md";
 import { IoDocumentTextOutline } from "react-icons/io5";
 import { BiPhone } from "react-icons/bi";
 import { RiGroupLine } from "react-icons/ri";
-import { LuUser } from "react-icons/lu";
+import { HiMiniChevronLeft } from "react-icons/hi2";
 
 import './TopBar.css'
 import CartProductBox from '../CartProductBox/CartProductBox';
@@ -76,7 +76,7 @@ export default function TopBar() {
 
   return (
     <>
-      <div className='w-full hidden sm:flex items-center justify-between py-4 px-6 bg-custom-dark text-white'>
+      <div className='fixed w-full hidden sm:flex items-center justify-between py-4 px-6 bg-custom-dark text-white z-20'>
         {/* Topbar Logo */}
         <Link to={'/'} className='flex items-center gap-1 cursor-pointer'>
           <img src='./images/logo/logo-lg.png' className='w-14 h-14 lg:w-16 xl:h-16' />
@@ -108,16 +108,14 @@ export default function TopBar() {
 
               {/* <!-- Cart Box --> */}
               <div className="absolute top-full left-0 opacity-0 invisible group-hover:opacity-100 group-hover:visible w-[400px] p-5 border-t-[3px] shadow-custom border-t-purple-custom rounded-2xl
-                        bg-white dark:bg-zinc-700 transition-all delay-75 overflow-hidden">
+                        bg-white dark:bg-zinc-700 transition-all delay-75 overflow-hidden z-30">
 
                 {/* <!-- Cart Box Header --> */}
                 <div className="flex items-center justify-between font-DanaMedium text-xs tracking-tighter">
                   <span className="text-gray-300">1 مورد</span>
                   <a href="#" className="flex items-center text-purple-custom">
                     مشاهده سبد خرید
-                    <svg className="w-5 h-5">
-                      <use href="#chevron-left-mini"></use>
-                    </svg>
+                    <HiMiniChevronLeft className='w-5 h-5' />
                   </a>
                 </div>
 

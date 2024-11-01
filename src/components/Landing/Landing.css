@@ -1,0 +1,22 @@
+.banner {
+    @apply relative w-full h-80
+}
+
+.banner--img {
+    position: absolute;
+    top: -8rem;
+    left: 50px;
+    width: 450px;
+    height: 450px;
+    object-fit: contain;
+}
+
+.title-bar{
+    transform: translate(-20px);
+    transition: all 0.3ms linear;
+}
+
+.swiper-slide-active{
+    translate: (0);
+    transition: all 0.3ms linear;
+}

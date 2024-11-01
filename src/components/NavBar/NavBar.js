@@ -20,10 +20,32 @@ export default function NavBar() {
     menuElem.classList.remove('visible--elem')
   }
 
+  ////////// Handle NavBar visiblity 
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
+  const [visible, setVisible] = useState(true)
+
+  const handleScroll = () => {
+    const currentScrollPos = window.scrollY
+
+    if (currentScrollPos > prevScrollPos) {
+      setVisible(false)
+    } else {
+      setVisible(true)
+    }
+
+    setPrevScrollPos(currentScrollPos)
+  }
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+
+    return () => window.removeEventListener('scroll', handleScroll)
+  })
+
 
   return (
     <>
-      <div className='hidden sm:block bg-custom-navy text-gray-100'>
+      <div className={`hidden sm:block sticky ${visible ? 'top-24' : 'top-0'} w-full bg-custom-navy text-gray-100 transition-all z-10`}>
         <div className='flex gap-x-5 md:gap-x-8 py-3 pr-5 lg:pr-24 text-xs md:text-sm lg:text-base child:flex-center child:gap-x-1.5 md:child:gap-x-2'>
 
           <div id='menu-container' onMouseOver={() => openCategoryFunc()} onMouseOut={() => closeCategoryFunc()} className='relative cursor-pointer hover:text-purple-300'>
@@ -36,8 +58,8 @@ export default function NavBar() {
 
               <div className='group w-36'>
                 <Link to={'/'} className='flex-center gap-1.5'>
-                <FiSmartphone/>
-                لوازم جانبی موبایل
+                  <FiSmartphone />
+                  لوازم جانبی موبایل
                 </Link>
                 <div className='navbar-submenu'>
                   <Link to={'/'} className='submenu-category-all-btn'>
