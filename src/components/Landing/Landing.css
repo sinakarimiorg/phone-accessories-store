@@ -1,22 +1,31 @@
 .banner {
-    @apply relative w-full h-80
+    @apply relative w-full h-50 custom-sc:h-60 xl:h-80
 }
 
 .banner--img {
     position: absolute;
-    top: -8rem;
-    left: 50px;
-    width: 450px;
-    height: 450px;
+    display: none;
+    top: -6.5rem;
+    left: 10px;
+    width: 275px;
+    height: 275px;
     object-fit: contain;
+    @apply sm:block custom-sc:w-[350px] xl:w-[450px] custom-sc:h-[350px] xl:h-[450px] custom-sc:-top-32 custom-sc:left-12
 }
 
-.title-bar{
-    transform: translate(-20px);
-    transition: all 0.3ms linear;
+.banner--title-bar {
+    @apply flex flex-col items-center justify-center w-full sm:w-[22rem] md:w-[28rem] custom-sc:w-[30rem] xl:w-[40rem] h-full my-auto
 }
 
-.swiper-slide-active{
-    translate: (0);
-    transition: all 0.3ms linear;
+.banner--title-first {
+    @apply font-MorabbaBold text-xl md:text-2xl custom-sc:text-3xl xl:text-4xl tracking-wide xl:leading-10
+}
+
+.banner--title-second {
+    @apply font-MorabbaBold text-sm md:text-base custom-sc:text-xl xl:text-2xl tracking-wider xl:leading-10 pt-3
+}
+
+.shopping-btn {
+    @apply mt-3 md:mt-4 custom-sc:mt-6 pr-3 md:pr-3.5 custom-sc:pr-5 pl-0.5 md:pl-1 custom-sc:pl-1.5 xl:pl-2 py-1 xl:py-1.5 font-DanaMedium text-xs md:text-base custom-sc:text-lg xl:text-xl
+     hover:bg-purple-600/70 border border-white/75 hover:border-0 shadow-2xl rounded-2xl
 }

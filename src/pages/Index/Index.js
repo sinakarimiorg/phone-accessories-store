@@ -6,7 +6,7 @@ import './Index.css'
 
 export default function Index() {
   return (
-    <div className='bg-gradient-to-r from-gray-100 to-slate-200 dark:bg-gradient-to-r dark:from-zinc-800 dark:to-zinc-900'>
+    <div className='bg-gradient-to-r from-gray-100 to-slate-200 dark:bg-gradient-to-r dark:from-zinc-800 dark:to-zinc-900 overflow-hidden'>
       <Header/>
       <Landing />
       <div className='w-[80%] h-[175px] flex-center m-auto gap-12'>
