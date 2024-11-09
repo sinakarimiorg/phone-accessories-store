@@ -11,7 +11,7 @@ export default function Index() {
       <Header />
       <Landing />
         <PopularCategories />
-        <div className='w-full bg-black h-10'></div>
+        <div className='w-full h-52'></div>
 
     </div>
   )

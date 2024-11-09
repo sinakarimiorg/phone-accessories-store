@@ -76,7 +76,7 @@ export default function TopBar() {
 
   return (
     <>
-      <div className='fixed w-full hidden sm:flex items-center justify-between py-4 px-6 bg-custom-dark text-white z-20'>
+      <div className='fixed w-full hidden sm:flex items-center justify-between py-4 px-6 bg-custom-dark text-white z-50'>
         {/* Topbar Logo */}
         <Link to={'/'} className='flex items-center gap-1 cursor-pointer'>
           <img src='./images/logo/logo-lg.png' className='w-14 h-14 lg:w-16 xl:h-16' />
