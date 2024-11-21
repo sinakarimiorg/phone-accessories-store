@@ -1,9 +1,10 @@
 import React from 'react'
 import Header from '../../components/Header/Header'
 import Landing from '../../components/Landing/Landing'
+import PopularCategories from '../../components/PopularCategories/PopularCategories'
+import AmazingOffers from '../../components/AmazingOffers/AmazingOffers'
 
 import './Index.css'
-import PopularCategories from '../../components/PopularCategories/PopularCategories'
 
 export default function Index() {
   return (
@@ -11,7 +12,7 @@ export default function Index() {
       <Header />
       <Landing />
         <PopularCategories />
-        <div className='w-full h-52'></div>
+        <AmazingOffers/>
 
     </div>
   )

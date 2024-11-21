@@ -1,0 +1,15 @@
+.ex-price{
+    @apply relative inline-flex ml-2 pl-5 xs:pl-7 pr-2 xs:font-medium text-xs xs:text-sm text-gray-500 overflow-hidden
+}
+
+.ex-price::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 2px;
+    margin: auto;
+    width: 100%;
+    height: 2px;
+    background-color:  rgb(107 114 128 / 0.3);
+    @apply left-4 xs:left-[26px]
+}

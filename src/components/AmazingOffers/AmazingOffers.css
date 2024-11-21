@@ -1,0 +1,8 @@
+.bg-image {
+    object-fit: cover;
+    width: 100%;
+}
+
+.mySwiper {
+    @apply h-64 xs:h-auto
+}

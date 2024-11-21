@@ -45,7 +45,7 @@ export default function NavBar() {
 
   return (
     <>
-      <div className={`hidden sm:block sticky ${visible ? 'top-[88px] xl:top-24' : 'top-0'} w-full bg-custom-navy text-gray-100 transition-all z-40`}>
+      <div className={`hidden sm:block fixed ${visible ? 'top-[88px] xl:top-24' : 'top-0'} w-full bg-custom-navy text-gray-100 transition-all z-40`}>
         <div className='flex gap-x-5 md:gap-x-8 py-3 pr-5 lg:pr-24 text-xs md:text-sm lg:text-base child:flex-center child:gap-x-1.5 md:child:gap-x-2'>
 
           <div id='menu-container' onMouseOver={() => openCategoryFunc()} onMouseOut={() => closeCategoryFunc()} className='relative cursor-pointer hover:text-purple-300'>

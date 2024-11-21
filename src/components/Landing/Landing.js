@@ -2,19 +2,20 @@ import React from 'react'
 import { HiMiniChevronLeft } from "react-icons/hi2";
 import { FaChevronLeft } from "react-icons/fa6";
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Autoplay } from 'swiper/modules';
+import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/effect-fade';
+import 'swiper/css/pagination';
 
 import './Landing.css'
 
 export default function Landing() {
     return (
         <>
-            <div className='relative sm:mt-48 '>
-                <button className='prev absolute top-1/2 right-6 md:right-10 p-2 md:p-3 xl:p-4 bg-white/15 hover:bg-white/50 rounded-full shadow-black shadow-custom z-10'>
+            <div className='relative sm:mt-72 '>
+                <button className='prev absolute top-1/2 right-6 md:right-10 p-2 md:p-3 bg-white/15 hover:bg-white/50 rounded-full shadow-black shadow-custom z-10'>
                     <FaChevronLeft className='w-3 md:w-4 xl:w-5 h-3 md:h-4 xl:h-5 rotate-180 text-zinc-800' />
                 </button>
                 <Swiper
@@ -26,12 +27,15 @@ export default function Landing() {
                         disableOnInteraction: false,
                     }}
                     speed={1200}
+                    pagination={
+                       { clickable: true}
+                    }
                     navigation={{
                         prevEl: '.prev',
                         nextEl: '.next',
                     }}
                     grabCursor={true}
-                    modules={[Autoplay, Navigation]}
+                    modules={[Autoplay, Pagination, Navigation]}
                     className='mySwiper overflow-visible'
                 >
                     <SwiperSlide>
@@ -118,7 +122,7 @@ export default function Landing() {
                         </div>
                     </SwiperSlide>
                 </Swiper>
-                <button className='next absolute top-1/2 left-6 md:left-10 p-2 md:p-3 xl:p-4 bg-white/15 hover:bg-white/50 rounded-full shadow-black shadow-custom z-10'>
+                <button className='next absolute top-1/2 left-6 md:left-10 p-2 md:p-3 bg-white/15 hover:bg-white/50 rounded-full shadow-black shadow-custom z-10'>
                     <FaChevronLeft className='w-3 md:w-4 xl:w-5 h-3 md:h-4 xl:h-5  text-zinc-800' />
                 </button>
             </div>
