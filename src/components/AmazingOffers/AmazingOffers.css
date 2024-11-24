@@ -6,3 +6,7 @@
 .mySwiper {
     @apply h-64 xs:h-auto
 }
+
+.amazing-offers__item{
+@apply w-[150px] xs:w-44 h-64 xs:h-72 px-2 py-3 bg-white dark:bg-zinc-600 shadow-lg rounded-lg
+}

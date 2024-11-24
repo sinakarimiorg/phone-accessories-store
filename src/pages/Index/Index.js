@@ -6,6 +6,7 @@ import AmazingOffers from '../../components/AmazingOffers/AmazingOffers'
 import CategoriesByPhone from '../../components/CategoriesByPhone/CategoriesByPhone'
 
 import './Index.css'
+import LatestProducts from '../../components/LatestProducts/LatestProducts'
 
 export default function Index() {
   return (
@@ -15,6 +16,7 @@ export default function Index() {
       <PopularCategories />
       <AmazingOffers />
       <CategoriesByPhone/>
+      <LatestProducts/>
     </div>
   )
 }

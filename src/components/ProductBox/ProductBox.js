@@ -2,7 +2,7 @@ import React from 'react'
 
 import './ProductBox.css'
 
-export default function ProductBox({ img, title, price, discount, exPrice }) {
+export default function ProductBox({ img, title, price, discount, exPrice, classes, img2 }) {
 
     return (
         <>
@@ -20,17 +20,21 @@ export default function ProductBox({ img, title, price, discount, exPrice }) {
             </svg>
 
             <div>
-                <div className='w-[150px] xs:w-44 h-64 xs:h-72 px-2 py-3 bg-white shadow-lg rounded-lg'>
-                    <img className='h-32 xs:h-[150px]' src={img} />
+                <div className={classes}>
+                    <div className={`${img2 && 'group'} relative w-40 h-32 mx-auto xs:h-[150px]`}>
+                    <img className='absolute group-hover:opacity-0 group-hover:invisible h-32 xs:h-[150px] inset-0 cursor-pointer transition-all duration-500' src={img} />
+                    {img2 &&
+                    <img className='absolute opacity-0 invisible group-hover:block group-hover:opacity-100 group-hover:visible h-32 xs:h-[150px] inset-0 cursor-pointer transition-all duration-500' src={img2} />}
+                    </div>
                     {/* Box Body */}
                     <div>
-                        <p className='text-sm text-zinc-600 leading-6 pt-3'>{title}</p>
-                        <div className='flex justify-end gap-5 items-center px-2 pt-2 pb-1'>
+                        <p className='text-sm text-zinc-600 dark:text-white leading-6 pt-3.5'>{title}</p>
+                        <div className='flex justify-between items-center px-2 pt-2 pb-1'>
                             {discount && <span className='px-2 xs:px-2.5 pt-0.5 font-DanaMedium xs:font-DanaDemiBold text-xs text-white bg-purple-500 rounded-lg'>{discount}%</span>}
-                            <div className='flex justify-center items-center xs:gap-1 text-zinc-800'>
-                                <span className='font-DanaDemiBold text-sm xs:text-lg'>{price.toLocaleString()}</span>
-                                <span><svg className='w-3 xs:w-4 h-3 xs:h-4'><use href="#toman"></use></svg></span>
-                            </div>
+                            <p className='flex justify-end items-center xs:gap-1 w-full text-zinc-800'>
+                                <span className='font-DanaDemiBold text-sm xs:text-lg dark:text-white'>{price.toLocaleString()}</span>
+                                <span><svg className='w-3 xs:w-4 h-3 xs:h-4 pb-0.5 dark:text-white'><use href="#toman"></use></svg></span>
+                            </p>
                         </div>
                         {
                             exPrice &&

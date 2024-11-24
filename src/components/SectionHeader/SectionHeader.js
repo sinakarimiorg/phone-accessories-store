@@ -7,7 +7,7 @@ import './SectionHeader.css'
 
 export default function SectionHeader({ title, desc, btnTitle, btnHref }) {
   return (
-    <div className="flex items-center justify-between pt-20">
+    <div className="flex items-center justify-between pt-20 pb-10">
       <div className="flex flex-col ">
         <div className="title">
           <span className='relative z-10'>{title}</span>

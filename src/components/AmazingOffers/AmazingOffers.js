@@ -63,32 +63,32 @@ export default function AmazingOffers() {
                             className='mySwiper overflow-visible'
                         >
                             <SwiperSlide>
-                                <ProductBox img={'./images/products/airpods.png'} title={'هندزفری بلوتوثی کربی مدل CR-T107'} price={765000} discount={10} exPrice={850000} />
+                                <ProductBox img={'./images/products/airpods.png'} title={'هندزفری بلوتوثی کربی مدل CR-T107'} classes={'amazing-offers__item'} price={765000} discount={10} exPrice={850000} />
                             </SwiperSlide>
 
                             <SwiperSlide>
-                                <ProductBox img={'./images/products/charge-cable.png'} title={'هندزفری بلوتوثی کربی مدل CR-T107'} price={765000} discount={10} exPrice={850000} />
+                                <ProductBox img={'./images/products/charge-cable.png'} title={'هندزفری بلوتوثی کربی مدل CR-T107'} classes={'amazing-offers__item'} price={765000} discount={10} exPrice={850000} />
                             </SwiperSlide>
 
                             <SwiperSlide>
-                                <ProductBox img={'./images/products/cover.png'} title={'هندزفری بلوتوثی کربی مدل CR-T107'} price={765000} discount={27} exPrice={850000} />
+                                <ProductBox img={'./images/products/cover.png'} title={'هندزفری بلوتوثی کربی مدل CR-T107'} classes={'amazing-offers__item'} price={765000} discount={27} exPrice={850000} />
                             </SwiperSlide>
 
                             <SwiperSlide>
-                                <ProductBox img={'./images/products/power-bank2.png'} title={'هندزفری بلوتوثی کربی مدل CR-T107'} price={765000} />
+                                <ProductBox img={'./images/products/power-bank3.png'} title={'هندزفری بلوتوثی کربی مدل CR-T107'} classes={'amazing-offers__item'} price={765000} />
                             </SwiperSlide>
                             <SwiperSlide>
-                                <ProductBox img={'./images/products/power-bank1.png'} title={'هندزفری بلوتوثی کربی مدل CR-T107'} price={765000} discount={88} exPrice={970000} />
+                                <ProductBox img={'./images/products/power-bank1.png'} title={'هندزفری بلوتوثی کربی مدل CR-T107'} classes={'amazing-offers__item'} price={765000} discount={88} exPrice={970000} />
                             </SwiperSlide>
                             <SwiperSlide>
-                                <ProductBox img={'./images/products/cover.png'} title={'هندزفری بلوتوثی کربی مدل CR-T107'} price={765000} />
+                                <ProductBox img={'./images/products/cover.png'} title={'هندزفری بلوتوثی کربی مدل CR-T107'} classes={'amazing-offers__item'} price={765000} />
                             </SwiperSlide>
                             <SwiperSlide>
-                                <ProductBox img={'./images/products/airpods.png'} title={'هندزفری بلوتوثی کربی مدل CR-T107'} price={765000} discount={88} exPrice={970000} />
+                                <ProductBox img={'./images/products/airpods.png'} title={'هندزفری بلوتوثی کربی مدل CR-T107'} classes={'amazing-offers__item'} price={765000} discount={88} exPrice={970000} />
                             </SwiperSlide>
 
                             <SwiperSlide>
-                                <ProductBox img={'./images/products/charge-cable.png'} title={'هندزفری بلوتوثی کربی مدل CR-T107'} price={765000} discount={10} exPrice={850000} />
+                                <ProductBox img={'./images/products/charge-cable.png'} title={'هندزفری بلوتوثی کربی مدل CR-T107'} classes={'amazing-offers__item'} price={765000} discount={10} exPrice={850000} />
                             </SwiperSlide>
 
                             <SwiperSlide>

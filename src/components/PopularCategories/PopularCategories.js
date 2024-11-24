@@ -6,10 +6,10 @@ import './PopularCategories.css'
 
 export default function PopularCategories() {
     return (
-        <div className=''>
+        <div>
             <div className='container'>
                 <SectionHeader title={'دسته بندی های محبوب'} desc={'بهترین ها را از ما بخواهید'} btnTitle={'مشاهده همه'} />
-                <div className='w-full mt-10 flex-center flex-wrap m-auto gap-10 md:gap-16 2xl:gap-20'>
+                <div className='w-full flex-center flex-wrap m-auto gap-10 md:gap-16 2xl:gap-20'>
                     <PopularCategoryBox src={'./images/categories/phone-category.png'} title={'گوشی موبایل'} />
                     <PopularCategoryBox src={'./images/categories/cable-category.png'} title={'کابل و تبدیلات'} />
                     <PopularCategoryBox src={'./images/categories/hard-category.png'} title={'ذخیره سازی'} />
