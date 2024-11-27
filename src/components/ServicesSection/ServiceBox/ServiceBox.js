@@ -13,10 +13,10 @@ export default function ServiceBox({ icon, title, desc, gradiant, transitionFron
 
       {/* service box back content */}
       <div className={`absolute ${transitionBackClass} w-full h-full px-7 text-center content-center text-white transition-all duration-500 ${gradiant}`}>
-        <p className='text-xs md:text-sm xl:text-base'>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم
+        <p className='text-xs md:text-sm xl:text-base line-clamp-5 xl:line-clamp-4'>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم
           از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله..
         </p>
-        <button className='mt-1 md:mt-2 lg:mt-5 px-2 lg:px-4 py-1 lg:py-2 xl:font-DanaMedium text-sm tracking-tight bg-black/70 hover:bg-white/80 hover:text-zinc-700 rounded-2xl'>مطالعه بیشتر</button>
+        <button className='mt-2 xl:mt-3 2xl:mt-5 px-2 xl:px-4 py-1 xl:py-2 xl:font-DanaMedium text-xs xl:text-sm tracking-tight bg-black/70 hover:bg-white/80 hover:text-zinc-700 rounded-2xl'>مطالعه بیشتر</button>
       </div>
     </div>
   )

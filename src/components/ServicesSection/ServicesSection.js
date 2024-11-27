@@ -10,9 +10,9 @@ import './ServicesSection.css'
 
 export default function ServicesSection() {
     return (
-        <div className='services-section my-20 py-28'>
+        <div className='services-section my-20 py-16 md:py-24 xl:py-28'>
             <div className='container'>
-                <div className='flex-center flex-wrap gap-x-7 md:gap-x-12 xl:gap-x-16 gap-y-7'>
+                <div className='flex-center flex-wrap gap-x-7 custom-sc:gap-x-8 xl:gap-x-16 gap-y-7'>
                     <ServiceBox icon={<SlSocialDropbox className='service-box-icon' />} title={"بازگشت و تعویض کالا"} desc={'تا هفت روز به هر دلیل'}
                         gradiant={'bg-gradient-to-r from-yellow-500 via-orange-500 to-red-500'} transitionFrontClass={'top-0 bottom-0 right-0 left-0 group-hover:right-[100%]'}
                          transitionBackClass={'left-[100%] group-hover:left-0 '} />
