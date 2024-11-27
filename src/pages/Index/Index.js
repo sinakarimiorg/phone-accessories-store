@@ -4,9 +4,10 @@ import Landing from '../../components/Landing/Landing'
 import PopularCategories from '../../components/PopularCategories/PopularCategories'
 import AmazingOffers from '../../components/AmazingOffers/AmazingOffers'
 import CategoriesByPhone from '../../components/CategoriesByPhone/CategoriesByPhone'
+import LatestProducts from '../../components/LatestProducts/LatestProducts'
+import ServicesSection from '../../components/ServicesSection/ServicesSection'
 
 import './Index.css'
-import LatestProducts from '../../components/LatestProducts/LatestProducts'
 
 export default function Index() {
   return (
@@ -16,6 +17,8 @@ export default function Index() {
       <PopularCategories />
       <AmazingOffers />
       <CategoriesByPhone/>
+      <LatestProducts/>
+      <ServicesSection/>
       <LatestProducts/>
     </div>
   )

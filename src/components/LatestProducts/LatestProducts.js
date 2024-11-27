@@ -13,7 +13,7 @@ import './LatestProducts.css'
 
 export default function LatestProducts() {
     return (
-        <div className='mb-24'>
+        <div>
             <div className='container'>
                 <SectionHeader title={'جدیدترین محصولات'} desc={'از تازه ها شروع کن!'} btnTitle={'مشاهده همه'} />
                 <div className='overflow-hidden'>
