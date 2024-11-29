@@ -1,7 +1,6 @@
 import React from 'react'
 import SectionHeader from '../SectionHeader/SectionHeader'
 import ProductBox from '../ProductBox/ProductBox';
-import { FaArrowLeft } from "react-icons/fa6";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
 

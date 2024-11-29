@@ -32,7 +32,7 @@ export default function ProductBox({ img, title, price, discount, exPrice, class
                         <div className='flex justify-between items-center px-2 pt-2 pb-1'>
                             {discount && <span className='px-2 xs:px-2.5 pt-0.5 font-DanaMedium xs:font-DanaDemiBold text-xs text-white bg-purple-500 rounded-lg'>{discount}%</span>}
                             <p className='flex justify-end items-center xs:gap-1 w-full text-zinc-800'>
-                                <span className='font-DanaDemiBold text-sm xs:text-lg dark:text-white'>{price.toLocaleString()}</span>
+                                <span className='font-DanaDemiBold text-sm sm:text-base md:text-lg dark:text-white'>{price.toLocaleString()}</span>
                                 <span><svg className='w-3 xs:w-4 h-3 xs:h-4 pb-0.5 dark:text-white'><use href="#toman"></use></svg></span>
                             </p>
                         </div>
