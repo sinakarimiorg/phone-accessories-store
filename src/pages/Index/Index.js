@@ -10,6 +10,7 @@ import PopularProducts from '../../components/PopularProducts/PopularProducts'
 import PopularBrands from '../../components/PopularBrands/PopularBrands'
 
 import './Index.css'
+import LatestArticles from '../../components/LatestArticles/LatestArticles'
 
 export default function Index() {
   return (
@@ -23,6 +24,7 @@ export default function Index() {
       <ServicesSection/>
       <PopularProducts/>
       <PopularBrands/>
+      <LatestArticles/>
     </div>
   )
 }

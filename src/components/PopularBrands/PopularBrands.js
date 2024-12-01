@@ -12,7 +12,7 @@ import './PopularBrands.css'
 
 export default function PopularBrands() {
     return (
-        <div className='hidden sm:block my-20'>
+        <div className='hidden sm:block mt-20'>
             <div className='container'>
                 <div className='flex items-center w-full  text-white border border-gray-400 rounded-2xl'>
                     {/* Brands Section Title */}
