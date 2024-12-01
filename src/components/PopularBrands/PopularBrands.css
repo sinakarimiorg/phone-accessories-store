@@ -1,0 +1,7 @@
+.brand-item{
+    @apply w-full h-full border-l border-gray-400
+}
+
+.brand-item img{
+    @apply w-36 h-25 my-auto mx-auto cursor-pointer
+}

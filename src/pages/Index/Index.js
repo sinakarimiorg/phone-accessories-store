@@ -6,9 +6,10 @@ import AmazingOffers from '../../components/AmazingOffers/AmazingOffers'
 import CategoriesByPhone from '../../components/CategoriesByPhone/CategoriesByPhone'
 import LatestProducts from '../../components/LatestProducts/LatestProducts'
 import ServicesSection from '../../components/ServicesSection/ServicesSection'
+import PopularProducts from '../../components/PopularProducts/PopularProducts'
+import PopularBrands from '../../components/PopularBrands/PopularBrands'
 
 import './Index.css'
-import PopularProducts from '../../components/PopularProducts/PopularProducts'
 
 export default function Index() {
   return (
@@ -21,7 +22,7 @@ export default function Index() {
       <LatestProducts/>
       <ServicesSection/>
       <PopularProducts/>
-      <ServicesSection/>
+      <PopularBrands/>
     </div>
   )
 }

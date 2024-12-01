@@ -16,7 +16,7 @@ export default function PopularProducts() {
         <div>
             <div className='container'>
                 <SectionHeader title={'محصولات منتخب'} desc={'براساس نظرات شما'} btnTitle={'مشاهده همه'} />
-                <div className='overflow-hidden section-border bg-gradient-to-r from-rose-50 to-indigo-100 py-4 md:py-8'>
+                <div className='overflow-hidden section-border bg-gradient-to-r from-rose-50 to-indigo-100 py-4 px-2.5 md:py-8'>
 
                     <button className='prev absolute top-1/2 right-6 md:right-5 p-2 bg-white/95 rounded-full shadow-black shadow-custom z-10'>
                         <FaChevronLeft className='w-3 md:w-4 h-3 md:h-4 rotate-180 text-zinc-800' />
