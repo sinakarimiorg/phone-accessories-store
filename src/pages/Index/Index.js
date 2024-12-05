@@ -8,9 +8,10 @@ import LatestProducts from '../../components/LatestProducts/LatestProducts'
 import ServicesSection from '../../components/ServicesSection/ServicesSection'
 import PopularProducts from '../../components/PopularProducts/PopularProducts'
 import PopularBrands from '../../components/PopularBrands/PopularBrands'
+import LatestArticles from '../../components/LatestArticles/LatestArticles'
+import Footer from '../../components/Footer/Footer'
 
 import './Index.css'
-import LatestArticles from '../../components/LatestArticles/LatestArticles'
 
 export default function Index() {
   return (
@@ -25,6 +26,7 @@ export default function Index() {
       <PopularProducts/>
       <PopularBrands/>
       <LatestArticles/>
+      <Footer/>
     </div>
   )
 }

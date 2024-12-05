@@ -1,0 +1,3 @@
+.footer{
+@apply dark:text-white bg-gradient-to-b from-gray-500/5 to-gray-600 dark:to-gray-400
+}
