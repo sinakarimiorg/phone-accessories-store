@@ -7,11 +7,11 @@
 }
 
 .footer-title{
-    @apply pb-4 font-DanaDemiBold text-zinc-800 dark:text-white
+    @apply pb-1.5 md:pb-4 font-DanaMedium md:font-DanaDemiBold text-sm md:text-base text-zinc-800 dark:text-white
 }
 
 .footer-col__list{
-    @apply flex items-start justify-center flex-col gap-y-2.5 text-sm tracking-tight transition-all
+    @apply flex items-start justify-center flex-col gap-y-2 md:gap-y-2.5 text-xs md:text-sm tracking-tight transition-all
 }
 
 .footer-col__list a:hover{
@@ -20,18 +20,7 @@
 
   /* Social Media Links */
 .social-button {
-    display: inline-block;
-    position: relative;
-    cursor: pointer;
-    width: 2.5rem;
-    height: 2.5rem;
-    border: 0.125rem solid transparent;
-    padding: 0;
-    text-decoration: none;
-    text-align: center;
-    color: #fefefe;
-    border-radius: 1.6875rem;
-    transition: all 0.5s ease;
+    @apply inline-block relative w-8 md:w-10 h-8 md:h-10 p-0 text-center text-white cursor-pointer rounded-full transition-all duration-500
   }
   
 .social-button:hover, .social-button:focus {
@@ -41,12 +30,10 @@
   }
   
   .social-button__icon {
-    width: 23px;
-    height: 23px;
-    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
+    @apply absolute w-4 md:w-6 h-4 md:h-4
   }
   /* ///////////////////////////////////////// */
