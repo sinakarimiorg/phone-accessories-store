@@ -1,13 +1,22 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { HiMiniChevronUp } from "react-icons/hi2";
+import { IoLogoInstagram } from "react-icons/io";
+import { MdOutlineWhatsapp } from "react-icons/md";
+import { FaYoutube } from "react-icons/fa";
+import { RiTwitterXFill } from "react-icons/ri";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay } from 'swiper/modules';
+
+import 'swiper/css';
+import 'swiper/css/effect-fade';
 
 import './Footer.css'
 
 export default function Footer() {
     return (
         <div className='footer'>
-            <div className='px-10 py-7'>
+            <div className='px-16 py-7'>
                 {/* Footer Header  */}
                 <div className='pb-4 border-b border-zinc-400'>
                     <div className='flex items-center justify-between'>
@@ -28,12 +37,12 @@ export default function Footer() {
                     <div className='flex items-center gap-x-4 h-4 mt-7 text-sm'>
                         <p className='flex items-center gap-x-2'>
                             <span>تلفن پشتیبانی :</span>
-                            <span>1111000 - 021</span>
+                            <a href='tel:1111000 - 021'>1111000 - 021</a>
                         </p>
                         <div className='w-px h-full bg-gray-400'></div>
                         <p className='flex items-center gap-x-2'>
                             <span>آدرس ایمیل :</span>
-                            <span>info@moboland.ir</span>
+                            <a href="mailto:info@moboland.ir">info@moboland.ir</a>
                         </p>
                         <div className='w-px h-full bg-gray-400'></div>
                         <p className='flex items-center gap-x-2'>
@@ -43,16 +52,94 @@ export default function Footer() {
                 </div>
 
                 {/* Footer Content  */}
-                <div>
+                <div className='flex items-start gap-x-36 pt-10'>
                     {/* <!-- First Col & section -->  */}
-                    <div></div>
+                    <div className='footer-col'>
+                        <h2 className='footer-title'>دسترسی سریع</h2>
+                        <div className='footer-col__list'>
+                            <a href='#'>ثبت شکایت</a>
+                            <a href='#'>قوانین و مقررات</a>
+                            <a href='#'>روش های ارسال</a>
+                            <a href='#'>روش های پرداخت</a>
+                            <a href='#'>رویه بازگشت کالا</a>
+                        </div>
+                    </div>
+
                     {/* <!-- Second Col & section -->  */}
-                    <div></div>
+                    <div className='footer-col'>
+                        <h2 className='footer-title'>خدمات مشتریان</h2>
+                        <div className='footer-col__list'>
+                            <a href='#'>حساب کاربری من</a>
+                            <a href='#'>بلاگ</a>
+                            <a href='#'>خرید عمده لوازم جانبی موبایل</a>
+                            <a href='#'>نمایندگی فروش</a>
+                        </div>
+                    </div>
                     {/* <!-- Third Col & section -->  */}
-                    <div></div>
+                    <div className='footer-col w-[30rem]'>
+                        <h2 className='footer-title'>درباره ما</h2>
+                        <p className='text-sm leading-7'>
+                            فروشگاه موبولند، بزرگترین وارد کننده لوازم جانبی موبایل در پایتخت کشور
+                            فروشگاه لوازم جانبی موبایل مودب به عنوان بزرگترین وارد کننده و پخش کننده لوازم جانبی موبایل با سابقه ی بیش از 7 سال می باشد که
+                            در طی این سالها توانسته است نیاز بیش از 3000 همکار در سراسر ایران را بر طرف نماید. در این فروشگاه محصولات با تنوع بالا به صورت عمده و تکی عرضه می شود.
+                        </p>
+                    </div>
+                    {/* <!-- fourth Col & section -->  */}
+                    <div className='footer-col'>
+                        <h2 className='footer-title'>مجــوزها</h2>
+                        <div className='w-25 overflow-hidden'>
+                            <Swiper
+                                spaceBetween={7}
+                                slidesPerView={1}
+                                loop={true}
+                                autoplay={{
+                                    delay: 2500,
+                                    disableOnInteraction: false,
+                                }}
+                                speed={1200}
+                                modules={[Autoplay]}
+                                className='mySwiper overflow-visible'
+                            >
+                                <SwiperSlide>
+                                    <img className='w-full h-30 cursor-pointer' src='./images/licenses/enemad.png' />
+                                </SwiperSlide>
+                                <SwiperSlide>
+                                    <img className='w-full h-30 cursor-pointer' src='./images/licenses/rezi.jpg' />
+                                </SwiperSlide>
+                                <SwiperSlide>
+                                    <img className='w-full h-30 cursor-pointer' src='./images/licenses/white.png' />
+                                </SwiperSlide>
+                                <SwiperSlide>
+                                    <img className='w-full h-30 cursor-pointer' src='./images/licenses/zarin.png' />
+                                </SwiperSlide>
+
+                            </Swiper>
+                        </div>
+                    </div>
+                    {/* <!-- fifth Col & section -->  */}
+                    <div className='footer-col'>
+                        {/* Social Media Links */}
+                        <div>
+                            <h2 className='footer-title'>شبکه های اجتماعی</h2>
+                            <div className='flex-center gap-x-2 pt-1 text-center'>
+                                <a className='social-button bg-black hover:bg-white hover:text-black hover:border-2 hover:border-black' href='https://twitter.com/'><RiTwitterXFill className='social-button__icon' /></a>
+                                <a className='social-button bg-green-600 hover:bg-white hover:text-green-600 hover:border-2 hover:border-green-600' href='https://web.whatsapp.com/'><MdOutlineWhatsapp className='social-button__icon' /></a>
+                                <a className='social-button bg-red-600 hover:bg-white hover:text-red-600 hover:border-2 hover:border-red-600' href='https://www.youtube.com/'><FaYoutube className='social-button__icon' /></a>
+                                <a className='social-button bg-pink-600 hover:bg-white hover:text-pink-600 hover:border-2 hover:border-pink-600' href='https://www.instagram.com/'><IoLogoInstagram className='social-button__icon' /></a>
+                            </div>
+                        </div>
+
+                        <div className='mt-10'>
+                            <h2 className='footer-title'>با ثبت ایمیل، از اخبار موبولند باخبر شوید.</h2>
+                            <div>
+                                <input className='px-3 py-2.5 ml-2 text-sm bg-gray-300 border border-gray-700/70 shadow-lg focus:border-none focus:outline-none focus:shadow-white/30 rounded-lg placeholder:text-sm' type='email' name='email' placeholder='ایمیل شما' />
+                                <button className='px-4 py-2 font-DanaMedium dark:text-zinc-700 bg-gray-300/85 border border-gray-700/70 shadow-lg tracking-wide rounded-lg'>ثبت</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div>
+            <div className='relative'>
                 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                     viewBox="0 2900 9000 800" style={{ enableBackground: 'new 0 0 9000 4000' }} xmlSpace="preserve">
                     <g>
@@ -87,6 +174,9 @@ export default function Footer() {
                         <rect y="2958.885" style={{ clipPath: 'url(#SVGID_00000080901780527199675520000018088305332511116957_)', fill: 'url(#SVGID_00000121963957562804191240000002117599932745102525_)' }} width="8488.95" height="1041.115" />
                     </g>
                 </svg>
+                <p className='w-full absolute bottom-7 text-center text-zinc-300 text-sm'>
+                © 1403 تمامی حقوق مادی و معنوی این سایت متعلق به <a className='font-DanaDemiBold text-base text-white' href='https://github.com/sinakarimiorg'>ســینا‌کـــریمی</a> می‌باشد.
+                </p>
             </div>
         </div>
     )

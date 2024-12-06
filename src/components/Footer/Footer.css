@@ -1,3 +1,52 @@
 .footer{
 @apply dark:text-white bg-gradient-to-b from-gray-500/5 to-gray-600 dark:to-gray-400
 }
+
+.footer-col{
+@apply flex items-start justify-center flex-col
+}
+
+.footer-title{
+    @apply pb-4 font-DanaDemiBold text-zinc-800 dark:text-white
+}
+
+.footer-col__list{
+    @apply flex items-start justify-center flex-col gap-y-2.5 text-sm tracking-tight transition-all
+}
+
+.footer-col__list a:hover{
+    @apply text-fuchsia-300 transition-all
+}
+
+  /* Social Media Links */
+.social-button {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 0.125rem solid transparent;
+    padding: 0;
+    text-decoration: none;
+    text-align: center;
+    color: #fefefe;
+    border-radius: 1.6875rem;
+    transition: all 0.5s ease;
+  }
+  
+.social-button:hover, .social-button:focus {
+    -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+  
+  .social-button__icon {
+    width: 23px;
+    height: 23px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+  }
+  /* ///////////////////////////////////////// */
