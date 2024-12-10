@@ -55,7 +55,7 @@ export default function Landing() {
                                     <HiMiniChevronLeft className='w-5 xl:w-6 h-5 xl:h-6 pb-0.5 xl:pb-1'/>
                                 </button>
                             </div>
-                            <img className='banner--img' src='images/banners/banner-smart watch.png' />
+                            <img className='banner--img' src='/images/banners/banner-smart watch.png' />
                         </div>
                     </SwiperSlide>
 
@@ -74,7 +74,7 @@ export default function Landing() {
                                     <HiMiniChevronLeft className='w-5 xl:w-6 h-5 xl:h-6 pb-0.5 xl:pb-1'/>
                                 </button>
                             </div>
-                            <img className='banner--img' src='images/banners/banner-smartRing.png' />
+                            <img className='banner--img' src='/images/banners/banner-smartRing.png' />
                         </div>
                     </SwiperSlide>
 
@@ -94,7 +94,7 @@ export default function Landing() {
                                     <HiMiniChevronLeft className='w-5 xl:w-6 h-5 xl:h-6 pb-0.5 xl:pb-1'/>
                                 </button>
                             </div>
-                            <img className='banner--img' src='images/banners/banner-headphones.png' />
+                            <img className='banner--img' src='/images/banners/banner-headphones.png' />
                         </div>
                     </SwiperSlide>
 
@@ -118,7 +118,7 @@ export default function Landing() {
                                     <HiMiniChevronLeft className='w-5 xl:w-6 h-5 xl:h-6 pb-0.5 xl:pb-1'/>
                                 </button>
                             </div>
-                            <img className='banner--img' src='images/banners/banner-speaker.jpg' />
+                            <img className='banner--img' src='/images/banners/banner-speaker.jpg' />
                         </div>
                     </SwiperSlide>
                 </Swiper>

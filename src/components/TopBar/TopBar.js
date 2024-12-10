@@ -79,7 +79,7 @@ export default function TopBar() {
       <div className='fixed w-full hidden sm:flex items-center justify-between py-4 px-6 bg-custom-dark text-white z-50'>
         {/* Topbar Logo */}
         <Link to={'/'} className='flex items-center gap-1 cursor-pointer'>
-          <img src='./images/logo/logo-lg.png' className='w-14 h-14 lg:w-16 xl:h-16' />
+          <img src='/images/logo/logo-lg.png' className='w-14 h-14 lg:w-16 xl:h-16' />
           <h5 className='text-shadow-topbar font-MorabbaBold text-xl md:text-2xl xl:text-3xl'>
             مـوبـو
             لــــــند
@@ -122,13 +122,13 @@ export default function TopBar() {
                 {/* <!-- Cart Box Body --> */}
                 <div
                   className="my-2 border-b border-b-gray-300 dark:border-b-white/10  divide-y divide-gray-100 dark:divide-white/5 max-h-[330px] overflow-hidden hover:overflow-y-auto child:flex child:gap-x-2.5 child:py-5 child:pl-1">
-                  <CartProductBox img={'./images/products/airpods.png'} title={'هندزفری بلوتوثی کربی مدل CR-T107'} off={93500} price={790000} />
-                  <CartProductBox img={'./images/products/cover.png'} title={'کیف کلاسوری کربی مدل Pattern مناسب برای گوشی موبایل سامسونگ Galaxy J5 Pro'} off={35200} price={149000} />
-                  <CartProductBox img={'./images/products/car-charger.png'} title={'شارژر فندکی 35 وات مدل QC 3'} off={10000} price={70000} />
-                  <CartProductBox img={'./images/products/power-bank2.png'} title={'پاوربانک انکر مدل PowerCore Metro A1246 ظرفیت 10000 میلی آمپر ساعت'} off={130000} price={2200000} />
-                  <CartProductBox img={'./images/products/charge-cable.png'} title={'کابل تبدیل USB و USB-C به لایتنینگ و USB-C مدل 2in2-Fast-100W طول 1 متر'} price={490000} />
-                  <CartProductBox img={'./images/products/holder.png'} title={'پایه نگهدارنده گوشی موبایل الدینیو مدل MG01'} off={33000} price={277000} />
-                  <CartProductBox img={'./images/products/glass.png'} title={'محافظ صفحه نمایش حریم شخصی مات مدل m2m مناسب برای گوشی موبایل اپل iPhone 7Plus/ 8Plus'} price={27700} />                  {/* <!-- Cart Box Product --> */}
+                  <CartProductBox img={'/images/products/airpods.png'} title={'هندزفری بلوتوثی کربی مدل CR-T107'} off={93500} price={790000} />
+                  <CartProductBox img={'/images/products/cover.png'} title={'کیف کلاسوری کربی مدل Pattern مناسب برای گوشی موبایل سامسونگ Galaxy J5 Pro'} off={35200} price={149000} />
+                  <CartProductBox img={'/images/products/car-charger.png'} title={'شارژر فندکی 35 وات مدل QC 3'} off={10000} price={70000} />
+                  <CartProductBox img={'/images/products/power-bank2.png'} title={'پاوربانک انکر مدل PowerCore Metro A1246 ظرفیت 10000 میلی آمپر ساعت'} off={130000} price={2200000} />
+                  <CartProductBox img={'/images/products/charge-cable.png'} title={'کابل تبدیل USB و USB-C به لایتنینگ و USB-C مدل 2in2-Fast-100W طول 1 متر'} price={490000} />
+                  <CartProductBox img={'/images/products/holder.png'} title={'پایه نگهدارنده گوشی موبایل الدینیو مدل MG01'} off={33000} price={277000} />
+                  <CartProductBox img={'/images/products/glass.png'} title={'محافظ صفحه نمایش حریم شخصی مات مدل m2m مناسب برای گوشی موبایل اپل iPhone 7Plus/ 8Plus'} price={27700} />                  {/* <!-- Cart Box Product --> */}
                 </div>
 
                 {/* <!-- Cart Box Footer --> */}
@@ -176,7 +176,7 @@ export default function TopBar() {
 
         {/* Topbar Logo */}
         <div className='flex items-center gap-1 cursor-pointer text-white'>
-          <img src='./images/logo/logo-lg.png' className='w-8 h-8' />
+          <img src='/images/logo/logo-lg.png' className='w-8 h-8' />
           <h5 className='text-shadow-topbar font-MorabbaBold text-xl'>
             مـوبـو
             لــــــند
@@ -195,7 +195,7 @@ export default function TopBar() {
 
             {/* Nav Logo */}
             <Link to={'/'} className='flex items-center gap-1 cursor-pointer'>
-              <img src='./images/logo/logo-lg.png' className='w-8 h-8' />
+              <img src='/images/logo/logo-lg.png' className='w-8 h-8' />
               <h5 className='font-MorabbaBold text-xl text-neutral-700 dark:text-white'>
                 مـوبـو
                 لــــــند
@@ -318,13 +318,13 @@ export default function TopBar() {
           {/* <!-- Cart Body --> */}
           <div
             className="text-sm divide-y divide-gray-100 dark:divide-white/10 overflow-hidden overflow-y-auto child:py-5 child:flex child:gap-x-1">
-            <CartProductBox img={'./images/products/airpods.png'} title={'هندزفری بلوتوثی کربی مدل CR-T107'} off={93500} price={790000} />
-            <CartProductBox img={'./images/products/cover.png'} title={'کیف کلاسوری کربی مدل Pattern مناسب برای گوشی موبایل سامسونگ Galaxy J5 Pro'} off={35200} price={149000} />
-            <CartProductBox img={'./images/products/car-charger.png'} title={'شارژر فندکی 35 وات مدل QC 3'} off={10000} price={70000} />
-            <CartProductBox img={'./images/products/power-bank2.png'} title={'پاوربانک انکر مدل PowerCore Metro A1246 ظرفیت 10000 میلی آمپر ساعت'} off={130000} price={2200000} />
-            <CartProductBox img={'./images/products/charge-cable.png'} title={'کابل تبدیل USB و USB-C به لایتنینگ و USB-C مدل 2in2-Fast-100W طول 1 متر'} price={490000} />
-            <CartProductBox img={'./images/products/holder.png'} title={'پایه نگهدارنده گوشی موبایل الدینیو مدل MG01'} off={33000} price={277000} />
-            <CartProductBox img={'./images/products/glass.png'} title={'محافظ صفحه نمایش حریم شخصی مات مدل m2m مناسب برای گوشی موبایل اپل iPhone 7Plus/ 8Plus'} price={27700} />
+            <CartProductBox img={'/images/products/airpods.png'} title={'هندزفری بلوتوثی کربی مدل CR-T107'} off={93500} price={790000} />
+            <CartProductBox img={'/images/products/cover.png'} title={'کیف کلاسوری کربی مدل Pattern مناسب برای گوشی موبایل سامسونگ Galaxy J5 Pro'} off={35200} price={149000} />
+            <CartProductBox img={'/images/products/car-charger.png'} title={'شارژر فندکی 35 وات مدل QC 3'} off={10000} price={70000} />
+            <CartProductBox img={'/images/products/power-bank2.png'} title={'پاوربانک انکر مدل PowerCore Metro A1246 ظرفیت 10000 میلی آمپر ساعت'} off={130000} price={2200000} />
+            <CartProductBox img={'/images/products/charge-cable.png'} title={'کابل تبدیل USB و USB-C به لایتنینگ و USB-C مدل 2in2-Fast-100W طول 1 متر'} price={490000} />
+            <CartProductBox img={'/images/products/holder.png'} title={'پایه نگهدارنده گوشی موبایل الدینیو مدل MG01'} off={33000} price={277000} />
+            <CartProductBox img={'/images/products/glass.png'} title={'محافظ صفحه نمایش حریم شخصی مات مدل m2m مناسب برای گوشی موبایل اپل iPhone 7Plus/ 8Plus'} price={27700} />
 
           </div>
 

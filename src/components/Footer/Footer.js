@@ -22,7 +22,7 @@ export default function Footer() {
                     <div className='flex items-center justify-between'>
                         <div>
                             <Link to={'/'} className='flex items-center gap-1 cursor-pointer'>
-                                <img src='./images/logo/logo-lg.png' className='w-8 md:w-12 h-8 md:h-12 lg:w-14 xl:h-12' />
+                                <img src='/images/logo/logo-lg.png' className='w-8 md:w-12 h-8 md:h-12 lg:w-14 xl:h-12' />
                                 <h5 className='text-shadow-topbar font-MorabbaBold text-xl md:text-2xl xl:text-3xl'>
                                     مـوبو
                                     لــــند
@@ -106,16 +106,16 @@ export default function Footer() {
                                 className='mySwiper overflow-visible'
                             >
                                 <SwiperSlide>
-                                    <img className='w-full h-25 xs:h-28 md:h-30 cursor-pointer' src='./images/licenses/enemad.png' />
+                                    <img className='w-full h-25 xs:h-28 md:h-30 cursor-pointer' src='/images/licenses/enemad.png' />
                                 </SwiperSlide>
                                 <SwiperSlide>
-                                    <img className='w-full h-25 xs:h-28 md:h-30 cursor-pointer' src='./images/licenses/rezi.jpg' />
+                                    <img className='w-full h-25 xs:h-28 md:h-30 cursor-pointer' src='/images/licenses/rezi.jpg' />
                                 </SwiperSlide>
                                 <SwiperSlide>
-                                    <img className='w-full h-25 xs:h-28 md:h-30 cursor-pointer' src='./images/licenses/white.png' />
+                                    <img className='w-full h-25 xs:h-28 md:h-30 cursor-pointer' src='/images/licenses/white.png' />
                                 </SwiperSlide>
                                 <SwiperSlide>
-                                    <img className='w-full h-25 xs:h-28 md:h-30 cursor-pointer' src='./images/licenses/zarin.png' />
+                                    <img className='w-full h-25 xs:h-28 md:h-30 cursor-pointer' src='/images/licenses/zarin.png' />
                                 </SwiperSlide>
 
                             </Swiper>

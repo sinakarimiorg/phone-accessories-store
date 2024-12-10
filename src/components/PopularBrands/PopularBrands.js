@@ -43,73 +43,73 @@ export default function PopularBrands() {
                         >
                             <SwiperSlide>
                                 <div className='brand-item'>
-                                    <img src='./images/brands/apple.jpg' />
+                                    <img src='/images/brands/apple.jpg' />
                                 </div>
                             </SwiperSlide>
 
                             <SwiperSlide>
                                 <div className='brand-item'>
-                                    <img src='./images/brands/samsung.jpg' />
+                                    <img src='/images/brands/samsung.jpg' />
                                 </div>
                             </SwiperSlide>
 
                             <SwiperSlide>
                                 <div className='brand-item'>
-                                    <img src='./images/brands/huawei.jpg' />
+                                    <img src='/images/brands/huawei.jpg' />
                                 </div>
                             </SwiperSlide>
 
                             <SwiperSlide>
                                 <div className='brand-item'>
-                                    <img src='./images/brands/asus.jpg' />
+                                    <img src='/images/brands/asus.jpg' />
                                 </div>
                             </SwiperSlide>
 
                             <SwiperSlide>
                                 <div className='brand-item'>
-                                    <img src='./images/brands/adata.jpg' />
+                                    <img src='/images/brands/adata.jpg' />
                                 </div>
                             </SwiperSlide>
 
                             <SwiperSlide>
                                 <div className='brand-item'>
-                                    <img src='./images/brands/anker.jpg' />
+                                    <img src='/images/brands/anker.jpg' />
                                 </div>
                             </SwiperSlide>
 
                             <SwiperSlide>
                                 <div className='brand-item'>
-                                    <img src='./images/brands/haylou.jpg' />
+                                    <img src='/images/brands/haylou.jpg' />
                                 </div>
                             </SwiperSlide>
                             <SwiperSlide>
                                 <div className='brand-item'>
-                                    <img src='./images/brands/jbl.jpg' />
+                                    <img src='/images/brands/jbl.jpg' />
                                 </div>
                             </SwiperSlide>
                             <SwiperSlide>
                                 <div className='brand-item'>
-                                    <img src='./images/brands/LG.jpg' />
+                                    <img src='/images/brands/LG.jpg' />
                                 </div>
                             </SwiperSlide>
                             <SwiperSlide>
                                 <div className='brand-item'>
-                                    <img src='./images/brands/philips.jpg' />
+                                    <img src='/images/brands/philips.jpg' />
                                 </div>
                             </SwiperSlide>
                             <SwiperSlide>
                                 <div className='brand-item'>
-                                    <img src='./images/brands/sony.jpg' />
+                                    <img src='/images/brands/sony.jpg' />
                                 </div>
                             </SwiperSlide>
                             <SwiperSlide>
                                 <div className='brand-item'>
-                                    <img src='./images/brands/tp-link.jpg' />
+                                    <img src='/images/brands/tp-link.jpg' />
                                 </div>
                             </SwiperSlide>
                             <SwiperSlide>
                                 <div className='brand-item'>
-                                    <img src='./images/brands/tsco.jpg' />
+                                    <img src='/images/brands/tsco.jpg' />
                                 </div>
                             </SwiperSlide>
                         </Swiper>

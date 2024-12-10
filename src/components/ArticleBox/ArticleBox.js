@@ -11,7 +11,7 @@ export default function ArticleBox({ img, title, date }) {
                     className="w-32 h-32 object-cover object-top sm:w-[338px] sm:h-[187px]" />
                 <div
                     className="absolute w-full h-full hidden sm:flex-center flex-col invisible opacity-0 group-hover:visible group-hover:opacity-100 inset-0 bg-gradient-to-r from-orange-200/80 to-orange-300/80 transition-all delay-75">
-                        <img src='./images/logo/logo-lg.png'/>
+                        <img src='/images/logo/logo-lg.png'/>
                         <p className='pt-3 font-sans font-extrabold text-lg text-purple-custom'>Mobo Mag</p>
                 </div>
             </div>
