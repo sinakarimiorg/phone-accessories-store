@@ -1,0 +1,28 @@
+.product__color-Item {
+    @apply w-8 h-8 border-2 border-gray-500 rounded-lg cursor-pointer
+}
+
+.product__album-img {
+    @apply w-20 h-20 border border-gray-300/50 rounded-lg cursor-pointer
+}
+
+.product__action-button {
+    @apply relative inline-block p-2 bg-white/85 dark:bg-zinc-600 dark:text-white shadow-md rounded-md
+}
+
+.tooltiptext {
+    @apply invisible opacity-0 absolute bottom-[150%] -left-[110%] w-30 py-1.5 px-3 bg-white dark:bg-zinc-500 dark:text-white text-center text-sm rounded-md z-10 shadow-2xl transition-all
+}
+
+.tooltiptext::after {
+    @apply absolute top-full left-1/2 -ml-[5px] transition-all dark:border-transparent;
+    content: "";
+    border-width: 5px;
+    border-style: solid;
+    border-color: white transparent transparent transparent;
+}
+
+.product__action-button:hover .tooltiptext {
+    visibility: visible;
+    opacity: 100%;
+}

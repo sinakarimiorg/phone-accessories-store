@@ -1,5 +1,5 @@
 .footer{
-@apply dark:text-white bg-gradient-to-b from-gray-500/5 to-gray-600 dark:to-gray-400
+@apply mt-32 dark:text-white bg-gradient-to-b from-gray-500/5 to-gray-600 dark:to-gray-400
 }
 
 .footer-col{

@@ -4,7 +4,7 @@ import ArticleBox from '../ArticleBox/ArticleBox'
 
 export default function LatestArticles() {
     return (
-        <div className='mb-40'>
+        <div>
             <div className='container'>
                 <SectionHeader title={'مطالب خواندنی'} desc={'موبولــند مــگ'} btnTitle={'همه مطالب'} />
                 {/* <!-- Blogs --> */}
