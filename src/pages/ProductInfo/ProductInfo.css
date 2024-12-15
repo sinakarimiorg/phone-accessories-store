@@ -26,3 +26,19 @@
     visibility: visible;
     opacity: 100%;
 }
+
+.cart__ex-price{
+    @apply relative inline-flex px-2 xs:font-medium text-sm xs:text-base text-gray-500 dark:text-gray-300 overflow-hidden
+}
+
+.cart__ex-price::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 2px;
+    margin: auto;
+    width: 100%;
+    height: 2px;
+    background-color:  rgb(107 114 128 / 0.3);
+    @apply left-0.5 dark:bg-gray-300/30
+}
