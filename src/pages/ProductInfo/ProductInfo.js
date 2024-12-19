@@ -18,6 +18,7 @@ import { PiWarningOctagonThin } from "react-icons/pi";
 import { PiPhoneCallLight } from "react-icons/pi";
 
 import './ProductInfo.css'
+import ProductFeatureBoxLarge from '../../components/ProductFeatureBoxLarge/ProductFeatureBoxLarge';
 
 export default function ProductInfo() {
   return (
@@ -41,8 +42,8 @@ export default function ProductInfo() {
       {/* Contents For Desctop Size */}
       <div>
         <div className='container'>
+          {/* First & Main Row (Pics, purchase cart, features) */}
           <div className='flex gap-12'>
-
             {/* Right Section &  Product Features */}
             <div className='flex justify-between py-8 px-7 border border-gray-300 rounded-xl'>
 
@@ -115,7 +116,6 @@ export default function ProductInfo() {
               </div>
             </div>
 
-
             {/* Left Section &  Product Price */}
             <div className='w-[350px]'>
               {/* Top section of Cart */}
@@ -173,7 +173,7 @@ export default function ProductInfo() {
                     <div className='flex items-center justify-end gap-4 pt-2 pl-2'>
                       <span className='cart__ex-price'>2,200,000</span>
                       <div className='inline-flex gap-1'>
-                        <span className='font-DanaDemiBold text-xl'>1,500,000</span>
+                        <span className='font-DanaDemiBold text-xl dark:text-white'>1,500,000</span>
                         <span><svg className='w-4 h-4 dark:text-white'><use href="#toman"></use></svg></span>
                       </div>
                     </div>
@@ -185,19 +185,89 @@ export default function ProductInfo() {
               </div>
 
               {/* bottom section of Cart */}
-              <div className='h-fit w-full mt-7 p-3 border border-gray-400 rounded-xl'>
+              <div className='h-fit w-full mt-3 p-3 border border-gray-400 rounded-xl'>
                 <div className='flex items-center gap-1.5 pb-2 border-b border-dotted border-gray-300 cursor-pointer'>
-                  <PiWarningOctagonThin className='w-5 h-5 text-amber-500'/>
-                  <span className='text-sm text-zinc-500'>گزارش نادرستی مشخصات</span>
+                  <PiWarningOctagonThin className='w-5 h-5 text-amber-500' />
+                  <span className='text-sm text-zinc-500 dark:text-white/80'>گزارش نادرستی مشخصات</span>
                 </div>
 
                 <div className='flex items-center gap-4 pt-3 cursor-pointer'>
-                <span className='inline-block p-1 text-zinc-600 border border-zinc-600 rounded-full'><PiPhoneCallLight className='w-6 h-6'/></span>
-                <div>
-                  <p className='text-sm text-zinc-500 tracking-tight'>ارتباط با فروش</p>
-                  <p className='font-DanaMedium text-sm'>تماس با کـارشناسان</p>
+                  <span className='inline-block p-1 text-zinc-600 border border-zinc-600 rounded-full'><PiPhoneCallLight className='w-6 h-6' /></span>
+                  <div>
+                    <p className='text-sm text-zinc-500 tracking-tight dark:text-white/80'>ارتباط با فروش</p>
+                    <p className='font-DanaMedium text-sm dark:text-white'>تماس با کـارشناسان</p>
+                  </div>
                 </div>
-                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Second Row (All features, description, comments) */}
+          <div className='mt-20'>
+            {/* Header Of This Row */}
+            <div>
+              <ul className='flex gap-8 px-4 border-b-2 border-gray-400 rounded-t-md bg-slate-300/90'>
+                <li className='productInfo__menu-title'>
+                  <span>معرفی</span>
+                  <div className='productInfo__underline-border'></div>
+                </li>
+                <li className='productInfo__menu-title'>
+                  <span>مشخصات</span>
+                  <div className='productInfo__underline-border opacity-0'></div>
+                </li>
+                <li className='productInfo__menu-title'>
+                  <span>نظرات کاربران</span>
+                  <div className='productInfo__underline-border opacity-0'></div>
+                </li>
+              </ul>
+            </div>
+
+            {/* Description */}
+            <div className='hidden px-2.5 py-7'>
+              <p className='text-zinc-500 dark:text-white leading-9 line-clamp-3'>
+                محصول جدید از کمپانی کربی ( CRBE ) با نام ( CR-T101 ) معرفی شد . این محصول از سری هدفون های بی سیم کمپانی کربی ( CRBE ) است که با توجه به امکانات و طراحی مینیمال خود
+                مورد توجه قرار گرفت . هدفون بی سیم کربی مدل (CR-T101 ) در کنار کیفیت ساخت فوق‌العاده
+                بالای خود، به بلوتوث نسخه 5.3 مجهز شده است تا شاهد سرعت بسیار بالای آن در زمینه‌ی برقراری اتصال آن از طریق بلوتوث باشیم .
+                فناوری کنترل لمسی برای پاسخگویی به تماس و همچنین پخش و توقف موسیقی بر روی گوشی های این هدفون قرار گرفته است . از این
+                هدفون بی سیم برای استفاده از دستیار صوتی نیز میتوان استفاده کرد . باتری به کار رفته در این هدفون بی سیم کربی از نوع لیتیوم پلیمری ست و هر کدام از گوشی ها 30 میلی
+                آمپر ظرفیت دارد . ظرفیت باتری محفظه شارژ این هدفون نیز 200 میلی آمپر است . بازدهی باتری هدفون بی سیم کربی مدل ( CR-T101) هر گوش با
+                توجه به میزان بلندی صدا 2 الی 4ساعت و در حالت استندبای
+                میتواند تا 80ساعت بازدهی موثر داشته باشد . برای شارژ
+                کامل این هدفون یک ساعت و برای شارژ محفظه شارژ
+                نیز 2 ساعت زمان کافیست . نکته قابل توجه این است
+                برای شارژ این محصول باید از کابل مخصوص داخل پک و
+                هد شارژ استاندارد استفاده شود .یکی از قابلیت های
+                بسیار جذاب این کالا امکان کنترل صدا از
+                روی گوشی های دستگاه میباشد . محفظه شارژ
+                این دستگاه حداقل گوشی های آن را شارژ میکند.
+
+              </p>
+              <div className='inline-flex items-center text-sky-500 cursor-pointer'>
+                <span>بیشتر</span>
+                <span className='hidden'>بستن</span>
+                <HiMiniChevronLeft className='w-5 h-5' />
+              </div>
+            </div>
+
+            {/* All Features */}
+            <div>
+              <div className='h-[35rem] overflow-hidden'>
+                <ProductFeatureBoxLarge name={'اقلام همراه هدفون'} status={'کابل شارژ تایپ سی'} />
+                <ProductFeatureBoxLarge name={'منبع تغذیه هدفون'} status={'باطری'} />
+                <ProductFeatureBoxLarge name={'قابلیت‌های هدفون، هدست و هندزفری'} status={'نشانگر LED'} />
+                <ProductFeatureBoxLarge name={'محدوده عملکرد'} status={'۱۰ متر'} />
+                <ProductFeatureBoxLarge name={'نوع گوشی'} status={'دو گوشی'} />
+                <ProductFeatureBoxLarge name={'عمر باتری هدفون در حالت مکالمه'} status={'۲-۴ ساعت'} />
+                <ProductFeatureBoxLarge name={'عمر باتری هدفون در حالت استندبای'} status={'۸۰'} />
+                <ProductFeatureBoxLarge name={'عمر باتری هدفون در حالت پخش موسیقی'} status={'2-3 ساعت'} />
+                <ProductFeatureBoxLarge name={'وزن'} status={'30 گرم'} />
+                <ProductFeatureBoxLarge name={'نسخه بلوتوث'} status={'۵.۳'} />
+                <ProductFeatureBoxLarge name={'جنس بدنه'} status={'پلاستیک'} />
+              </div>
+              <div className='inline-flex items-center mt-8 text-sky-500 cursor-pointer'>
+                <span>مشاهده بیشتر</span>
+                <span className='hidden'>بستن</span>
+                <HiMiniChevronLeft className='w-5 h-5' />
               </div>
             </div>
           </div>
