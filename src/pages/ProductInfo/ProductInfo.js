@@ -42,12 +42,12 @@ export default function ProductInfo() {
       {/* Contents For Desctop Size */}
       <div>
         <div className='container'>
-          {/* First & Main Row (Pics, purchase cart, features) */}
+          {/* First & Main Section (Pics, purchase cart, features) */}
           <div className='flex gap-12'>
             {/* Right Section &  Product Features */}
             <div className='flex justify-between py-8 px-7 border border-gray-300 rounded-xl'>
 
-              {/* Features Col  */}
+              {/* Rate & Color & Features Col */}
               <div>
                 <h1 className='font-MorabbaBold text-xl text-zinc-800 dark:text-white tracking-wide leading-8'>
                   هندزفری بلوتوثی کربی مدل - CR-T107
@@ -119,7 +119,7 @@ export default function ProductInfo() {
             {/* Left Section &  Product Price */}
             <div className='w-[350px]'>
               {/* Top section of Cart */}
-              <div className='h-fit w-full border border-gray-400 rounded-xl'>
+              <div className='h-fit w-full bg-white shadow-xl rounded-xl'>
                 {/* Off timer */}
                 <div className='flex items-center justify-between py-4 px-3 w-full text-white bg-custom-navy/85 rounded-t-lg'>
                   <span className='font-MorabbaMedium'>تخفـیف شگفـت انـگـیز</span>
@@ -185,7 +185,7 @@ export default function ProductInfo() {
               </div>
 
               {/* bottom section of Cart */}
-              <div className='h-fit w-full mt-3 p-3 border border-gray-400 rounded-xl'>
+              <div className='h-fit w-full mt-5 p-3 bg-white shadow-xl rounded-xl'>
                 <div className='flex items-center gap-1.5 pb-2 border-b border-dotted border-gray-300 cursor-pointer'>
                   <PiWarningOctagonThin className='w-5 h-5 text-amber-500' />
                   <span className='text-sm text-zinc-500 dark:text-white/80'>گزارش نادرستی مشخصات</span>
@@ -202,74 +202,144 @@ export default function ProductInfo() {
             </div>
           </div>
 
-          {/* Second Row (All features, description, comments) */}
+          {/* Bottom Section (All features, description, comments) */}
           <div className='mt-20'>
-            {/* Header Of This Row */}
+            {/* Header Of This Section */}
             <div>
               <ul className='flex gap-8 px-4 border-b-2 border-gray-400 rounded-t-md bg-slate-300/90'>
                 <li className='productInfo__menu-title'>
-                  <span>معرفی</span>
+                  <a href='#product__description-section'>معرفی</a>
                   <div className='productInfo__underline-border'></div>
                 </li>
                 <li className='productInfo__menu-title'>
-                  <span>مشخصات</span>
+                  <a href='#product__features-section'>مشخصات</a>
                   <div className='productInfo__underline-border opacity-0'></div>
                 </li>
                 <li className='productInfo__menu-title'>
-                  <span>نظرات کاربران</span>
+                  <a href='#product__comments-section'>نظرات کاربران</a>
                   <div className='productInfo__underline-border opacity-0'></div>
                 </li>
               </ul>
             </div>
+            {/* Body & Contents of Section */}
+            <div className=' flex gap-10 pt-8'>
+              {/* Right col & Contents */}
+              <div className='w-9/12'>
+                {/* Description */}
+                <div id='product__description-section' className='px-2.5 mb-7'>
+                  <h1 className='product-info__title'>معرفی</h1>
+                  <p className='text-zinc-500 dark:text-white leading-9 line-clamp-3'>
+                    محصول جدید از کمپانی کربی ( CRBE ) با نام ( CR-T101 ) معرفی شد . این محصول از سری هدفون های بی سیم کمپانی کربی ( CRBE ) است که با توجه به امکانات و طراحی مینیمال خود
+                    مورد توجه قرار گرفت . هدفون بی سیم کربی مدل (CR-T101 ) در کنار کیفیت ساخت فوق‌العاده
+                    بالای خود، به بلوتوث نسخه 5.3 مجهز شده است تا شاهد سرعت بسیار بالای آن در زمینه‌ی برقراری اتصال آن از طریق بلوتوث باشیم .
+                    فناوری کنترل لمسی برای پاسخگویی به تماس و همچنین پخش و توقف موسیقی بر روی گوشی های این هدفون قرار گرفته است . از این
+                    هدفون بی سیم برای استفاده از دستیار صوتی نیز میتوان استفاده کرد . باتری به کار رفته در این هدفون بی سیم کربی از نوع لیتیوم پلیمری ست و هر کدام از گوشی ها 30 میلی
+                    آمپر ظرفیت دارد . ظرفیت باتری محفظه شارژ این هدفون نیز 200 میلی آمپر است . بازدهی باتری هدفون بی سیم کربی مدل ( CR-T101) هر گوش با
+                    توجه به میزان بلندی صدا 2 الی 4ساعت و در حالت استندبای
+                    میتواند تا 80ساعت بازدهی موثر داشته باشد . برای شارژ
+                    کامل این هدفون یک ساعت و برای شارژ محفظه شارژ
+                    نیز 2 ساعت زمان کافیست . نکته قابل توجه این است
+                    برای شارژ این محصول باید از کابل مخصوص داخل پک و
+                    هد شارژ استاندارد استفاده شود .یکی از قابلیت های
+                    بسیار جذاب این کالا امکان کنترل صدا از
+                    روی گوشی های دستگاه میباشد . محفظه شارژ
+                    این دستگاه حداقل گوشی های آن را شارژ میکند.
 
-            {/* Description */}
-            <div className='hidden px-2.5 py-7'>
-              <p className='text-zinc-500 dark:text-white leading-9 line-clamp-3'>
-                محصول جدید از کمپانی کربی ( CRBE ) با نام ( CR-T101 ) معرفی شد . این محصول از سری هدفون های بی سیم کمپانی کربی ( CRBE ) است که با توجه به امکانات و طراحی مینیمال خود
-                مورد توجه قرار گرفت . هدفون بی سیم کربی مدل (CR-T101 ) در کنار کیفیت ساخت فوق‌العاده
-                بالای خود، به بلوتوث نسخه 5.3 مجهز شده است تا شاهد سرعت بسیار بالای آن در زمینه‌ی برقراری اتصال آن از طریق بلوتوث باشیم .
-                فناوری کنترل لمسی برای پاسخگویی به تماس و همچنین پخش و توقف موسیقی بر روی گوشی های این هدفون قرار گرفته است . از این
-                هدفون بی سیم برای استفاده از دستیار صوتی نیز میتوان استفاده کرد . باتری به کار رفته در این هدفون بی سیم کربی از نوع لیتیوم پلیمری ست و هر کدام از گوشی ها 30 میلی
-                آمپر ظرفیت دارد . ظرفیت باتری محفظه شارژ این هدفون نیز 200 میلی آمپر است . بازدهی باتری هدفون بی سیم کربی مدل ( CR-T101) هر گوش با
-                توجه به میزان بلندی صدا 2 الی 4ساعت و در حالت استندبای
-                میتواند تا 80ساعت بازدهی موثر داشته باشد . برای شارژ
-                کامل این هدفون یک ساعت و برای شارژ محفظه شارژ
-                نیز 2 ساعت زمان کافیست . نکته قابل توجه این است
-                برای شارژ این محصول باید از کابل مخصوص داخل پک و
-                هد شارژ استاندارد استفاده شود .یکی از قابلیت های
-                بسیار جذاب این کالا امکان کنترل صدا از
-                روی گوشی های دستگاه میباشد . محفظه شارژ
-                این دستگاه حداقل گوشی های آن را شارژ میکند.
+                  </p>
+                  <div className='inline-flex items-center text-sky-500 cursor-pointer'>
+                    <span>بیشتر</span>
+                    <span className='hidden'>بستن</span>
+                    <HiMiniChevronLeft className='w-5 h-5' />
+                  </div>
+                </div>
 
-              </p>
-              <div className='inline-flex items-center text-sky-500 cursor-pointer'>
-                <span>بیشتر</span>
-                <span className='hidden'>بستن</span>
-                <HiMiniChevronLeft className='w-5 h-5' />
+                {/* All Features */}
+                <div id='product__features-section'>
+                  <h1 className='product-info__title'>مشـخصات فـنی</h1>
+                  <div className='h-[35rem] overflow-hidden'>
+                    <ProductFeatureBoxLarge name={'اقلام همراه هدفون'} status={'کابل شارژ تایپ سی'} />
+                    <ProductFeatureBoxLarge name={'منبع تغذیه هدفون'} status={'باطری'} />
+                    <ProductFeatureBoxLarge name={'قابلیت‌های هدفون، هدست و هندزفری'} status={'نشانگر LED'} />
+                    <ProductFeatureBoxLarge name={'محدوده عملکرد'} status={'۱۰ متر'} />
+                    <ProductFeatureBoxLarge name={'نوع گوشی'} status={'دو گوشی'} />
+                    <ProductFeatureBoxLarge name={'عمر باتری هدفون در حالت مکالمه'} status={'۲-۴ ساعت'} />
+                    <ProductFeatureBoxLarge name={'عمر باتری هدفون در حالت استندبای'} status={'۸۰'} />
+                    <ProductFeatureBoxLarge name={'عمر باتری هدفون در حالت پخش موسیقی'} status={'2-3 ساعت'} />
+                    <ProductFeatureBoxLarge name={'وزن'} status={'30 گرم'} />
+                    <ProductFeatureBoxLarge name={'نسخه بلوتوث'} status={'۵.۳'} />
+                    <ProductFeatureBoxLarge name={'جنس بدنه'} status={'پلاستیک'} />
+                  </div>
+                  <div className='inline-flex items-center mt-8 text-sky-500 cursor-pointer'>
+                    <span>مشاهده بیشتر</span>
+                    <span className='hidden'>بستن</span>
+                    <HiMiniChevronLeft className='w-5 h-5' />
+                  </div>
+                </div>
+
+                {/* Comments */}
+                <div id='product__Comments-section'>
+                  <h1 className='product-info__title'>نظرات کاربران</h1>
+                </div>
+              </div>
+
+              {/* Left col & Product Purchase Cart */}
+              <div className='sticky top-44 h-fit w-3/12 bg-white shadow-xl rounded-xl'>
+                {/* Off timer */}
+                <div className='flex items-center justify-between py-4 px-3 w-full text-white bg-custom-navy/85 rounded-t-lg'>
+                  <span className='font-MorabbaMedium'>تخفـیف شگفـت انـگـیز</span>
+                  <div className='flex h-full gap-2'>
+                    <div className='flex-center gap-1'>
+                      <span>48</span>:
+                      <span>21</span>:
+                      <span>04</span>
+                    </div>
+                    <PiTimerLight className='w-5 h-5' />
+                  </div>
+                </div>
+
+                {/* Product's Title & Color & Image */}
+                <div className='flex-center gap-9 px-7 pt-5 pb-3'>
+                  <img className='w-14 h-14 scale-150' src='/images/products/airpods.png' />
+                  <div>
+                    <h3 className='font-DanaMedium text-wrap'>هندزفری بلوتوثی کربی مدل - CR-T107</h3>
+                    <div className='flex items-center gap-1.5 pt-2'>
+                      <div className='w-4 h-4 bg-black border-2 border-gray-500 rounded-sm'></div>
+                      <span className='font-DanaMedium text-zinc-600 text-sm'>مشکی</span>
+                    </div>
+                  </div>
+                </div>
+                {/* Cart Body */}
+                <div className='pb-6 px-5'>
+                  {/* Purchase Details */}
+                  <div className='py-3 border-y border-dotted border-gray-300'>
+                    <div className='flex gap-1.5 mb-2.5 py-1 px-3'>
+                      <CiBoxes className='w-5 h-5' />
+                      <span className='text-sm font-DanaMedium text-zinc-500 tracking-tight'>موجود در انبار موبولند (ارسال فوری)</span>
+                    </div>
+                    <div className='flex gap-1.5 py-1 px-3'>
+                      <BsPatchCheck className='w-4 h-4' />
+                      <span className='text-sm font-DanaMedium text-zinc-500'>۷ روز تضمین بازگشت کالا</span>
+                    </div>
+                  </div>
+
+                  {/* Produc Price */}
+                  <div className='my-5 px-4 text-left'>
+                    <div className='inline-flex justify-center items-end h-5 w-11 text-center text-[10px] text-white bg-purple-500 rounded-xl'><span className='text-xs'>33</span>%</div>
+                    <div className='flex items-center justify-end gap-4 pt-2 pl-2'>
+                      <span className='cart__ex-price'>2,200,000</span>
+                      <div className='inline-flex gap-1'>
+                        <span className='font-DanaDemiBold text-xl dark:text-white'>1,500,000</span>
+                        <span><svg className='w-4 h-4 dark:text-white'><use href="#toman"></use></svg></span>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Cart Actions  */}
+                  <div className='w-full h-12 font-DanaMedium text-center text-white text-lg leading-[48px] bg-custom-navy rounded-lg cursor-pointer'>افزودن به سبد خرید</div>
+                </div>
               </div>
             </div>
 
-            {/* All Features */}
-            <div>
-              <div className='h-[35rem] overflow-hidden'>
-                <ProductFeatureBoxLarge name={'اقلام همراه هدفون'} status={'کابل شارژ تایپ سی'} />
-                <ProductFeatureBoxLarge name={'منبع تغذیه هدفون'} status={'باطری'} />
-                <ProductFeatureBoxLarge name={'قابلیت‌های هدفون، هدست و هندزفری'} status={'نشانگر LED'} />
-                <ProductFeatureBoxLarge name={'محدوده عملکرد'} status={'۱۰ متر'} />
-                <ProductFeatureBoxLarge name={'نوع گوشی'} status={'دو گوشی'} />
-                <ProductFeatureBoxLarge name={'عمر باتری هدفون در حالت مکالمه'} status={'۲-۴ ساعت'} />
-                <ProductFeatureBoxLarge name={'عمر باتری هدفون در حالت استندبای'} status={'۸۰'} />
-                <ProductFeatureBoxLarge name={'عمر باتری هدفون در حالت پخش موسیقی'} status={'2-3 ساعت'} />
-                <ProductFeatureBoxLarge name={'وزن'} status={'30 گرم'} />
-                <ProductFeatureBoxLarge name={'نسخه بلوتوث'} status={'۵.۳'} />
-                <ProductFeatureBoxLarge name={'جنس بدنه'} status={'پلاستیک'} />
-              </div>
-              <div className='inline-flex items-center mt-8 text-sky-500 cursor-pointer'>
-                <span>مشاهده بیشتر</span>
-                <span className='hidden'>بستن</span>
-                <HiMiniChevronLeft className='w-5 h-5' />
-              </div>
-            </div>
           </div>
         </div>
       </div>

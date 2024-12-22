@@ -57,3 +57,7 @@
     border-radius: 40px 40px 0px 0;
     transform: translate(-50%);
 }
+
+.product-info__title{
+    @apply inline-block font-DanaMedium text-xl mb-5 py-2 border-b-2 border-slate-500
+}
