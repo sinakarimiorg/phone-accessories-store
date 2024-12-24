@@ -1,0 +1,6 @@
+.comment-section__star{
+    @apply w-6 h-6 text-amber-500
+}
+.user-comment__star{
+    @apply w-5 h-5 text-amber-500
+}

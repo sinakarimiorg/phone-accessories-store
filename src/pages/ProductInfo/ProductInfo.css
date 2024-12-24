@@ -44,7 +44,7 @@
 }
 
 .productInfo__menu-title{
-    @apply relative py-5 px-2
+    @apply relative py-4 px-2
 }
 
 .productInfo__underline-border{
@@ -60,4 +60,8 @@
 
 .product-info__title{
     @apply inline-block font-DanaMedium text-xl mb-5 py-2 border-b-2 border-slate-500
+}
+
+.divider-border{
+    @apply mt-16 mb-8 w-full h-1 border-y border-slate-400
 }

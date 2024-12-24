@@ -1,4 +1,5 @@
 import React from 'react'
+import { useEffect, useState } from 'react'
 import Header from '../../components/Header/Header'
 import Footer from '../../components/Footer/Footer'
 import BreadCrumb from '../../components/BreadCrumb/BreadCrumb'
@@ -16,11 +17,34 @@ import { PiStorefront } from "react-icons/pi";
 import { CiBoxes } from "react-icons/ci";
 import { PiWarningOctagonThin } from "react-icons/pi";
 import { PiPhoneCallLight } from "react-icons/pi";
+import ProductFeatureBoxLarge from '../../components/ProductFeatureBoxLarge/ProductFeatureBoxLarge';
+import CommentsSection from '../../components/CommentsSection/CommentsSection'
 
 import './ProductInfo.css'
-import ProductFeatureBoxLarge from '../../components/ProductFeatureBoxLarge/ProductFeatureBoxLarge';
 
 export default function ProductInfo() {
+
+  ////////// Handle NavBar visiblity
+    const [prevScrollPos, setPrevScrollPos] = useState(0);
+    const [visible, setVisible] = useState(true)
+  
+    const handleScroll = () => {
+      const currentScrollPos = window.scrollY
+  
+      if (currentScrollPos > prevScrollPos) {
+        setVisible(false)
+      } else {
+        setVisible(true)
+      }
+  
+      setPrevScrollPos(currentScrollPos)
+    }
+  
+    useEffect(() => {
+      window.addEventListener('scroll', handleScroll);
+  
+      return () => window.removeEventListener('scroll', handleScroll)
+    })
   return (
 
     <div>
@@ -205,8 +229,8 @@ export default function ProductInfo() {
           {/* Bottom Section (All features, description, comments) */}
           <div className='mt-20'>
             {/* Header Of This Section */}
-            <div>
-              <ul className='flex gap-8 px-4 border-b-2 border-gray-400 rounded-t-md bg-slate-300/90'>
+            <div className={`sticky ${visible ? 'top-[10.25rem]' : 'top-24'} z-10`}>
+              <ul className='flex gap-8 px-4 border-b-2 border-gray-400 rounded-t-md bg-slate-300'>
                 <li className='productInfo__menu-title'>
                   <a href='#product__description-section'>معرفی</a>
                   <div className='productInfo__underline-border'></div>
@@ -222,7 +246,7 @@ export default function ProductInfo() {
               </ul>
             </div>
             {/* Body & Contents of Section */}
-            <div className=' flex gap-10 pt-8'>
+            <div className=' flex gap-16 pt-8'>
               {/* Right col & Contents */}
               <div className='w-9/12'>
                 {/* Description */}
@@ -253,6 +277,8 @@ export default function ProductInfo() {
                   </div>
                 </div>
 
+                <div className='divider-border'></div>
+
                 {/* All Features */}
                 <div id='product__features-section'>
                   <h1 className='product-info__title'>مشـخصات فـنی</h1>
@@ -276,14 +302,16 @@ export default function ProductInfo() {
                   </div>
                 </div>
 
+                <div className='divider-border'></div>
+
                 {/* Comments */}
                 <div id='product__Comments-section'>
-                  <h1 className='product-info__title'>نظرات کاربران</h1>
+                  <CommentsSection/>
                 </div>
               </div>
 
               {/* Left col & Product Purchase Cart */}
-              <div className='sticky top-44 h-fit w-3/12 bg-white shadow-xl rounded-xl'>
+              <div className={`sticky ${visible ? 'top-60' : 'top-44'} h-fit w-3/12 bg-white shadow-xl rounded-xl`}>
                 {/* Off timer */}
                 <div className='flex items-center justify-between py-4 px-3 w-full text-white bg-custom-navy/85 rounded-t-lg'>
                   <span className='font-MorabbaMedium'>تخفـیف شگفـت انـگـیز</span>
