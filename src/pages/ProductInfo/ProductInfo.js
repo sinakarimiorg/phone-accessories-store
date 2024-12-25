@@ -25,26 +25,26 @@ import './ProductInfo.css'
 export default function ProductInfo() {
 
   ////////// Handle NavBar visiblity
-    const [prevScrollPos, setPrevScrollPos] = useState(0);
-    const [visible, setVisible] = useState(true)
-  
-    const handleScroll = () => {
-      const currentScrollPos = window.scrollY
-  
-      if (currentScrollPos > prevScrollPos) {
-        setVisible(false)
-      } else {
-        setVisible(true)
-      }
-  
-      setPrevScrollPos(currentScrollPos)
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
+  const [visible, setVisible] = useState(true)
+
+  const handleScroll = () => {
+    const currentScrollPos = window.scrollY
+
+    if (currentScrollPos > prevScrollPos) {
+      setVisible(false)
+    } else {
+      setVisible(true)
     }
-  
-    useEffect(() => {
-      window.addEventListener('scroll', handleScroll);
-  
-      return () => window.removeEventListener('scroll', handleScroll)
-    })
+
+    setPrevScrollPos(currentScrollPos)
+  }
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+
+    return () => window.removeEventListener('scroll', handleScroll)
+  })
   return (
 
     <div>
@@ -64,16 +64,28 @@ export default function ProductInfo() {
         ]} />
 
       {/* Contents For Desctop Size */}
-      <div>
+      <div className='hidden md:block'>
         <div className='container'>
+          {/* Off timer */}
+          <div className='xl:hidden flex items-center justify-between py-4 px-3 w-full text-white bg-custom-navy/85 rounded-t-lg'>
+            <span className='font-MorabbaMedium'>تخفـیف شگفـت انـگـیز</span>
+            <div className='flex h-full gap-2'>
+              <div className='flex-center gap-1'>
+                <span>48</span>:
+                <span>21</span>:
+                <span>04</span>
+              </div>
+              <PiTimerLight className='w-5 h-5' />
+            </div>
+          </div>
           {/* First & Main Section (Pics, purchase cart, features) */}
-          <div className='flex gap-12'>
+          <div className='flex flex-col xl:flex-row gap-x-12 gap-y-5'>
             {/* Right Section &  Product Features */}
-            <div className='flex justify-between py-8 px-7 border border-gray-300 rounded-xl'>
+            <div className='flex gap-x-5 py-8 px-5 lg:px-7 border border-gray-300 rounded-b-xl xl:rounded-xl'>
 
               {/* Rate & Color & Features Col */}
               <div>
-                <h1 className='font-MorabbaBold text-xl text-zinc-800 dark:text-white tracking-wide leading-8'>
+                <h1 className='font-MorabbaBold lg:text-xl text-zinc-800 dark:text-white tracking-wide leading-8'>
                   هندزفری بلوتوثی کربی مدل - CR-T107
                 </h1>
 
@@ -99,10 +111,11 @@ export default function ProductInfo() {
                     <div className='product__color-Item bg-sky-700'></div>
                   </div>
                 </div>
+
                 {/* Product's Features */}
                 <div className='mt-6'>
                   <h3 className='font-DanaDemiBold text-zinc-800 pb-6 dark:text-white'>ویژگی‌ها</h3>
-                  <div className='grid grid-cols-3 gap-x-5 gap-y-6'>
+                  <div className='grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-2 2xl:grid-cols-3 gap-x-5 gap-y-6 h-52 lg:h-auto overflow-hidden'>
                     <ProductFeatureBox name={'قابلیت نویز کنسلینگ'} status={'نویز کنسلینگ میکروفون'} />
                     <ProductFeatureBox name={'نوع گوشی'} status={'دو گوشی'} />
                     <ProductFeatureBox name={'درگاه‌های ارتباطی'} status={'بلوتوث'} />
@@ -110,7 +123,7 @@ export default function ProductInfo() {
                     <ProductFeatureBox name={'رابط‌ها'} status={'Bluetooth'} />
                     <ProductFeatureBox name={'قابلیت‌های مقاومتی'} status={'مقاومت در برابر رطوبت و عرق'} />
                   </div>
-                  <p className='pt-7 text-center text-white'>
+                  <p className='pt-2 lg:pt-7 text-center text-white'>
                     <a href='#' className='inline-flex py-2 px-4 text-sm bg-slate-500 hover:bg-slate-600/70 rounded-lg'>
                       مشاهده همه ویژگی‌ها
                       <HiMiniChevronLeft className='h-4 w-4' />
@@ -122,7 +135,7 @@ export default function ProductInfo() {
               {/* Actions & Product's Photos Col */}
               <div>
                 {/* Action Buttons */}
-                <div className='flex-center gap-5'>
+                <div className='flex-center gap-x-3 lg:gap-x-5'>
                   <button className='product__action-button'><GoShareAndroid className='w-5 h-5' /><span className='tooltiptext'>اشتراک گذاری کالا</span></button>
                   <button className='product__action-button'><LiaComments className='w-5 h-5' /><span className='tooltiptext'>نظرات کاربران</span></button>
                   <button className='product__action-button'><PiBellRingingLight className='w-5 h-5' /><span className='tooltiptext'>اطلاع‌رسانی موبولند</span></button>
@@ -130,7 +143,7 @@ export default function ProductInfo() {
                 </div>
                 {/* Product Images  */}
                 <div>
-                  <img className='h-96' src='/images/products/airpods.png' />
+                  <img className='h-72 lg:h-80 2xl:h-96 scale-125 lg:scale-0' src='/images/products/airpods.png' />
                   <div className='flex-center gap-3'>
                     <img className='product__album-img' src='/images/products/airpod2.png' />
                     <img className='product__album-img' src='/images/products/airpods.png' />
@@ -138,14 +151,15 @@ export default function ProductInfo() {
                   </div>
                 </div>
               </div>
+
             </div>
 
             {/* Left Section &  Product Price */}
-            <div className='w-[350px]'>
+            <div className='flex flex-row xl:flex-col items-center gap-x-10 w-full xl:w-[350px] mx-auto'>
               {/* Top section of Cart */}
-              <div className='h-fit w-full bg-white shadow-xl rounded-xl'>
+              <div className='h-fit w-4/6 xl:w-full bg-white shadow-xl rounded-xl'>
                 {/* Off timer */}
-                <div className='flex items-center justify-between py-4 px-3 w-full text-white bg-custom-navy/85 rounded-t-lg'>
+                <div className='hidden xl:flex items-center justify-between py-4 px-3 w-full text-white bg-custom-navy/85 rounded-t-lg'>
                   <span className='font-MorabbaMedium'>تخفـیف شگفـت انـگـیز</span>
                   <div className='flex h-full gap-2'>
                     <div className='flex-center gap-1'>
@@ -157,9 +171,9 @@ export default function ProductInfo() {
                   </div>
                 </div>
                 {/* Cart Body */}
-                <div className='py-6 px-5'>
+                <div className='py-4 xl:py-6 px-5'>
                   {/* Purchase Details */}
-                  <div>
+                  <div className='hidden xl:block'>
 
                     <div className='flex gap-1.5 mb-2.5 py-4 px-3 bg-slate-300/90 rounded-md'>
                       <div>
@@ -192,9 +206,9 @@ export default function ProductInfo() {
                   </div>
 
                   {/* Produc Price */}
-                  <div className='my-5 px-4 text-left'>
+                  <div className='mb-0.5 xl:my-5 px-4 xl:text-left'>
                     <div className='inline-flex justify-center items-end h-5 w-11 text-center text-[10px] text-white bg-purple-500 rounded-xl'><span className='text-xs'>33</span>%</div>
-                    <div className='flex items-center justify-end gap-4 pt-2 pl-2'>
+                    <div className='flex items-center justify-center xl:justify-end gap-4 pt-2 pl-2'>
                       <span className='cart__ex-price'>2,200,000</span>
                       <div className='inline-flex gap-1'>
                         <span className='font-DanaDemiBold text-xl dark:text-white'>1,500,000</span>
@@ -204,12 +218,12 @@ export default function ProductInfo() {
                   </div>
 
                   {/* Cart Actions  */}
-                  <div className='w-full h-12 font-DanaMedium text-center text-white text-lg leading-[48px] bg-custom-navy rounded-lg cursor-pointer'>افزودن به سبد خرید</div>
+                  <div className='w-full h-10 xl:h-12 font-DanaMedium text-center text-white xl:text-lg leading-10 xl:leading-[48px] bg-custom-navy rounded-lg cursor-pointer'>افزودن به سبد خرید</div>
                 </div>
               </div>
 
               {/* bottom section of Cart */}
-              <div className='h-fit w-full mt-5 p-3 bg-white shadow-xl rounded-xl'>
+              <div className='h-fit w-2/6 xl:w-full xl:mt-5 p-3 bg-white shadow-xl rounded-xl'>
                 <div className='flex items-center gap-1.5 pb-2 border-b border-dotted border-gray-300 cursor-pointer'>
                   <PiWarningOctagonThin className='w-5 h-5 text-amber-500' />
                   <span className='text-sm text-zinc-500 dark:text-white/80'>گزارش نادرستی مشخصات</span>
@@ -227,7 +241,7 @@ export default function ProductInfo() {
           </div>
 
           {/* Bottom Section (All features, description, comments) */}
-          <div className='mt-20'>
+          <div className='mt-14 lg:mt-20'>
             {/* Header Of This Section */}
             <div className={`sticky ${visible ? 'top-[10.25rem]' : 'top-24'} z-10`}>
               <ul className='flex gap-8 px-4 border-b-2 border-gray-400 rounded-t-md bg-slate-300'>
@@ -246,13 +260,13 @@ export default function ProductInfo() {
               </ul>
             </div>
             {/* Body & Contents of Section */}
-            <div className=' flex gap-16 pt-8'>
+            <div className=' flex gap-x-8 xl:gap-x-16 pt-8'>
               {/* Right col & Contents */}
-              <div className='w-9/12'>
+              <div className='w-8/12 xl:w-9/12'>
                 {/* Description */}
                 <div id='product__description-section' className='px-2.5 mb-7'>
                   <h1 className='product-info__title'>معرفی</h1>
-                  <p className='text-zinc-500 dark:text-white leading-9 line-clamp-3'>
+                  <p className='text-sm lg:text-base text-zinc-500 dark:text-white leading-8 lg:leading-9 line-clamp-3'>
                     محصول جدید از کمپانی کربی ( CRBE ) با نام ( CR-T101 ) معرفی شد . این محصول از سری هدفون های بی سیم کمپانی کربی ( CRBE ) است که با توجه به امکانات و طراحی مینیمال خود
                     مورد توجه قرار گرفت . هدفون بی سیم کربی مدل (CR-T101 ) در کنار کیفیت ساخت فوق‌العاده
                     بالای خود، به بلوتوث نسخه 5.3 مجهز شده است تا شاهد سرعت بسیار بالای آن در زمینه‌ی برقراری اتصال آن از طریق بلوتوث باشیم .
@@ -270,10 +284,10 @@ export default function ProductInfo() {
                     این دستگاه حداقل گوشی های آن را شارژ میکند.
 
                   </p>
-                  <div className='inline-flex items-center text-sky-500 cursor-pointer'>
+                  <div className='inline-flex items-center text-sm lg:text-base text-sky-500 cursor-pointer'>
                     <span>بیشتر</span>
                     <span className='hidden'>بستن</span>
-                    <HiMiniChevronLeft className='w-5 h-5' />
+                    <HiMiniChevronLeft className='w-4 lg:w-5 h-4 lg:h-5' />
                   </div>
                 </div>
 
@@ -296,7 +310,7 @@ export default function ProductInfo() {
                     <ProductFeatureBoxLarge name={'جنس بدنه'} status={'پلاستیک'} />
                   </div>
                   <div className='inline-flex items-center mt-8 text-sky-500 cursor-pointer'>
-                    <span>مشاهده بیشتر</span>
+                    <span className='text-sm xl:text-base'>مشاهده بیشتر</span>
                     <span className='hidden'>بستن</span>
                     <HiMiniChevronLeft className='w-5 h-5' />
                   </div>
@@ -306,14 +320,14 @@ export default function ProductInfo() {
 
                 {/* Comments */}
                 <div id='product__Comments-section'>
-                  <CommentsSection/>
+                  <CommentsSection />
                 </div>
               </div>
 
               {/* Left col & Product Purchase Cart */}
-              <div className={`sticky ${visible ? 'top-60' : 'top-44'} h-fit w-3/12 bg-white shadow-xl rounded-xl`}>
+              <div className={`sticky ${visible ? 'top-60' : 'top-44'} h-fit w-4/12 xl:w-3/12 bg-white shadow-xl rounded-xl`}>
                 {/* Off timer */}
-                <div className='flex items-center justify-between py-4 px-3 w-full text-white bg-custom-navy/85 rounded-t-lg'>
+                <div className='flex items-center justify-between flex-col lg:flex-row gap-y-2 py-2 lg:py-4 lg:px-3 w-full text-white bg-custom-navy/85 rounded-t-lg'>
                   <span className='font-MorabbaMedium'>تخفـیف شگفـت انـگـیز</span>
                   <div className='flex h-full gap-2'>
                     <div className='flex-center gap-1'>
@@ -326,44 +340,44 @@ export default function ProductInfo() {
                 </div>
 
                 {/* Product's Title & Color & Image */}
-                <div className='flex-center gap-9 px-7 pt-5 pb-3'>
+                <div className='flex-center gap-4 lg:gap-9 px-4 lg:px-7 pt-5 pb-3'>
                   <img className='w-14 h-14 scale-150' src='/images/products/airpods.png' />
                   <div>
-                    <h3 className='font-DanaMedium text-wrap'>هندزفری بلوتوثی کربی مدل - CR-T107</h3>
+                    <h3 className='font-DanaMedium text-sm lg:text-base text-wrap'>هندزفری بلوتوثی کربی مدل - CR-T107</h3>
                     <div className='flex items-center gap-1.5 pt-2'>
-                      <div className='w-4 h-4 bg-black border-2 border-gray-500 rounded-sm'></div>
-                      <span className='font-DanaMedium text-zinc-600 text-sm'>مشکی</span>
+                      <div className='w-3 lg:w-4 h-3 lg:h-4 bg-black border-2 border-gray-500 rounded-sm'></div>
+                      <span className='lg:font-DanaMedium text-zinc-600 text-xs lg:text-sm'>مشکی</span>
                     </div>
                   </div>
                 </div>
                 {/* Cart Body */}
                 <div className='pb-6 px-5'>
                   {/* Purchase Details */}
-                  <div className='py-3 border-y border-dotted border-gray-300'>
-                    <div className='flex gap-1.5 mb-2.5 py-1 px-3'>
+                  <div className='py-1 lg:py-3 px-1 lg:px-3 border-y border-dotted border-gray-300'>
+                    <div className='flex items-center gap-1.5 mb-2.5 py-1'>
                       <CiBoxes className='w-5 h-5' />
-                      <span className='text-sm font-DanaMedium text-zinc-500 tracking-tight'>موجود در انبار موبولند (ارسال فوری)</span>
+                      <span className='font-DanaMedium text-xs lg:text-sm text-zinc-500 tracking-tight'>موجود در انبار موبولند (ارسال فوری)</span>
                     </div>
-                    <div className='flex gap-1.5 py-1 px-3'>
+                    <div className='flex items-center gap-1.5 py-1'>
                       <BsPatchCheck className='w-4 h-4' />
-                      <span className='text-sm font-DanaMedium text-zinc-500'>۷ روز تضمین بازگشت کالا</span>
+                      <span className='font-DanaMedium text-xs lg:text-sm text-zinc-500'>۷ روز تضمین بازگشت کالا</span>
                     </div>
                   </div>
 
                   {/* Produc Price */}
-                  <div className='my-5 px-4 text-left'>
-                    <div className='inline-flex justify-center items-end h-5 w-11 text-center text-[10px] text-white bg-purple-500 rounded-xl'><span className='text-xs'>33</span>%</div>
-                    <div className='flex items-center justify-end gap-4 pt-2 pl-2'>
+                  <div className='my-2 lg:my-5 px-2 lg:px-4 text-left'>
+                    <div className='inline-flex justify-center items-end h-5 w-10 lg:w-11 text-center text-[10px] text-white bg-purple-500 rounded-xl'><span className='text-xs'>33</span>%</div>
+                    <div className='flex items-center justify-end gap-x-2 lg:gap-x-4 pt-2 pl-2'>
                       <span className='cart__ex-price'>2,200,000</span>
                       <div className='inline-flex gap-1'>
-                        <span className='font-DanaDemiBold text-xl dark:text-white'>1,500,000</span>
-                        <span><svg className='w-4 h-4 dark:text-white'><use href="#toman"></use></svg></span>
+                        <span className='font-DanaDemiBold text-lg lg:text-xl dark:text-white'>1,500,000</span>
+                        <span><svg className='w-3.5 lg:w-4 h-3.5 lg:h-4 dark:text-white'><use href="#toman"></use></svg></span>
                       </div>
                     </div>
                   </div>
 
-                  {/* Cart Actions  */}
-                  <div className='w-full h-12 font-DanaMedium text-center text-white text-lg leading-[48px] bg-custom-navy rounded-lg cursor-pointer'>افزودن به سبد خرید</div>
+                  {/* Cart Add Basket Button  */}
+                  <div className='w-full h-10 lg:h-12 font-DanaMedium text-center text-white lg:text-lg leading-10 lg:leading-[48px] bg-custom-navy rounded-lg cursor-pointer'>افزودن به سبد خرید</div>
                 </div>
               </div>
             </div>
@@ -373,7 +387,204 @@ export default function ProductInfo() {
       </div>
 
       {/* Contents For Mobile Size */}
-      <div></div>
+      <div className='block md:hidden'>
+
+        {/* Fixed, Buy Actions Button &  Product Price */}
+        <div className='fixed bottom-0 h-fit w-full bg-white shadow-t-lg z-20'>
+          {/* Cart Body */}
+          <div className='py-4 px-6'>
+            {/* Produc Price */}
+            <div className='mb-2.5 px-4 text-end'>
+              <div className='flex items-center justify-end gap-6 pt-2 pl-2'>
+                <div className='inline-flex justify-center items-end ml-3 h-5 w-11 text-center text-[10px] text-white bg-purple-500 rounded-md'><span className='text-xs'>33</span>%</div>
+                <span className='cart__ex-price'>2,200,000</span>
+                <div className='inline-flex gap-1'>
+                  <span className='font-DanaDemiBold text-xl dark:text-white'>1,500,000</span>
+                  <span><svg className='w-4 h-4 dark:text-white'><use href="#toman"></use></svg></span>
+                </div>
+              </div>
+            </div>
+
+            {/* Cart Actions  */}
+            <div className='w-full h-10 font-DanaMedium text-center text-white leading-10 bg-custom-navy rounded-lg cursor-pointer'>افزودن به سبد خرید</div>
+          </div>
+        </div>
+        {/* //////////////////////////////////////////// */}
+        <div className='container'>
+          {/* Off timer */}
+          <div className='flex items-center justify-between py-3 px-3 w-full text-white bg-custom-navy/85 rounded-t-lg'>
+            <span className='font-MorabbaMedium'>تخفـیف شگفـت انـگـیز</span>
+            <div className='flex h-full gap-2'>
+              <div className='flex-center gap-1 text-sm'>
+                <span>48</span>:
+                <span>21</span>:
+                <span>04</span>
+              </div>
+              <PiTimerLight className='w-4 h-4' />
+            </div>
+          </div>
+
+          {/* First & Main Section (Pics, purchase cart, features) */}
+          <div className='border border-gray-300 rounded-b-xl'>
+
+            {/* Actions & Product's Photos Col */}
+            <div className='my-6'>
+              {/* Action Buttons */}
+              <div className='flex-center gap-x-6 sm:gap-x-10 mb-2 sm:mb-4'>
+                <button className='product__action-button'><GoShareAndroid className='w-5 h-5' /><span className='tooltiptext'>اشتراک گذاری کالا</span></button>
+                <button className='product__action-button'><LiaComments className='w-5 h-5' /><span className='tooltiptext'>نظرات کاربران</span></button>
+                <button className='product__action-button'><PiBellRingingLight className='w-5 h-5' /><span className='tooltiptext'>اطلاع‌رسانی موبولند</span></button>
+                <button className='product__action-button'><TbHeartPlus className='w-5 h-5' /><span className='tooltiptext'>مورد علاقه</span></button>
+              </div>
+              {/* Product Images  */}
+              <div>
+                <img className='h-48 mx-auto scale-125' src='/images/products/airpods.png' />
+                <div className='flex-center gap-5 mt-2 sm:mt-4'>
+                  <img className='product__album-img' src='/images/products/airpod2.png' />
+                  <img className='product__album-img' src='/images/products/airpods.png' />
+                  <img className='product__album-img' src='/images/products/airpod2.png' />
+                </div>
+              </div>
+            </div>
+
+            {/*  Product Features & Details */}
+            <div className='px-3 py-3'>
+              {/* Rate & Color & Features Col */}
+              <div>
+                <h1 className='font-MorabbaBold text-zinc-800 dark:text-white tracking-wide'>
+                  هندزفری بلوتوثی کربی مدل - CR-T107
+                </h1>
+
+                {/* Product Rating */}
+                <div className='inline-flex items-center gap-2 pt-4 pb-2 border-b border-gray-300'>
+                  <p className='flex gap-1'>
+                    <span><RiStarFill className='h-5 w-5 text-amber-500' /></span>
+                    <span className='text-sm dark:text-white'>4.3</span>
+                  </p>
+                  <a href='#' className='text-zinc-500 dark:text-white/70 hover:text-purple-400 text-xs cursor-pointer'>(از 23 نظر)</a>
+                </div>
+
+                {/* Product Colors */}
+                <div className='mt-4 pb-4 border-b border-gray-300'>
+                  <p className='flex gap-1 pb-1'>
+                    <h3 className='text-zinc-600 dark:text-white/90'>رنگ:</h3>
+                    <span className='font-DanaDemiBold text-sm text-zinc-800 dark:text-white'>مشکی</span>
+                  </p>
+                  <div className='flex items-center gap-2'>
+                    <div className='product__color-Item bg-black'></div>
+                    <div className='product__color-Item bg-pink-400'></div>
+                    <div className='product__color-Item bg-white'></div>
+                    <div className='product__color-Item bg-sky-700'></div>
+                  </div>
+                </div>
+
+                {/* Product's Features */}
+                <div className='mt-6'>
+                  <h3 className='font-DanaDemiBold text-zinc-800 pb-6 dark:text-white'>ویژگی‌ها</h3>
+                  <div className='grid grid-cols-2 gap-x-5 gap-y-6 max-h-52 overflow-hidden'>
+                    <ProductFeatureBox name={'قابلیت نویز کنسلینگ'} status={'نویز کنسلینگ میکروفون'} />
+                    <ProductFeatureBox name={'نوع گوشی'} status={'دو گوشی'} />
+                    <ProductFeatureBox name={'درگاه‌های ارتباطی'} status={'بلوتوث'} />
+                    <ProductFeatureBox name={'نوع اتصال'} status={'بی‌سیم'} />
+                    <ProductFeatureBox name={'رابط‌ها'} status={'Bluetooth'} />
+                    <ProductFeatureBox name={'قابلیت‌های مقاومتی'} status={'مقاومت در برابر رطوبت و عرق'} />
+                  </div>
+                  <p className='pt-4 text-center text-white'>
+                    <a href='#' className='inline-flex py-2 px-4 text-sm bg-slate-500 hover:bg-slate-600/70 rounded-lg'>
+                      مشاهده همه ویژگی‌ها
+                      <HiMiniChevronLeft className='h-4 w-4' />
+                    </a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Bottom Section (All features, description, comments) */}
+          <div className='mt-10'>
+            {/* Header Of This Section */}
+            <div className='sticky top-0 z-10'>
+              <ul className='flex justify-between px-10 border-b-2 border-gray-400 rounded-t-md bg-slate-300'>
+                <li className='productInfo__menu-title'>
+                  <a href='#product__description-section'>معرفی</a>
+                  <div className='productInfo__underline-border'></div>
+                </li>
+                <li className='productInfo__menu-title'>
+                  <a href='#product__features-section'>مشخصات</a>
+                  <div className='productInfo__underline-border opacity-0'></div>
+                </li>
+                <li className='productInfo__menu-title'>
+                  <a href='#product__comments-section'>نظرات کاربران</a>
+                  <div className='productInfo__underline-border opacity-0'></div>
+                </li>
+              </ul>
+            </div>
+            {/* Body & Contents of Section */}
+            <div className='w-full pt-8'>
+              {/* Description */}
+              <div id='product__description-section' className='px-2.5 mb-7'>
+                <h1 className='product-info__title'>معرفی</h1>
+                <p className='text-sm lg:text-base text-zinc-500 dark:text-white leading-8 lg:leading-9 line-clamp-3'>
+                  محصول جدید از کمپانی کربی ( CRBE ) با نام ( CR-T101 ) معرفی شد . این محصول از سری هدفون های بی سیم کمپانی کربی ( CRBE ) است که با توجه به امکانات و طراحی مینیمال خود
+                  مورد توجه قرار گرفت . هدفون بی سیم کربی مدل (CR-T101 ) در کنار کیفیت ساخت فوق‌العاده
+                  بالای خود، به بلوتوث نسخه 5.3 مجهز شده است تا شاهد سرعت بسیار بالای آن در زمینه‌ی برقراری اتصال آن از طریق بلوتوث باشیم .
+                  فناوری کنترل لمسی برای پاسخگویی به تماس و همچنین پخش و توقف موسیقی بر روی گوشی های این هدفون قرار گرفته است . از این
+                  هدفون بی سیم برای استفاده از دستیار صوتی نیز میتوان استفاده کرد . باتری به کار رفته در این هدفون بی سیم کربی از نوع لیتیوم پلیمری ست و هر کدام از گوشی ها 30 میلی
+                  آمپر ظرفیت دارد . ظرفیت باتری محفظه شارژ این هدفون نیز 200 میلی آمپر است . بازدهی باتری هدفون بی سیم کربی مدل ( CR-T101) هر گوش با
+                  توجه به میزان بلندی صدا 2 الی 4ساعت و در حالت استندبای
+                  میتواند تا 80ساعت بازدهی موثر داشته باشد . برای شارژ
+                  کامل این هدفون یک ساعت و برای شارژ محفظه شارژ
+                  نیز 2 ساعت زمان کافیست . نکته قابل توجه این است
+                  برای شارژ این محصول باید از کابل مخصوص داخل پک و
+                  هد شارژ استاندارد استفاده شود .یکی از قابلیت های
+                  بسیار جذاب این کالا امکان کنترل صدا از
+                  روی گوشی های دستگاه میباشد . محفظه شارژ
+                  این دستگاه حداقل گوشی های آن را شارژ میکند.
+
+                </p>
+                <div className='inline-flex items-center text-sm lg:text-base text-sky-500 cursor-pointer'>
+                  <span>بیشتر</span>
+                  <span className='hidden'>بستن</span>
+                  <HiMiniChevronLeft className='w-4 lg:w-5 h-4 lg:h-5' />
+                </div>
+              </div>
+
+              <div className='divider-border'></div>
+
+              {/* All Features */}
+              <div id='product__features-section'>
+                <h1 className='product-info__title'>مشـخصات فـنی</h1>
+                <div className='h-[35rem] overflow-hidden'>
+                  <ProductFeatureBoxLarge name={'اقلام همراه هدفون'} status={'کابل شارژ تایپ سی'} />
+                  <ProductFeatureBoxLarge name={'منبع تغذیه هدفون'} status={'باطری'} />
+                  <ProductFeatureBoxLarge name={'قابلیت‌های هدفون، هدست و هندزفری'} status={'نشانگر LED'} />
+                  <ProductFeatureBoxLarge name={'محدوده عملکرد'} status={'۱۰ متر'} />
+                  <ProductFeatureBoxLarge name={'نوع گوشی'} status={'دو گوشی'} />
+                  <ProductFeatureBoxLarge name={'عمر باتری هدفون در حالت مکالمه'} status={'۲-۴ ساعت'} />
+                  <ProductFeatureBoxLarge name={'عمر باتری هدفون در حالت استندبای'} status={'۸۰'} />
+                  <ProductFeatureBoxLarge name={'عمر باتری هدفون در حالت پخش موسیقی'} status={'2-3 ساعت'} />
+                  <ProductFeatureBoxLarge name={'وزن'} status={'30 گرم'} />
+                  <ProductFeatureBoxLarge name={'نسخه بلوتوث'} status={'۵.۳'} />
+                  <ProductFeatureBoxLarge name={'جنس بدنه'} status={'پلاستیک'} />
+                </div>
+                <div className='inline-flex items-center mt-8 text-sky-500 cursor-pointer'>
+                  <span className='text-sm xl:text-base'>مشاهده بیشتر</span>
+                  <span className='hidden'>بستن</span>
+                  <HiMiniChevronLeft className='w-5 h-5' />
+                </div>
+              </div>
+
+              <div className='divider-border'></div>
+
+              {/* Comments */}
+              <div id='product__Comments-section'>
+                <CommentsSection />
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
       <Footer />
     </div>
   )

@@ -1,6 +1,10 @@
 .comment-section__star{
-    @apply w-6 h-6 text-amber-500
+    @apply w-5 xl:w-6 h-5 xl:h-6 text-amber-500
 }
 .user-comment__star{
-    @apply w-5 h-5 text-amber-500
+    @apply w-4 xl:w-5 h-4 xl:h-5 text-amber-500
+}
+
+.comments__divider-border{
+    @apply mt-10 xl:mt-16 mb-5 xl:mb-8 w-full h-1 border-y border-slate-400
 }

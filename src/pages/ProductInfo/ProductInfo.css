@@ -1,9 +1,9 @@
 .product__color-Item {
-    @apply w-8 h-8 border-2 border-gray-500 rounded-lg cursor-pointer
+    @apply w-6 sm:w-7 xl:w-8 h-6 sm:h-7 xl:h-8 border-2 border-gray-500 rounded-lg cursor-pointer
 }
 
 .product__album-img {
-    @apply w-20 h-20 border border-gray-300/50 rounded-lg cursor-pointer
+    @apply w-16 md:w-20 h-16 md:h-20 border border-gray-300/50 rounded-lg cursor-pointer
 }
 
 .product__action-button {
@@ -28,7 +28,7 @@
 }
 
 .cart__ex-price{
-    @apply relative inline-flex px-2 xs:font-medium text-sm xs:text-base text-gray-500 dark:text-gray-300 overflow-hidden
+    @apply relative inline-flex px-2 xs:font-medium text-sm lg:text-base text-gray-500 dark:text-gray-300 overflow-hidden
 }
 
 .cart__ex-price::after{
@@ -44,7 +44,7 @@
 }
 
 .productInfo__menu-title{
-    @apply relative py-4 px-2
+    @apply relative py-4 px-2 text-sm md:text-base
 }
 
 .productInfo__underline-border{
@@ -59,7 +59,7 @@
 }
 
 .product-info__title{
-    @apply inline-block font-DanaMedium text-xl mb-5 py-2 border-b-2 border-slate-500
+    @apply inline-block font-DanaMedium text-lg lg:text-xl mb-5 py-2 border-b-2 border-slate-500
 }
 
 .divider-border{
