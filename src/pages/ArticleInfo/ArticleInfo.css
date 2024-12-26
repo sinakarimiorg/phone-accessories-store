@@ -1,0 +1,12 @@
+#article-content h2{
+    @apply pt-8 font-DanaDemiBold text-xl text-zinc-800
+}
+#article-content p{
+    @apply pt-5 pb-7
+}
+#article-content h3{
+    @apply font-DanaMedium text-lg pt-7
+}
+#article-content img{
+    margin: 0 auto ;
+}

@@ -47,11 +47,11 @@ export default function CommentsSection() {
                                 <RiStarFill className='comment-section__star' />
                                 <RiStarFill className='comment-section__star text-gray-400' />
                             </div>
-                            <span className='block pt-3 text-sm lg:text-xs xl:text-sm text-zinc-500'>از مجموع ۱۷ امتیاز</span>
+                            <span className='block pt-3 text-sm lg:text-xs xl:text-sm text-zinc-500 dark:text-white'>از مجموع ۱۷ امتیاز</span>
                         </div>
                         <div className='flex items-center gap-1'>
-                            <h1 className='font-DanaDemiBold text-4xl xl:text-[2.5rem]'>4.3</h1>
-                            <span className='text-sm xl:text-base text-zinc-500'>از ۵</span>
+                            <h1 className='font-DanaDemiBold dark:text-white text-4xl xl:text-[2.5rem]'>4.3</h1>
+                            <span className='text-sm xl:text-base text-zinc-500 dark:text-white/60'>از ۵</span>
                         </div>
                     </div>
 
@@ -76,7 +76,7 @@ export default function CommentsSection() {
                             {/* Name Of User */}
                             <div className='flex gap-x-1.5 xl:gap-x-2.5 mb-3.5 text-zinc-500'>
                                 <TbUserSquareRounded className='w-6 h-6' />
-                                <span className='font-DanaDemiBold xl:text-lg'>علی رضایی</span>
+                                <span className='font-DanaDemiBold dark:text-white xl:text-lg'>علی رضایی</span>
                             </div>
                             {/* Rate Of Comment */}
                             <div className='flex mb-2'>
@@ -94,7 +94,7 @@ export default function CommentsSection() {
 
                         {/* Comment Body */}
                         <div className='my-5 xl:my-7'>
-                            <p className='max-w-[730px] font-DanaMedium text-sm xl:text-base text-indigo-950 leading-8 tracking-tight'>
+                            <p className='max-w-[730px] font-DanaMedium text-sm xl:text-base text-indigo-950 dark:text-white/85 leading-8 tracking-tight'>
                                 درود دوستان
                                 کاملا این محصول رو پیشنهاد میکنم بسیار کیفیت خوبی داره و برند شناخته شده ای هست و در این بازه قیمتی در خریدش شک نکنید
                             </p>
@@ -124,7 +124,7 @@ export default function CommentsSection() {
                             {/* Name Of User */}
                             <div className='flex gap-x-1.5 xl:gap-x-2.5 mb-3.5 text-zinc-500'>
                                 <TbUserSquareRounded className='w-6 h-6' />
-                                <span className='font-DanaDemiBold xl:text-lg'>علی رضایی</span>
+                                <span className='font-DanaDemiBold dark:text-white xl:text-lg'>علی رضایی</span>
                             </div>
                             {/* Rate Of Comment */}
                             <div className='flex mb-2'>
@@ -142,7 +142,7 @@ export default function CommentsSection() {
 
                         {/* Comment Body */}
                         <div className='my-5 xl:my-7'>
-                            <p className='max-w-[730px] font-DanaMedium text-sm xl:text-base text-indigo-950 leading-8 tracking-tight'>
+                            <p className='max-w-[730px] font-DanaMedium text-sm xl:text-base text-indigo-950 dark:text-white/85 leading-8 tracking-tight'>
                                 درود دوستان
                                 کاملا این محصول رو پیشنهاد میکنم بسیار کیفیت خوبی داره و برند شناخته شده ای هست و در این بازه قیمتی در خریدش شک نکنید
                             </p>
@@ -172,7 +172,7 @@ export default function CommentsSection() {
                             {/* Name Of User */}
                             <div className='flex gap-x-1.5 xl:gap-x-2.5 mb-3.5 text-zinc-500'>
                                 <TbUserSquareRounded className='w-6 h-6' />
-                                <span className='font-DanaDemiBold xl:text-lg'>علی رضایی</span>
+                                <span className='font-DanaDemiBold dark:text-white xl:text-lg'>علی رضایی</span>
                             </div>
                             {/* Rate Of Comment */}
                             <div className='flex mb-2'>
@@ -190,7 +190,7 @@ export default function CommentsSection() {
 
                         {/* Comment Body */}
                         <div className='my-5 xl:my-7'>
-                            <p className='max-w-[730px] font-DanaMedium text-sm xl:text-base text-indigo-950 leading-8 tracking-tight'>
+                            <p className='max-w-[730px] font-DanaMedium text-sm xl:text-base text-indigo-950 dark:text-white/85 leading-8 tracking-tight'>
                                 درود دوستان
                                 کاملا این محصول رو پیشنهاد میکنم بسیار کیفیت خوبی داره و برند شناخته شده ای هست و در این بازه قیمتی در خریدش شک نکنید
                             </p>
@@ -220,7 +220,7 @@ export default function CommentsSection() {
                             {/* Name Of User */}
                             <div className='flex gap-x-1.5 xl:gap-x-2.5 mb-3.5 text-zinc-500'>
                                 <TbUserSquareRounded className='w-6 h-6' />
-                                <span className='font-DanaDemiBold xl:text-lg'>علی رضایی</span>
+                                <span className='font-DanaDemiBold dark:text-white xl:text-lg'>علی رضایی</span>
                             </div>
                             {/* Rate Of Comment */}
                             <div className='flex mb-2'>
@@ -238,7 +238,7 @@ export default function CommentsSection() {
 
                         {/* Comment Body */}
                         <div className='my-5 xl:my-7'>
-                            <p className='max-w-[730px] font-DanaMedium text-sm xl:text-base text-indigo-950 leading-8 tracking-tight'>
+                            <p className='max-w-[730px] font-DanaMedium text-sm xl:text-base text-indigo-950 dark:text-white/85 leading-8 tracking-tight'>
                                 درود دوستان
                                 کاملا این محصول رو پیشنهاد میکنم بسیار کیفیت خوبی داره و برند شناخته شده ای هست و در این بازه قیمتی در خریدش شک نکنید
                             </p>
@@ -268,7 +268,7 @@ export default function CommentsSection() {
                             {/* Name Of User */}
                             <div className='flex gap-x-1.5 xl:gap-x-2.5 mb-3.5 text-zinc-500'>
                                 <TbUserSquareRounded className='w-6 h-6' />
-                                <span className='font-DanaDemiBold xl:text-lg'>علی رضایی</span>
+                                <span className='font-DanaDemiBold dark:text-white xl:text-lg'>علی رضایی</span>
                             </div>
                             {/* Rate Of Comment */}
                             <div className='flex mb-2'>
@@ -286,7 +286,7 @@ export default function CommentsSection() {
 
                         {/* Comment Body */}
                         <div className='my-5 xl:my-7'>
-                            <p className='max-w-[730px] font-DanaMedium text-sm xl:text-base text-indigo-950 leading-8 tracking-tight'>
+                            <p className='max-w-[730px] font-DanaMedium text-sm xl:text-base text-indigo-950 dark:text-white/85 leading-8 tracking-tight'>
                                 درود دوستان
                                 کاملا این محصول رو پیشنهاد میکنم بسیار کیفیت خوبی داره و برند شناخته شده ای هست و در این بازه قیمتی در خریدش شک نکنید
                             </p>

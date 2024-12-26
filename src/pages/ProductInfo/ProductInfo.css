@@ -59,7 +59,7 @@
 }
 
 .product-info__title{
-    @apply inline-block font-DanaMedium text-lg lg:text-xl mb-5 py-2 border-b-2 border-slate-500
+    @apply inline-block font-DanaMedium text-lg lg:text-xl mb-5 py-2 border-b-2 border-slate-500 dark:text-white
 }
 
 .divider-border{

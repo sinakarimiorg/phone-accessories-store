@@ -211,8 +211,8 @@ export default function ProductInfo() {
                     <div className='flex items-center justify-center xl:justify-end gap-4 pt-2 pl-2'>
                       <span className='cart__ex-price'>2,200,000</span>
                       <div className='inline-flex gap-1'>
-                        <span className='font-DanaDemiBold text-xl dark:text-white'>1,500,000</span>
-                        <span><svg className='w-4 h-4 dark:text-white'><use href="#toman"></use></svg></span>
+                        <span className='font-DanaDemiBold text-xl'>1,500,000</span>
+                        <span><svg className='w-4 h-4'><use href="#toman"></use></svg></span>
                       </div>
                     </div>
                   </div>
@@ -226,14 +226,14 @@ export default function ProductInfo() {
               <div className='h-fit w-2/6 xl:w-full xl:mt-5 p-3 bg-white shadow-xl rounded-xl'>
                 <div className='flex items-center gap-1.5 pb-2 border-b border-dotted border-gray-300 cursor-pointer'>
                   <PiWarningOctagonThin className='w-5 h-5 text-amber-500' />
-                  <span className='text-sm text-zinc-500 dark:text-white/80'>گزارش نادرستی مشخصات</span>
+                  <span className='text-sm text-zinc-500'>گزارش نادرستی مشخصات</span>
                 </div>
 
                 <div className='flex items-center gap-4 pt-3 cursor-pointer'>
                   <span className='inline-block p-1 text-zinc-600 border border-zinc-600 rounded-full'><PiPhoneCallLight className='w-6 h-6' /></span>
                   <div>
-                    <p className='text-sm text-zinc-500 tracking-tight dark:text-white/80'>ارتباط با فروش</p>
-                    <p className='font-DanaMedium text-sm dark:text-white'>تماس با کـارشناسان</p>
+                    <p className='text-sm text-zinc-500 tracking-tight'>ارتباط با فروش</p>
+                    <p className='font-DanaMedium text-sm'>تماس با کـارشناسان</p>
                   </div>
                 </div>
               </div>

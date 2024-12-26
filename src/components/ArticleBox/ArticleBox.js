@@ -1,10 +1,11 @@
 import React from 'react'
 import { FaChevronLeft } from "react-icons/fa6";
+import { Link } from 'react-router-dom';
 
-export default function ArticleBox({ img, title, date }) {
+export default function ArticleBox({ shortName, img, title, date }) {
     
     return (
-        <div
+        <Link to={`/article-info/${shortName}`}
             className="group flex sm:flex-col gap-y-4 gap-x-3 w-full h-[150px] sm:h-[285px] p-2.5 bg-white dark:bg-zinc-700 rounded-2xl shadow-custom cursor-pointer overflow-hidden">
             <div className="relative rounded-2xl rounded-bl-4xl overflow-hidden shrink-0">
                 <img src={img} alt="blog"
@@ -39,6 +40,6 @@ export default function ArticleBox({ img, title, date }) {
                     </a>
                 </div>
             </div>
-        </div>
+        </Link>
     )
 }

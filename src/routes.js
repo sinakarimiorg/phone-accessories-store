@@ -6,7 +6,7 @@ import ArticleInfo from './pages/ArticleInfo/ArticleInfo'
 const routes = [
     { path: '/', element: <Index /> },
     { path: '/product-info/:productName', element: <ProductInfo/> },
-    { path: '/Article-info/:productName', element: <ArticleInfo/> },
+    { path: '/article-info/:productName', element: <ArticleInfo/> },
 ]
 
 export default routes
