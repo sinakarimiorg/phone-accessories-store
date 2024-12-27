@@ -21,41 +21,41 @@ export default function ArticleInfo() {
                     { id: 3, title: 'کسب درآمد از بازی', to: '/article-info' },
                 ]} />
             <div className='container'>
-                <div className='flex gap-4'>
+                <div className='flex flex-col xl:flex-row gap-4'>
                     {/* Right Col & Main Contents */}
-                    <div id='article-content' className='w-10/12 bg-white shadow-xl rounded-lg overflow-hidden'>
+                    <div id='article-content' className='w-full xl:w-10/12 bg-white shadow-xl rounded-lg overflow-hidden'>
                         {/* Header Of Article */}
                         <div>
                             {/* Header Of Article */}
-                            <div className='relative w-full h-96 bg-blue-950'>
+                            <div className='relative w-full h-40 xs:h-60 sm:h-96 bg-blue-950'>
                                 {/* Article Name */}
-                                <div className='flex gap-2 p-6'>
-                                    <PiBookOpenText className='w-6 h-6 text-white' />
-                                    <h1 className='font-DanaDemiBold text-xl text-white'>راهنمای خرید هندزفری سیمی</h1>
+                                <div className='flex gap-2 p-4 custom-sc:p-6'>
+                                    <PiBookOpenText className='w-4 custom-sc:w-6 h-4 custom-sc:h-6 text-white' />
+                                    <h1 className='font-DanaDemiBold text-lg custom-sc:text-xl text-white'>راهنمای خرید هندزفری سیمی</h1>
                                 </div>
                                 {/* Article Details */}
-                                <div className='flex items-center gap-5 pr-6 text-sm text-white/80'>
-                                    <div className='flex-center gap-2'>
+                                <div className='flex flex-wrap items-center gap-2.5 sm:gap-5 pr-6 text-[10px] xs:text-xs custom-sc:text-sm text-white/80'>
+                                    <div className='flex-center gap-1 sm:gap-2'>
                                         <SlCalender />
                                         <span>تاریخ انتشار: </span>
                                         <span>1403/10/6</span>
                                     </div>
-                                    <div className='flex-center gap-2'>
+                                    <div className='flex-center gap-1 sm:gap-2'>
                                         <LiaUserEditSolid />
                                         <span>نویسنده:</span>
                                         <span>سینا کریمی</span>
                                     </div>
-                                    <div className='flex-center gap-2'>
+                                    <div className='flex-center gap-1 sm:gap-2'>
                                         <FiEye />
                                         <span>تعداد بازدید:</span>
                                         <span>33</span>
                                     </div>
                                 </div>
-                                <img className='absolute right-[363px] top-28 w-[33rem] h-[30rem] border-4 border-white rounded-xl' src='/images/articles/headphone.jpg' />
+                                <img className='absolute right-0 left-0 top-[63%] xs:top-[40%] sm:top-[27%] w-56 xs:w-72 sm:w-96 custom-sc:w-[33rem] h-56 xs:h-72 sm:h-96 custom-sc:h-[30rem] border-4 border-white rounded-xl' src='/images/articles/headphone.jpg' />
                             </div>
                         </div>
                         {/* Content of Article */}
-                        <div className='mt-56 pb-10 px-16'>
+                        <div className='mt-40 custom-sc:mt-56 pb-10 px-16'>
                             <h2>هندزفری سیمی وسیله ای پرکاربرد و ضروری</h2>
                             <p>
                                 هندزفری‌ سیمی، ابزاری است که به کاربرا اجازه می‌دهد تا بدون ایجاد مزاحمت برای دیگران موسیقی گوش دهند، به تماشای فیلم بپردازند
@@ -92,9 +92,9 @@ export default function ArticleInfo() {
                     </div>
 
                     {/* Left Col & Suggestions */}
-                    <div className='w-2/12 py-8'>
+                    <div className='sticky top-32 h-fit xl:w-2/12 pb-8'>
                     <h1 className='inline-block pb-1 pl-1 mr-5 font-DanaMedium text-xl border-b-4 border-purple-custom rounded-md'>پیشنهادی‌ها</h1>
-                    <div className=''>
+                    <div className='grid grid-cols-1 sm:grid-cols-2 custom-sc:grid-cols-3  xl:block'>
                         <ArticleSuggestBox shortName={'earn-from-game'} img={'/images/articles/game-article.jpg'} title={'کسب درآمد از بازی!'} publishDate={'1404/9/4'}/>
                         <ArticleSuggestBox shortName={'best-phone'} img={'/images/articles/phone.jpg'} title={'بهترین گوشی تا پنج میلیون'} publishDate={'1404/4/21'}/>
                         <ArticleSuggestBox shortName={'how-buy-speaker'} img={'/images/articles/speaker.jpg'} title={'راهنمای خرید اسپیکر بلوتوث قابل حمل '} publishDate={'1403/2/28'}/>
