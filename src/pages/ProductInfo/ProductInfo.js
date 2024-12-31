@@ -143,7 +143,7 @@ export default function ProductInfo() {
                 </div>
                 {/* Product Images  */}
                 <div>
-                  <img className='h-72 lg:h-80 2xl:h-96 scale-125 lg:scale-0' src='/images/products/airpods.png' />
+                  <img className='h-72 lg:h-80 2xl:h-96 scale-125 lg:scale-100' src='/images/products/airpods.png' />
                   <div className='flex-center gap-3'>
                     <img className='product__album-img' src='/images/products/airpod2.png' />
                     <img className='product__album-img' src='/images/products/airpods.png' />
@@ -585,7 +585,7 @@ export default function ProductInfo() {
           </div>
         </div>
       </div>
-      <Footer />
+      <Footer marginClasses={'mt-32'}/>
     </div>
   )
 }

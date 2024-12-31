@@ -26,7 +26,7 @@ export default function Index() {
       <PopularProducts/>
       <PopularBrands/>
       <LatestArticles/>
-      <Footer/>
+      <Footer marginClasses={'mt-32'}/>
     </div>
   )
 }

@@ -23,7 +23,7 @@ export default function ArticleInfo() {
             <div className='container'>
                 <div className='flex flex-col xl:flex-row gap-4'>
                     {/* Right Col & Main Contents */}
-                    <div id='article-content' className='w-full xl:w-10/12 bg-white shadow-xl rounded-lg overflow-hidden'>
+                    <div id='article-content' className='w-full xl:w-10/12 bg-white dark:bg-zinc-700 dark:text-white shadow-xl rounded-lg overflow-hidden'>
                         {/* Header Of Article */}
                         <div>
                             {/* Header Of Article */}
@@ -93,7 +93,7 @@ export default function ArticleInfo() {
 
                     {/* Left Col & Suggestions */}
                     <div className='sticky top-32 h-fit xl:w-2/12 pb-8'>
-                    <h1 className='inline-block pb-1 pl-1 mr-5 font-DanaMedium text-xl border-b-4 border-purple-custom rounded-md'>پیشنهادی‌ها</h1>
+                    <h1 className='inline-block pb-1 pl-1 mr-5 font-DanaMedium text-xl dark:text-white border-b-4 border-purple-custom rounded-md'>پیشنهادی‌ها</h1>
                     <div className='grid grid-cols-1 sm:grid-cols-2 custom-sc:grid-cols-3  xl:block'>
                         <ArticleSuggestBox shortName={'earn-from-game'} img={'/images/articles/game-article.jpg'} title={'کسب درآمد از بازی!'} publishDate={'1404/9/4'}/>
                         <ArticleSuggestBox shortName={'best-phone'} img={'/images/articles/phone.jpg'} title={'بهترین گوشی تا پنج میلیون'} publishDate={'1404/4/21'}/>
@@ -103,7 +103,7 @@ export default function ArticleInfo() {
                     </div>
                 </div>
             </div>
-            <Footer />
+            <Footer marginClasses={'mt-32'}/>
         </div>
     )
 }

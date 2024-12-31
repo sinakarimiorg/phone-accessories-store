@@ -731,6 +731,10 @@ html {
   bottom: 0.125rem;
 }
 
+.bottom-16 {
+  bottom: 4rem;
+}
+
 .bottom-\[100\%\] {
   bottom: 100%;
 }
@@ -803,6 +807,10 @@ html {
   top: 100%;
 }
 
+.bottom-8 {
+  bottom: 2rem;
+}
+
 .z-10 {
   z-index: 10;
 }
@@ -842,6 +850,11 @@ html {
   margin-bottom: 3.5rem;
 }
 
+.my-16 {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
 .my-2 {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
@@ -870,6 +883,11 @@ html {
 .my-auto {
   margin-top: auto;
   margin-bottom: auto;
+}
+
+.my-10 {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
 }
 
 .-mt-2 {
@@ -958,6 +976,10 @@ html {
 
 .mt-3 {
   margin-top: 0.75rem;
+}
+
+.mt-32 {
+  margin-top: 8rem;
 }
 
 .mt-4 {
@@ -1295,6 +1317,14 @@ html {
 
 .w-px {
   width: 1px;
+}
+
+.w-52 {
+  width: 13rem;
+}
+
+.w-24 {
+  width: 6rem;
 }
 
 .max-w-\[730px\] {
@@ -2121,6 +2151,11 @@ html {
   padding-bottom: 1.25rem;
 }
 
+.py-6 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
 .py-7 {
   padding-top: 1.75rem;
   padding-bottom: 1.75rem;
@@ -2388,6 +2423,11 @@ html {
   color: rgb(19 25 33 / var(--tw-text-opacity));
 }
 
+.text-custom-navy {
+  --tw-text-opacity: 1;
+  color: rgb(35 47 63 / var(--tw-text-opacity));
+}
+
 .text-gray-100 {
   --tw-text-opacity: 1;
   color: rgb(243 244 246 / var(--tw-text-opacity));
@@ -2521,6 +2561,11 @@ html {
 
 .shadow-black {
   --tw-shadow-color: #000;
+  --tw-shadow: var(--tw-shadow-colored);
+}
+
+.shadow-white {
+  --tw-shadow-color: #fff;
   --tw-shadow: var(--tw-shadow-colored);
 }
 
@@ -2985,20 +3030,12 @@ html {
 }
 
 @media (min-width: 480px) {
-  .xs\:top-\[60\%\] {
-    top: 60%;
-  }
-
   .xs\:top-\[40\%\] {
     top: 40%;
   }
 
   .xs\:ml-1 {
     margin-left: 0.25rem;
-  }
-
-  .xs\:mt-44 {
-    margin-top: 11rem;
   }
 
   .xs\:h-28 {
@@ -3013,20 +3050,16 @@ html {
     height: 1.25rem;
   }
 
+  .xs\:h-60 {
+    height: 15rem;
+  }
+
   .xs\:h-72 {
     height: 18rem;
   }
 
   .xs\:h-\[150px\] {
     height: 150px;
-  }
-
-  .xs\:h-96 {
-    height: 24rem;
-  }
-
-  .xs\:h-60 {
-    height: 15rem;
   }
 
   .xs\:w-24 {
@@ -3227,6 +3260,10 @@ html {
     padding-right: 1rem;
   }
 
+  .sm\:pt-40 {
+    padding-top: 10rem;
+  }
+
   .sm\:pt-48 {
     padding-top: 12rem;
   }
@@ -3291,9 +3328,18 @@ html {
     right: 1.25rem;
   }
 
+  .md\:bottom-16 {
+    bottom: 4rem;
+  }
+
   .md\:my-24 {
     margin-top: 6rem;
     margin-bottom: 6rem;
+  }
+
+  .md\:my-16 {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
   }
 
   .md\:mb-0 {
@@ -3376,6 +3422,10 @@ html {
     width: 350px;
   }
 
+  .md\:w-36 {
+    width: 9rem;
+  }
+
   .md\:gap-16 {
     gap: 4rem;
   }
@@ -3394,6 +3444,10 @@ html {
 
   .md\:gap-x-8 {
     column-gap: 2rem;
+  }
+
+  .md\:rounded-2xl {
+    border-radius: 1rem;
   }
 
   .md\:p-3 {
@@ -3494,6 +3548,10 @@ html {
     line-height: 2.25rem;
   }
 
+  .md\:leading-none {
+    line-height: 1;
+  }
+
   .md\:placeholder\:text-sm::placeholder {
     font-size: 0.875rem;
     line-height: 1.25rem;
@@ -3521,12 +3579,20 @@ html {
     height: 30rem;
   }
 
+  .custom-sc\:h-11 {
+    height: 2.75rem;
+  }
+
   .custom-sc\:w-6 {
     width: 1.5rem;
   }
 
   .custom-sc\:w-\[33rem\] {
     width: 33rem;
+  }
+
+  .custom-sc\:w-52 {
+    width: 13rem;
   }
 
   .custom-sc\:grid-cols-3 {
@@ -3553,6 +3619,10 @@ html {
     padding: 1.5rem;
   }
 
+  .custom-sc\:font-DanaDemiBold {
+    font-family: Dana DemiBold;
+  }
+
   .custom-sc\:text-sm {
     font-size: 0.875rem;
     line-height: 1.25rem;
@@ -3561,6 +3631,15 @@ html {
   .custom-sc\:text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
+  }
+
+  .custom-sc\:text-base {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  .custom-sc\:tracking-tight {
+    letter-spacing: -0.025em;
   }
 }
 
@@ -3688,9 +3767,9 @@ html {
     width: auto;
   }
 
-  .lg\:scale-0 {
-    --tw-scale-x: 0;
-    --tw-scale-y: 0;
+  .lg\:scale-100 {
+    --tw-scale-x: 1;
+    --tw-scale-y: 1;
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
 
@@ -3906,6 +3985,10 @@ html {
     height: 3rem;
   }
 
+  .xl\:h-14 {
+    height: 3.5rem;
+  }
+
   .xl\:h-16 {
     height: 4rem;
   }
@@ -3944,6 +4027,10 @@ html {
 
   .xl\:w-6 {
     width: 1.5rem;
+  }
+
+  .xl\:w-60 {
+    width: 15rem;
   }
 
   .xl\:w-9\/12 {

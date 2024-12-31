@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 
 export default function ArticleSuggestBox({ img, title, publishDate, shortName }) {
   return (
-    <div className='max-h-[200px] w-72 xl:w-full mt-4 mx-auto bg-white shadow-md rounded-xl'>
+    <div className='max-h-[200px] w-72 xl:w-full mt-4 mx-auto bg-white dark:bg-zinc-700 dark:text-white shadow-md rounded-xl'>
     <Link to={`/article-info/${shortName}`}>
         <img className='w-full h-28 rounded-t-lg' src={img}/>
         <div className='px-5 py-2'>

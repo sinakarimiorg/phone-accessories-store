@@ -13,9 +13,9 @@ import 'swiper/css/effect-fade';
 
 import './Footer.css'
 
-export default function Footer() {
+export default function Footer( { marginClasses }) {
     return (
-        <div className='footer'>
+        <div className={`footer ${marginClasses}`}>
             <div className='px-5 xs:px-7 sm:px-8 xl:px-10 2xl:px-16 py-7'>
                 {/* Footer Header  */}
                 <div className='pb-4 border-b border-zinc-400'>

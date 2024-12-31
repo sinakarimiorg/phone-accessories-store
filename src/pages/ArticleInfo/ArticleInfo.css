@@ -1,5 +1,5 @@
 #article-content h2{
-    @apply pt-8 font-DanaDemiBold text-xl text-zinc-800
+    @apply pt-8 font-DanaDemiBold text-xl text-zinc-800 dark:text-white
 }
 #article-content p{
     @apply pt-5 pb-7
