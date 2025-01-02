@@ -33,11 +33,11 @@ export default function ArticleBox({ shortName, img, title, date }) {
                         <span>{date[0].month}</span>
                         <span>{date[0].year}</span>
                     </div>
-                    <a href="#"
+                    <button
                         className="flex-center sm:hidden gap-x-1 h-5 ml-1.5 sm:ml-0 pr-2.5 pl-2 font-DanaMedium text-xs text-orange-300 bg-orange-200/20 rounded-md">
                         مطالعه
                         <FaChevronLeft className='w-[14px] h-[14px]'/>
-                    </a>
+                    </button>
                 </div>
             </div>
         </Link>

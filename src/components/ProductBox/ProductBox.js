@@ -3,10 +3,7 @@ import { Link } from 'react-router-dom'
 
 import './ProductBox.css'
 
-export default function ProductBox(props) {
-    // { img, title, price, discount, exPrice, classes, img2 }
-    console.log(props);
-    
+export default function ProductBox(props) {    
     return (
         <>
             {/* Icons */}
@@ -31,7 +28,7 @@ export default function ProductBox(props) {
                     </div>
                     {/* Box Body */}
                     <div>
-                        <Link to={`/product-info/${props.shortName}`}><p className='text-sm text-zinc-600 dark:text-white leading-6 pt-3.5 hover:text-fuchsia-400 cursor-pointer'>{props.title}</p></Link>
+                        <p className='text-sm text-zinc-600 dark:text-white leading-6 pt-3.5 hover:text-fuchsia-400 cursor-pointer'>{props.title}</p>
                         <div className='flex justify-between items-center px-2 pt-2 pb-1'>
                             {props.discount && <span className='px-2 xs:px-2.5 pt-0.5 font-DanaMedium xs:font-DanaDemiBold text-xs text-white bg-purple-500 rounded-lg'>{props.discount}%</span>}
                             <p className='flex justify-end items-center xs:gap-1 w-full text-zinc-800'>

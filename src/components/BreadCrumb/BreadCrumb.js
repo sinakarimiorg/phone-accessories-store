@@ -4,7 +4,6 @@ import { HiOutlineChevronLeft } from "react-icons/hi2";
 
 
 export default function BreadCrumb({ links }) {
-    console.log(links)
     return (
 
         <section className='pt-4 sm:pt-48 pb-3'>

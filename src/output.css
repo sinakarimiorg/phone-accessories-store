@@ -731,8 +731,8 @@ html {
   bottom: 0.125rem;
 }
 
-.bottom-16 {
-  bottom: 4rem;
+.bottom-8 {
+  bottom: 2rem;
 }
 
 .bottom-\[100\%\] {
@@ -807,10 +807,6 @@ html {
   top: 100%;
 }
 
-.bottom-8 {
-  bottom: 2rem;
-}
-
 .z-10 {
   z-index: 10;
 }
@@ -845,14 +841,14 @@ html {
   margin-right: auto;
 }
 
+.my-10 {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
 .my-14 {
   margin-top: 3.5rem;
   margin-bottom: 3.5rem;
-}
-
-.my-16 {
-  margin-top: 4rem;
-  margin-bottom: 4rem;
 }
 
 .my-2 {
@@ -883,11 +879,6 @@ html {
 .my-auto {
   margin-top: auto;
   margin-bottom: auto;
-}
-
-.my-10 {
-  margin-top: 2.5rem;
-  margin-bottom: 2.5rem;
 }
 
 .-mt-2 {
@@ -1317,14 +1308,6 @@ html {
 
 .w-px {
   width: 1px;
-}
-
-.w-52 {
-  width: 13rem;
-}
-
-.w-24 {
-  width: 6rem;
 }
 
 .max-w-\[730px\] {
@@ -3308,6 +3291,10 @@ html {
 }
 
 @media (min-width: 768px) {
+  .md\:bottom-16 {
+    bottom: 4rem;
+  }
+
   .md\:bottom-3 {
     bottom: 0.75rem;
   }
@@ -3328,18 +3315,14 @@ html {
     right: 1.25rem;
   }
 
-  .md\:bottom-16 {
-    bottom: 4rem;
+  .md\:my-16 {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
   }
 
   .md\:my-24 {
     margin-top: 6rem;
     margin-bottom: 6rem;
-  }
-
-  .md\:my-16 {
-    margin-top: 4rem;
-    margin-bottom: 4rem;
   }
 
   .md\:mb-0 {
@@ -3398,6 +3381,10 @@ html {
     width: 7rem;
   }
 
+  .md\:w-36 {
+    width: 9rem;
+  }
+
   .md\:w-4 {
     width: 1rem;
   }
@@ -3420,10 +3407,6 @@ html {
 
   .md\:w-\[350px\] {
     width: 350px;
-  }
-
-  .md\:w-36 {
-    width: 9rem;
   }
 
   .md\:gap-16 {
@@ -3548,10 +3531,6 @@ html {
     line-height: 2.25rem;
   }
 
-  .md\:leading-none {
-    line-height: 1;
-  }
-
   .md\:placeholder\:text-sm::placeholder {
     font-size: 0.875rem;
     line-height: 1.25rem;
@@ -3571,6 +3550,10 @@ html {
     display: block;
   }
 
+  .custom-sc\:h-11 {
+    height: 2.75rem;
+  }
+
   .custom-sc\:h-6 {
     height: 1.5rem;
   }
@@ -3579,8 +3562,8 @@ html {
     height: 30rem;
   }
 
-  .custom-sc\:h-11 {
-    height: 2.75rem;
+  .custom-sc\:w-52 {
+    width: 13rem;
   }
 
   .custom-sc\:w-6 {
@@ -3589,10 +3572,6 @@ html {
 
   .custom-sc\:w-\[33rem\] {
     width: 33rem;
-  }
-
-  .custom-sc\:w-52 {
-    width: 13rem;
   }
 
   .custom-sc\:grid-cols-3 {
@@ -3623,6 +3602,11 @@ html {
     font-family: Dana DemiBold;
   }
 
+  .custom-sc\:text-base {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
   .custom-sc\:text-sm {
     font-size: 0.875rem;
     line-height: 1.25rem;
@@ -3631,11 +3615,6 @@ html {
   .custom-sc\:text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
-  }
-
-  .custom-sc\:text-base {
-    font-size: 1rem;
-    line-height: 1.5rem;
   }
 
   .custom-sc\:tracking-tight {

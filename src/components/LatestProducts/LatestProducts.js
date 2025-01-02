@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import SectionHeader from '../SectionHeader/SectionHeader'
 import ProductBox from '../ProductBox/ProductBox';
 import { Swiper, SwiperSlide } from 'swiper/react';
