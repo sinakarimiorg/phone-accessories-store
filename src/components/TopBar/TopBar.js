@@ -160,10 +160,10 @@ export default function TopBar() {
           <span className="block w-px h-14 bg-white/20"></span>
 
           {/* <!-- Login Link --> */}
-          <a href="#" className="flex items-center gap-x-2.5 tracking-tightest">
+          <Link to={'/register'} className="flex items-center gap-x-2.5 tracking-tightest">
             <HiArrowRightEndOnRectangle className='w-6 md:w-8 h-6 md:h-8 hover:text-purple-400' />
             <span className="hidden xl:inline-block">ورود | ثبت‌‌نام</span>
-          </a>
+          </Link>
         </div>
 
       </div>

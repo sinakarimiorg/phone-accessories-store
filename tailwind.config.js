@@ -49,7 +49,7 @@ module.exports = {
           DEFAULT: '1rem',
           xl: '0.625rem'
         }
-      },
+      }
     },
     screens: {
       'xs': '480px',
