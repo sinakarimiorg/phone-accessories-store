@@ -945,6 +945,18 @@ html {
   margin-right: 0.25rem;
 }
 
+.mr-16 {
+  margin-right: 4rem;
+}
+
+.mr-20 {
+  margin-right: 5rem;
+}
+
+.mr-3 {
+  margin-right: 0.75rem;
+}
+
 .mr-5 {
   margin-right: 1.25rem;
 }
@@ -1011,22 +1023,6 @@ html {
 
 .mt-auto {
   margin-top: auto;
-}
-
-.mr-32 {
-  margin-right: 8rem;
-}
-
-.mr-16 {
-  margin-right: 4rem;
-}
-
-.mr-3 {
-  margin-right: 0.75rem;
-}
-
-.mr-20 {
-  margin-right: 5rem;
 }
 
 .line-clamp-2 {
@@ -1166,6 +1162,14 @@ html {
   height: 2rem;
 }
 
+.h-80 {
+  height: 20rem;
+}
+
+.h-9 {
+  height: 2.25rem;
+}
+
 .h-\[14px\] {
   height: 14px;
 }
@@ -1196,14 +1200,6 @@ html {
 
 .h-px {
   height: 1px;
-}
-
-.h-9 {
-  height: 2.25rem;
-}
-
-.h-80 {
-  height: 20rem;
 }
 
 .max-h-52 {
@@ -1330,6 +1326,10 @@ html {
   width: 66.666667%;
 }
 
+.w-9 {
+  width: 2.25rem;
+}
+
 .w-9\/12 {
   width: 75%;
 }
@@ -1356,10 +1356,6 @@ html {
 
 .w-px {
   width: 1px;
-}
-
-.w-9 {
-  width: 2.25rem;
 }
 
 .max-w-\[730px\] {
@@ -1604,12 +1600,6 @@ html {
   --tw-space-y-reverse: 0;
   margin-top: calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(0.75rem * var(--tw-space-y-reverse));
-}
-
-.space-y-4 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-y-reverse: 0;
-  margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(1rem * var(--tw-space-y-reverse));
 }
 
 .divide-y > :not([hidden]) ~ :not([hidden]) {
@@ -2172,6 +2162,11 @@ html {
   padding-right: 1.75rem;
 }
 
+.px-8 {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
 .py-0\.5 {
   padding-top: 0.125rem;
   padding-bottom: 0.125rem;
@@ -2232,11 +2227,6 @@ html {
   padding-bottom: 1px;
 }
 
-.px-8 {
-  padding-left: 2rem;
-  padding-right: 2rem;
-}
-
 .pb-0\.5 {
   padding-bottom: 0.125rem;
 }
@@ -2285,10 +2275,6 @@ html {
   padding-left: 0.5rem;
 }
 
-.pl-32 {
-  padding-left: 8rem;
-}
-
 .pr-1 {
   padding-right: 0.25rem;
 }
@@ -2317,6 +2303,10 @@ html {
   padding-right: 1.75rem;
 }
 
+.pr-8 {
+  padding-right: 2rem;
+}
+
 .pt-0\.5 {
   padding-top: 0.125rem;
 }
@@ -2327,10 +2317,6 @@ html {
 
 .pt-12 {
   padding-top: 3rem;
-}
-
-.pt-16 {
-  padding-top: 4rem;
 }
 
 .pt-2 {
@@ -2367,18 +2353,6 @@ html {
 
 .pt-8 {
   padding-top: 2rem;
-}
-
-.pr-32 {
-  padding-right: 8rem;
-}
-
-.pt-10 {
-  padding-top: 2.5rem;
-}
-
-.pr-8 {
-  padding-right: 2rem;
 }
 
 .text-left {
@@ -2423,11 +2397,6 @@ html {
 
 .font-serif {
   font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
-}
-
-.text-2xl {
-  font-size: 1.5rem;
-  line-height: 2rem;
 }
 
 .text-3xl {
@@ -3463,16 +3432,16 @@ html {
     margin-left: 0.5rem;
   }
 
+  .md\:mr-0 {
+    margin-right: 0px;
+  }
+
   .md\:mt-10 {
     margin-top: 2.5rem;
   }
 
   .md\:mt-3 {
     margin-top: 0.75rem;
-  }
-
-  .md\:mr-0 {
-    margin-right: 0px;
   }
 
   .md\:block {
@@ -3675,10 +3644,6 @@ html {
 
   .md\:pt-2 {
     padding-top: 0.5rem;
-  }
-
-  .md\:pr-0 {
-    padding-right: 0px;
   }
 
   .md\:text-center {
@@ -4072,6 +4037,10 @@ html {
     padding-right: 6rem;
   }
 
+  .lg\:pt-20 {
+    padding-top: 5rem;
+  }
+
   .lg\:pt-4 {
     padding-top: 1rem;
   }
@@ -4086,10 +4055,6 @@ html {
 
   .lg\:pt-7 {
     padding-top: 1.75rem;
-  }
-
-  .lg\:pt-20 {
-    padding-top: 5rem;
   }
 
   .lg\:font-DanaDemiBold {

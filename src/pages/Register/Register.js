@@ -20,7 +20,7 @@ export default function Register() {
                 <h1 className='font-DanaMedium md:font-DanaDemiBold md:text-lg lg:text-2xl text-center pb-2 md:pb-4 tracking-tight md:tracking-normal'>سـاخت حـساب کاربـری</h1>
                 <div className='flex-center gap-1 md:gap-2 lg:gap-5 text-xs lg:text-sm'>
                   <span className='lg:font-DanaMedium border-b border-teal-700 tracking-tighter lg:tracking-normal'>قبلا ثبت نام کرده‌اید؟</span>
-                  <Link className='px-1 md:px-2 py-px md:py-0.5 bg-teal-700 hover:bg-teal-600 text-white text-[10px] tracking-tighter lg:tracking-tight rounded-sm md:rounded-md transition-all' to={'/login'}>وارد شوید</Link>
+                  <Link className='px-1 md:px-2 py-px md:py-0.5 bg-teal-700 hover:bg-teal-600 text-white text-[10px] lg:text-sm tracking-tighter lg:tracking-tight rounded-sm md:rounded-md transition-all' to={'/login'}>وارد شوید</Link>
                 </div>
               </div>
               {/* Register Form Section */}
