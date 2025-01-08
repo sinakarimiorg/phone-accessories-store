@@ -71,7 +71,6 @@ export default function Contact() {
             </div>
           </div>
         </div>
-    
         {/* Mobile Mode */}
         <div className='block sm:hidden'>
           <div>

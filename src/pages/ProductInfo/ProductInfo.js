@@ -59,7 +59,7 @@ export default function ProductInfo() {
       <BreadCrumb
         links={[
           { id: 1, title: 'فروشگاه موبولـند', to: '/' },
-          { id: 2, title: 'همه محصولات', to: '/all-products' },
+          { id: 2, title: 'همه محصولات', to: '/products/1' },
           { id: 3, title: 'هدفون کربی', to: '/product-info' },
         ]} />
 

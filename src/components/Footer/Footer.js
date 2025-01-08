@@ -71,9 +71,9 @@ export default function Footer( { marginClasses }) {
                         <h2 className='footer-title'>خدمات مشتریان</h2>
                         <div className='footer-col__list'>
                             <a href='#'>حساب کاربری من</a>
-                            <a href='#'>بلاگ</a>
+                            <Link to={'/articles/1'}>بلاگ</Link>
                             <a href='#'>خرید عمده لوازم جانبی موبایل</a>
-                            <a href='#'>نمایندگی فروش</a>
+                            <Link to={'/contact'}>ارتباط با ما</Link>
                         </div>
                     </div>
 
@@ -81,7 +81,7 @@ export default function Footer( { marginClasses }) {
                     <div className='footer-col'>
                         <h2 className='footer-title'>دسترسی سریع</h2>
                         <div className='footer-col__list'>
-                            <a href='#'>ثبت شکایت</a>
+                            <Link to={'/contact'}>ثبت شکایت</Link>
                             <a href='#'>قوانین و مقررات</a>
                             <a href='#'>روش های ارسال</a>
                             <a href='#'>روش های پرداخت</a>

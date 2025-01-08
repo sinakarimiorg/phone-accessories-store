@@ -17,7 +17,7 @@ export default function ArticleInfo() {
             <BreadCrumb
                 links={[
                     { id: 1, title: 'فروشگاه موبولـند', to: '/' },
-                    { id: 2, title: 'همه مقـالات', to: '/all-articles' },
+                    { id: 2, title: 'همه مقـالات', to: '/articles/1' },
                     { id: 3, title: 'کسب درآمد از بازی', to: '/article-info' },
                 ]} />
             <div className='container'>

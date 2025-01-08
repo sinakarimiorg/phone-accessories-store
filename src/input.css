@@ -59,6 +59,10 @@
     .visible--elem{
         @apply visible opacity-100
     }
+
+    .pagination--item{
+        @apply w-8 h-8 pt-0.5 bg-white text-center text-lg leading-8 rounded-md shadow-sm cursor-pointer
+    }
 }
 
 @layer utilities {

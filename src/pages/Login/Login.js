@@ -67,7 +67,6 @@ export default function Login() {
         </div>
       </div>
     </div>
-
     {/* Mobile Mode */}
     <div className='block sm:hidden'>
       <div>

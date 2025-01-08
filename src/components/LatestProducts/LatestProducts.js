@@ -14,7 +14,7 @@ export default function LatestProducts() {
     return (
         <div>
             <div className='container'>
-                <SectionHeader title={'جدیدترین محصولات'} desc={'از تازه ها شروع کن!'} btnTitle={'مشاهده همه'} />
+                <SectionHeader title={'جدیدترین محصولات'} desc={'از تازه ها شروع کن!'} btnTitle={'مشاهده همه'} btnHref={'/products/1'}/>
                 <div className='overflow-hidden'>
                     <Swiper
                         spaceBetween={2}
