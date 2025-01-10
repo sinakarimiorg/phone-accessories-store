@@ -1041,6 +1041,10 @@ html {
   margin-top: auto;
 }
 
+.mb-10 {
+  margin-bottom: 2.5rem;
+}
+
 .line-clamp-2 {
   overflow: hidden;
   display: -webkit-box;
@@ -1152,6 +1156,10 @@ html {
 
 .h-5 {
   height: 1.25rem;
+}
+
+.h-50 {
+  height: 12.5rem;
 }
 
 .h-52 {
@@ -1322,6 +1330,10 @@ html {
   width: 1.5rem;
 }
 
+.w-60 {
+  width: 15rem;
+}
+
 .w-64 {
   width: 16rem;
 }
@@ -1424,6 +1436,18 @@ html {
   grid-template-columns: repeat(6, minmax(0, 1fr));
 }
 
+.grid-cols-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.grid-cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.grid-cols-5 {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
 .flex-row {
   flex-direction: row;
 }
@@ -1504,6 +1528,10 @@ html {
   gap: 0.75rem;
 }
 
+.gap-3\.5 {
+  gap: 0.875rem;
+}
+
 .gap-4 {
   gap: 1rem;
 }
@@ -1518,10 +1546,6 @@ html {
 
 .gap-8 {
   gap: 2rem;
-}
-
-.gap-3\.5 {
-  gap: 0.875rem;
 }
 
 .gap-x-0\.5 {
@@ -1982,6 +2006,11 @@ html {
 .bg-zinc-700 {
   --tw-bg-opacity: 1;
   background-color: rgb(63 63 70 / var(--tw-bg-opacity));
+}
+
+.bg-gray-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(229 231 235 / var(--tw-bg-opacity));
 }
 
 .bg-gradient-to-r {
@@ -2892,6 +2921,10 @@ html {
   border-width: 2px;
 }
 
+.focus\:border-hidden:focus {
+  border-style: hidden;
+}
+
 .focus\:border-none:focus {
   border-style: none;
 }
@@ -3342,6 +3375,10 @@ html {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .sm\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
   .sm\:flex-row {
     flex-direction: row;
   }
@@ -3368,6 +3405,10 @@ html {
 
   .sm\:gap-y-4 {
     row-gap: 1rem;
+  }
+
+  .sm\:gap-x-8 {
+    column-gap: 2rem;
   }
 
   .sm\:px-8 {
@@ -3723,6 +3764,11 @@ html {
     line-height: 1.25rem;
   }
 
+  .md\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+
   .md\:text-xs {
     font-size: 0.75rem;
     line-height: 1rem;
@@ -3793,6 +3839,10 @@ html {
 
   .custom-sc\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .custom-sc\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
   .custom-sc\:flex-row {
@@ -4314,6 +4364,10 @@ html {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
+  .xl\:grid-cols-5 {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+
   .xl\:flex-row {
     flex-direction: row;
   }
@@ -4499,6 +4553,10 @@ html {
 
   .\32xl\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .\32xl\:grid-cols-6 {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
   }
 
   .\32xl\:justify-between {

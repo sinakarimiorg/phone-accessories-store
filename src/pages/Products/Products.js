@@ -17,18 +17,28 @@ export default function Products() {
         <div className='container'>
           {/* Filtering Header */}
 
-            <div className='flex gap-8 px-4 py-3 border-b-2 border-gray-400 rounded-t-md bg-slate-300'>
-              <div className='flex-center gap-1 font-DanaMedium'>
-                <MdFormatListNumberedRtl className='w-5 h-5'/>
-               مرتب سازی براساس:
-              </div>
-                <a href='#'>پرفروش‌ ترین</a>
-                <a href='#'>گران‌ ترین</a>
-                <a href='#'>ارزان ترین</a>
-                <a href='#'>محبوب ترین</a>
+          <div className='flex gap-x-4 sm:gap-x-8 px-4 py-3 border-b-2 border-gray-400 rounded-t-md bg-slate-300'>
+            <div className='flex-center gap-1 font-DanaMedium'>
+              <MdFormatListNumberedRtl className='w-5 h-5' />
+              مرتب سازی براساس:
             </div>
+            <div className='hidden sm:flex-center gap-x-8'>
+              <a href='#'>پرفروش‌ ترین</a>
+              <a href='#'>گران‌ ترین</a>
+              <a href='#'>ارزان ترین</a>
+              <a href='#'>محبوب ترین</a>
+            </div>
+            <div className='sm:hidden'>
+              <select className='px-3 py-1 bg-gray-200 text-sm cursor-pointer focus:outline-none rounded-md'>
+                <option><a href='#'>پرفروش‌ ترین</a></option>
+                <option><a href='#'>گران‌ ترین</a></option>
+                <option><a href='#'>ارزان ترین</a></option>
+                <option><a href='#'>محبوب ترین</a></option>
+              </select>
+            </div>
+          </div>
 
-          <div className='grid grid-cols-6 space-y-6'>
+          <div className='grid grid-cols-2 sm:grid-cols-3 custom-sc:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 space-y-6'>
             <ProductBox img={'/images/products/car-charger.png'} img2={'/images/products/car-charger2.png'} title={'هندزفری بلوتوثی کربی مدل CR-T107'} classes={'product-box'} price={765000} />
             <ProductBox img={'/images/products/cover.png'} img2={'/images/products/cover2.png'} title={'هندزفری بلوتوثی کربی مدل CR-T107'} classes={'product-box'} price={765000} discount={27} exPrice={850000} />
             <ProductBox img={'/images/products/cover.png'} img2={'/images/products/cover2.png'} title={'هندزفری بلوتوثی کربی مدل CR-T107'} classes={'product-box'} price={765000} discount={27} exPrice={850000} />

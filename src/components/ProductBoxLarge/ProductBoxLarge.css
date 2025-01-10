@@ -1,0 +1,3 @@
+.product-box-large{
+    @apply w-[150px] xs:w-44 md:w-[22rem] h-64 xs:h-96 mx-auto px-5 py-7 bg-white dark:bg-zinc-600 shadow-lg rounded-lg cursor-pointer
+}
