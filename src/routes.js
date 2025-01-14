@@ -10,8 +10,10 @@ import Articles from './pages/Articles/Articles'
 import Search from './pages/Search/Search'
 
 
-import AdminPanel from './pages/Admin Panel/Index'
-import PAdminIndex from './pages/Admin Panel/Index/Index'
+import AdminPanel from './pages/AdminPanel/Index'
+import PAdminIndex from './pages/AdminPanel/Index/Index'
+import PAdminProducts from './pages/AdminPanel/Products/Products'
+import PAdminUsers from './pages/AdminPanel/Users/Users'
 
 const routes = [
     { path: '/', element: <Index /> },
@@ -28,9 +30,10 @@ const routes = [
     {
         path: '/p-admin/*',
         element: <AdminPanel />,
-
-        Children: [
+        children: [
             { path: '', element: <PAdminIndex /> },
+            { path: 'products', element: <PAdminProducts /> },
+            { path: 'users', element: <PAdminUsers /> },
         ]
     }
 ]

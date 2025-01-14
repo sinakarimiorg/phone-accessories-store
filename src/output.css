@@ -735,8 +735,16 @@ html {
   left: -16rem;
 }
 
+.-right-1 {
+  right: -0.25rem;
+}
+
 .-right-64 {
   right: -16rem;
+}
+
+.-top-1 {
+  top: -0.25rem;
 }
 
 .bottom-0 {
@@ -862,6 +870,11 @@ html {
   margin-bottom: 2.5rem;
 }
 
+.my-12 {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
 .my-14 {
   margin-top: 3.5rem;
   margin-bottom: 3.5rem;
@@ -903,6 +916,10 @@ html {
 
 .mb-0\.5 {
   margin-bottom: 0.125rem;
+}
+
+.mb-10 {
+  margin-bottom: 2.5rem;
 }
 
 .mb-2 {
@@ -1041,10 +1058,6 @@ html {
   margin-top: auto;
 }
 
-.mb-10 {
-  margin-bottom: 2.5rem;
-}
-
 .line-clamp-2 {
   overflow: hidden;
   display: -webkit-box;
@@ -1080,6 +1093,10 @@ html {
 
 .inline-flex {
   display: inline-flex;
+}
+
+.table {
+  display: table;
 }
 
 .grid {
@@ -1250,6 +1267,10 @@ html {
   width: 2.5rem;
 }
 
+.w-10\/12 {
+  width: 83.333333%;
+}
+
 .w-11 {
   width: 2.75rem;
 }
@@ -1264,6 +1285,10 @@ html {
 
 .w-14 {
   width: 3.5rem;
+}
+
+.w-2\/12 {
+  width: 16.666667%;
 }
 
 .w-2\/6 {
@@ -1322,6 +1347,10 @@ html {
   width: 1.25rem;
 }
 
+.w-5\/12 {
+  width: 41.666667%;
+}
+
 .w-56 {
   width: 14rem;
 }
@@ -1340,6 +1369,10 @@ html {
 
 .w-7 {
   width: 1.75rem;
+}
+
+.w-7\/12 {
+  width: 58.333333%;
 }
 
 .w-72 {
@@ -1390,6 +1423,10 @@ html {
   max-width: 730px;
 }
 
+.flex-1 {
+  flex: 1 1 0%;
+}
+
 .shrink-0 {
   flex-shrink: 0;
 }
@@ -1430,22 +1467,6 @@ html {
 
 .grid-cols-2 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
-.grid-cols-6 {
-  grid-template-columns: repeat(6, minmax(0, 1fr));
-}
-
-.grid-cols-4 {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-}
-
-.grid-cols-3 {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-
-.grid-cols-5 {
-  grid-template-columns: repeat(5, minmax(0, 1fr));
 }
 
 .flex-row {
@@ -1878,6 +1899,10 @@ html {
   background-color: rgb(35 47 63 / var(--tw-bg-opacity));
 }
 
+.bg-custom-navy\/15 {
+  background-color: rgb(35 47 63 / 0.15);
+}
+
 .bg-custom-navy\/85 {
   background-color: rgb(35 47 63 / 0.85);
 }
@@ -1885,6 +1910,11 @@ html {
 .bg-gray-100 {
   --tw-bg-opacity: 1;
   background-color: rgb(243 244 246 / var(--tw-bg-opacity));
+}
+
+.bg-gray-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(229 231 235 / var(--tw-bg-opacity));
 }
 
 .bg-gray-300 {
@@ -1904,6 +1934,10 @@ html {
 .bg-green-600 {
   --tw-bg-opacity: 1;
   background-color: rgb(22 163 74 / var(--tw-bg-opacity));
+}
+
+.bg-inherit {
+  background-color: inherit;
 }
 
 .bg-orange-200\/20 {
@@ -1952,6 +1986,11 @@ html {
 .bg-sky-700 {
   --tw-bg-opacity: 1;
   background-color: rgb(3 105 161 / var(--tw-bg-opacity));
+}
+
+.bg-slate-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(226 232 240 / var(--tw-bg-opacity));
 }
 
 .bg-slate-300 {
@@ -2006,11 +2045,6 @@ html {
 .bg-zinc-700 {
   --tw-bg-opacity: 1;
   background-color: rgb(63 63 70 / var(--tw-bg-opacity));
-}
-
-.bg-gray-200 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(229 231 235 / var(--tw-bg-opacity));
 }
 
 .bg-gradient-to-r {
@@ -2169,6 +2203,10 @@ html {
 
 .p-5 {
   padding: 1.25rem;
+}
+
+.p-6 {
+  padding: 1.5rem;
 }
 
 .px-1 {
@@ -2463,6 +2501,11 @@ html {
   font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
 }
 
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
 .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
@@ -2584,6 +2627,11 @@ html {
   color: rgb(156 163 175 / var(--tw-text-opacity));
 }
 
+.text-green-500 {
+  --tw-text-opacity: 1;
+  color: rgb(34 197 94 / var(--tw-text-opacity));
+}
+
 .text-indigo-950 {
   --tw-text-opacity: 1;
   color: rgb(30 27 75 / var(--tw-text-opacity));
@@ -2607,6 +2655,11 @@ html {
 .text-purple-custom {
   --tw-text-opacity: 1;
   color: rgb(149 69 237 / var(--tw-text-opacity));
+}
+
+.text-red-500 {
+  --tw-text-opacity: 1;
+  color: rgb(239 68 68 / var(--tw-text-opacity));
 }
 
 .text-sky-500 {
@@ -2919,10 +2972,6 @@ html {
 
 .focus\:border-2:focus {
   border-width: 2px;
-}
-
-.focus\:border-hidden:focus {
-  border-style: hidden;
 }
 
 .focus\:border-none:focus {
@@ -3403,12 +3452,12 @@ html {
     column-gap: 7rem;
   }
 
-  .sm\:gap-y-4 {
-    row-gap: 1rem;
-  }
-
   .sm\:gap-x-8 {
     column-gap: 2rem;
+  }
+
+  .sm\:gap-y-4 {
+    row-gap: 1rem;
   }
 
   .sm\:px-8 {
