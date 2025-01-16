@@ -14,6 +14,7 @@ import AdminPanel from './pages/AdminPanel/Index'
 import PAdminIndex from './pages/AdminPanel/Index/Index'
 import PAdminProducts from './pages/AdminPanel/Products/Products'
 import PAdminUsers from './pages/AdminPanel/Users/Users'
+import PAdminArticles from './pages/AdminPanel/Articles/Articles'
 
 const routes = [
     { path: '/', element: <Index /> },
@@ -34,6 +35,7 @@ const routes = [
             { path: '', element: <PAdminIndex /> },
             { path: 'products', element: <PAdminProducts /> },
             { path: 'users', element: <PAdminUsers /> },
+            { path: 'articles', element: <PAdminArticles /> },
         ]
     }
 ]

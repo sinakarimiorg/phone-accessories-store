@@ -56,12 +56,24 @@
         @apply visible opacity-100
     }
 
-    .visible--elem{
+    .visible--elem {
         @apply visible opacity-100
     }
 
-    .pagination--item{
+    .pagination--item {
         @apply w-8 h-8 pt-0.5 bg-white text-center text-lg leading-8 rounded-md shadow-sm cursor-pointer
+    }
+
+    .p-admin__title {
+        @apply mb-6 font-MorabbaBold text-xl text-zinc-800 tracking-wide
+    
+    }
+    .p-admin__box-title {
+        @apply mb-5 font-DanaDemiBold text-lg text-zinc-800
+    }
+
+    .p-admin__box {
+        @apply p-5 bg-white rounded-md shadow-xl
     }
 }
 

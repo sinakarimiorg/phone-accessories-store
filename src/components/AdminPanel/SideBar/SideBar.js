@@ -32,7 +32,7 @@ export default function SideBar() {
                 <div className="sidebarMenu">
                     <h3 className="sidebarTitle">داشبورد</h3>
                     <ul className="sidebarList">
-                        <NavLink to="/" className="link sidebarListItem">
+                        <NavLink to="/p-admin" className="link sidebarListItem">
                             <li className="sidebarListItem">
                                 <CiHome className="sidebarIcon" />
                                 خانه
@@ -51,19 +51,19 @@ export default function SideBar() {
                 <div className="sidebarMenu">
                     <h3 className="sidebarTitle">منوی سریع</h3>
                     <ul className="sidebarList">
-                        <NavLink to="/products" className="link sidebarListItem">
+                        <NavLink to="/p-admin/products" className="link sidebarListItem">
                             <li className="sidebarListItem">
                                 <TbCubePlus className="sidebarIcon" />
                                 محصولات
                             </li>
                         </NavLink>
-                        <NavLink to="/newProduct" className="link sidebarListItem">
+                        <NavLink to="/p-admin/newProduct" className="link sidebarListItem">
                             <li className="sidebarListItem">
                                 <FaBoxes className="sidebarIcon" />
                                 محصول جدید
                             </li>
                         </NavLink>
-                        <NavLink to="/users" className="link sidebarListItem">
+                        <NavLink to="/p-admin/users" className="link sidebarListItem">
                             <li className="sidebarListItem">
                                 <HiOutlineUsers className="sidebarIcon" />
                                 کاربران

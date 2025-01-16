@@ -9,8 +9,7 @@ import './Index.css'
 
 export default function Index() {
   return (
-    <>
-      <div className='container my-12'>
+      <div>
         <div className='mb-8'>
           <span className='pl-1 font-DanaMedium text-zinc-500'>خوش آمدید،</span>
           <span className='font font-DanaDemiBold text-lg'>سینا کریمی</span>
@@ -18,7 +17,7 @@ export default function Index() {
         {/* Top Row & Information Boxes */}
         <div className='flex gap-10'>
           {/* Info Box */}
-          <div className='flex-1 px-7 py-6 bg-white rounded-md shadow-xl'>
+          <div className='flex-1 p-admin__box'>
             <h1 className='font-DanaMedium text-2xl'>درآمد:</h1>
             <div className='flex items-center justify-end gap-8'>
               <span className='font-DanaDemiBold text-2xl'>36,000,000</span>
@@ -30,7 +29,7 @@ export default function Index() {
             <p className='text-sm text-zinc-500'>نسبت به ماه گذشته</p>
           </div>
           {/* Info Box */}
-          <div className='flex-1 px-7 py-6 bg-white rounded-md shadow-xl'>
+          <div className='flex-1 p-admin__box'>
             <h1 className='font-DanaMedium text-2xl'>فروش:</h1>
             <div className='flex items-center justify-end gap-8'>
               <span className='font-DanaDemiBold text-2xl'>138,000,000</span>
@@ -42,7 +41,7 @@ export default function Index() {
             <p className='text-sm text-zinc-500'>نسبت به ماه گذشته</p>
           </div>
           {/* Info Box */}
-          <div className='flex-1 px-7 py-6 bg-white rounded-md shadow-xl'>
+          <div className='flex-1 p-admin__box'>
             <h1 className='font-DanaMedium text-2xl'>هزینه:</h1>
             <div className='flex items-center justify-end gap-8'>
               <span className='font-DanaDemiBold text-2xl'>101,000,000</span>
@@ -65,7 +64,7 @@ export default function Index() {
         {/* Bottom Row */}
         <div className='flex gap-10'>
           {/* Right Col & New Users */}
-          <div className='w-5/12 p-5 bg-white rounded-md shadow-xl'>
+          <div className='w-5/12 p-admin__box'>
             <h1 className='box-title'>کـاربران جدید</h1>
             <table className='w-full'>
               <thead className='bg-custom-navy/15'>
@@ -113,7 +112,7 @@ export default function Index() {
           </div>
 
           {/* Left Col & New Transactions */}
-          <div className='w-7/12 p-5 bg-white rounded-md shadow-xl'>
+          <div className='w-7/12 p-admin__box'>
             <h1 className='box-title'>تـراکـنشات اخیـر</h1>
             <table className='w-full'>
               <thead className='bg-custom-navy/15'>
@@ -186,6 +185,5 @@ export default function Index() {
           </div>
         </div>
       </div>
-    </>
   )
 }

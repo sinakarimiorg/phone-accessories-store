@@ -9,7 +9,7 @@ export default function Index() {
       <SideBar />
       <div className='w-10/12'>
         <TopBar />
-        <div>
+        <div className='p-12'>
           <Outlet />
         </div>
       </div>
