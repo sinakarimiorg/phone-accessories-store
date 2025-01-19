@@ -3,9 +3,10 @@ import { Link, NavLink } from 'react-router-dom'
 import { CiHome } from "react-icons/ci";
 import { MdOutlineTimeline } from "react-icons/md";
 import { AiOutlineRise } from "react-icons/ai";
-import { TbCubePlus } from "react-icons/tb";
+import { GrArticle } from "react-icons/gr";
 import { FaBoxes } from "react-icons/fa";
 import { HiOutlineUsers } from "react-icons/hi2";
+import { CgMenuLeft } from "react-icons/cg";
 import { GrTransaction } from "react-icons/gr";
 import { LiaComments } from "react-icons/lia";
 import { MdOutlineAlternateEmail } from "react-icons/md";
@@ -13,6 +14,7 @@ import { MdOutlineFeedback } from "react-icons/md";
 import { TbMessages } from "react-icons/tb";
 import { PiSuitcaseSimpleThin } from "react-icons/pi";
 import { GoReport } from "react-icons/go";
+import { IoExitOutline } from "react-icons/io5";
 
 import './SideBar.css'
 
@@ -53,20 +55,26 @@ export default function SideBar() {
                     <ul className="sidebarList">
                         <NavLink to="/p-admin/products" className="link sidebarListItem">
                             <li className="sidebarListItem">
-                                <TbCubePlus className="sidebarIcon" />
+                                <FaBoxes className="sidebarIcon" />
                                 محصولات
                             </li>
                         </NavLink>
-                        <NavLink to="/p-admin/newProduct" className="link sidebarListItem">
+                        <NavLink to="/p-admin/articles" className="link sidebarListItem">
                             <li className="sidebarListItem">
-                                <FaBoxes className="sidebarIcon" />
-                                محصول جدید
+                                <GrArticle className="sidebarIcon" />
+                                مقالات
                             </li>
                         </NavLink>
                         <NavLink to="/p-admin/users" className="link sidebarListItem">
                             <li className="sidebarListItem">
                                 <HiOutlineUsers className="sidebarIcon" />
                                 کاربران
+                            </li>
+                        </NavLink>
+                        <NavLink to="/p-admin/menus" className="link sidebarListItem">
+                            <li className="sidebarListItem">
+                                <CgMenuLeft className="sidebarIcon" />
+                                منوها
                             </li>
                         </NavLink>
                         <li className="sidebarListItem">
@@ -108,8 +116,8 @@ export default function SideBar() {
                             آمار
                         </li>
                         <li className="sidebarListItem">
-                            <GoReport className="sidebarIcon" />
-                            گزارشات
+                            <IoExitOutline className="sidebarIcon" />
+                            خروج
                         </li>
                     </ul>
                 </div>
