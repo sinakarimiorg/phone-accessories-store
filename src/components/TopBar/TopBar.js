@@ -5,7 +5,7 @@ import { HiArrowRightEndOnRectangle } from "react-icons/hi2";
 import { HiOutlineShoppingCart } from "react-icons/hi2";
 import { IoMoonOutline } from "react-icons/io5";
 import { FiSun } from "react-icons/fi";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { HiBars3 } from "react-icons/hi2";
 import { IoCartOutline } from "react-icons/io5";
 import { HiMiniXMark } from "react-icons/hi2";
@@ -17,9 +17,9 @@ import { IoDocumentTextOutline } from "react-icons/io5";
 import { BiPhone } from "react-icons/bi";
 import { RiGroupLine } from "react-icons/ri";
 import { HiMiniChevronLeft } from "react-icons/hi2";
+import CartProductBox from '../CartProductBox/CartProductBox';
 
 import './TopBar.css'
-import CartProductBox from '../CartProductBox/CartProductBox';
 
 export default function TopBar() {
 
@@ -48,6 +48,7 @@ export default function TopBar() {
   const [navClass, setNavClass] = useState('-right-64')
   const [cartClass, setCartClass] = useState('-left-64')
   const [isSubmenuOpen, setIsSubmenuOpen] = useState(false)
+  const [searchedValue, setSearchedValue] = useState('')
 
 
   const openMenuBar = () => {
@@ -74,8 +75,18 @@ export default function TopBar() {
     setVisibleOverlay(false)
   }
 
+  ////////////// For Search Section 
+  const navigate = useNavigate()
+  const enterInInput = (event) => {
+    if (event.keyCode === 13) {
+      navigate(`/search/${searchedValue}`)
+    }
+  }
+
+
   return (
     <>
+      {/* <!-- TopBar for Laptop --> */}
       <div className='fixed w-full hidden sm:flex items-center justify-between py-4 px-6 bg-custom-dark text-white z-50'>
         {/* Topbar Logo */}
         <Link to={'/'} className='flex items-center gap-1 cursor-pointer'>
@@ -88,13 +99,10 @@ export default function TopBar() {
 
         {/* Search Box */}
         <div className='flex items-center w-[300px] md:w-[350px] lg:w-[600px] xl:w-[700px] 2xl:mr-24 bg-gray-100 rounded-2xl overflow-hidden'>
-          <div className='flex-center p-3 bg-purple-500 cursor-pointer'>
+          <Link to={`/search/${searchedValue}`} className='flex-center p-3 bg-purple-500 cursor-pointer'>
             <RiSearch2Line className='w-5  md:w-6 h-5 md:h-6' />
-          </div>
-          <p className='flex-center gap-1 w-full md:text-lg text-neutral-600'>
-            جستجو در
-            <span className='text-purple-custom'>مـوبـولـــند</span>
-          </p>
+          </Link>
+          <input value={searchedValue} onChange={event => { setSearchedValue(event.target.value) }} onKeyDown={event => enterInInput(event)} type='text' className='w-full md:text-lg text-neutral-600 text-center bg-transparent focus:outline-none placeholder-purple-500' placeholder='جستجو در مـوبـولـــند' />
         </div>
 
         {/* Cart & Login  */}
@@ -169,183 +177,194 @@ export default function TopBar() {
       </div>
 
       {/* <!-- TopBar for Mobile --> */}
-      <div className='w-full flex sm:hidden items-center justify-between px-4 h-16 bg-custom-dark text-zinc-700 dark:text-white'>
-        <button className='text-white' onClick={() => openMenuBar()}>
-          <HiBars3 className='w-6 h-6' />
-        </button>
+      <div className='w-full block sm:hidden'>
+        {/* TopBar Content */}
+        <div className='w-full flex items-center justify-between px-4 h-16 bg-custom-dark text-zinc-700 dark:text-white'>
+          <button className='text-white' onClick={() => openMenuBar()}>
+            <HiBars3 className='w-6 h-6' />
+          </button>
 
-        {/* Topbar Logo */}
-        <div className='flex items-center gap-1 cursor-pointer text-white'>
-          <img src='/images/logo/logo-lg.png' className='w-8 h-8' />
-          <h5 className='text-shadow-topbar font-MorabbaBold text-xl'>
-            مـوبـو
-            لــــــند
-          </h5>
-        </div>
-
-        <button className='text-white' onClick={() => openCartBar()}>
-          <IoCartOutline className='w-6 h-6' />
-        </button>
-
-        {/* <!-- Mobile Nav --> */}
-        <div className={`mobile-nav fixed ${navClass} top-0 bottom-0 w-64 px-4 pt-4 bg-white dark:bg-zinc-700 z-20 transition-all overflow-y-auto`}>
-
-          {/* <!-- Nav Header --> */}
-          <div className="flex items-center justify-between pb-5 mb-6 border-b border-b-gray-100 dark:border-b-white/10">
-
-            {/* Nav Logo */}
-            <Link to={'/'} className='flex items-center gap-1 cursor-pointer'>
-              <img src='/images/logo/logo-lg.png' className='w-8 h-8' />
-              <h5 className='font-MorabbaBold text-xl text-neutral-700 dark:text-white'>
-                مـوبـو
-                لــــــند
-              </h5>
-            </Link>
-
-            {/* <!-- Close Nav Icon --> */}
-            <div onClick={() => closeNavBar()}>
-              <HiMiniXMark className="w-5 h-5" />
-            </div>
+          {/* Topbar Logo */}
+          <div className='flex items-center gap-1 cursor-pointer text-white'>
+            <img src='/images/logo/logo-lg.png' className='w-8 h-8' />
+            <h5 className='text-shadow-topbar font-MorabbaBold text-xl'>
+              مـوبـو
+              لــــــند
+            </h5>
           </div>
 
-          {/* <!-- Nav Menu --> */}
-          <div className="flex flex-col mb-8 text-zinc-700 dark:text-white">
-            <Link to={'/'} className="flex gap-x-2 py-2.5 pr-2.5 bg-purple-300/20 text-purple-custom dark:text-purple-300 rounded-md">
-              <AiOutlineHome className='w-5 h-5' />
-              <span>صفحه اصلی</span>
-            </Link>
+          <button className='text-white' onClick={() => openCartBar()}>
+            <IoCartOutline className='w-6 h-6' />
+          </button>
 
-            {/* <!-- menu --> */}
-            <ul className="flex flex-col gap-y-6 mt-4 pr-2.5">
+          {/* <!-- Mobile Nav(menu) --> */}
+          <div className={`mobile-nav fixed ${navClass} top-0 bottom-0 w-64 px-4 pt-4 bg-white dark:bg-zinc-700 z-20 transition-all overflow-y-auto`}>
 
-              <li>
-                <div className={`flex justify-between items-center ${isSubmenuOpen && 'text-purple-custom dark:text-purple-300'}`}>
-                  <div className="flex gap-2">
-                    <MdOutlineShoppingBag className='w-5 h-5' />
-                    <span>فروشگاه</span>
-                  </div>
-                  {/* <!-- Submenu Open/Close Btn --> */}
-                  <div>
-                    {
-                      isSubmenuOpen ? <HiMiniChevronUp className="w-4 h-4" onClick={() => setIsSubmenuOpen(false)} /> : <HiMiniChevronDown className="w-4 h-4" onClick={() => setIsSubmenuOpen(true)} />
-                    }
-                  </div>
-                </div>
+            {/* <!-- Nav Header --> */}
+            <div className="flex items-center justify-between pb-5 mb-6 border-b border-b-gray-100 dark:border-b-white/10">
 
-                {/* <!-- Submenu --> */}
-                {
-                  isSubmenuOpen &&
-                  <div className="flex flex-col items-start mt-3 pr-7 gap-y-3 text-sm text-zinc-600 dark:text-gray-200">
-                    <Link to={'/'}>شارژر گوشی</Link>
-                    <Link to={'/'}>قاب و کاور گوشی</Link>
-                    <Link to={'/'}>گلس گوشی</Link>
-                    <Link to={'/'}>هولدر گوشی موبایل</Link>
-                    <Link to={'/'}>کابل شارژ و مبدل</Link>
-                    <Link to={'/'}>پاوربانک</Link>
+              {/* Nav Logo */}
+              <Link to={'/'} className='flex items-center gap-1 cursor-pointer'>
+                <img src='/images/logo/logo-lg.png' className='w-8 h-8' />
+                <h5 className='font-MorabbaBold text-xl text-neutral-700 dark:text-white'>
+                  مـوبـو
+                  لــــــند
+                </h5>
+              </Link>
 
-                  </div>
-                }
-              </li>
-
-              <li>
-                <Link to={'/'} className="inline-flex gap-2">
-                  <RiGroupLine className="w-5 h-5" />
-                  <span>درباره ما</span>
-                </Link>
-              </li>
-
-              <li>
-                <Link to={'/'} className="inline-flex gap-2">
-                  <IoDocumentTextOutline className="w-5 h-5" />
-                  <span>موبو بلاگ</span>
-                </Link>
-              </li>
-
-              <li>
-                <Link to={'/'} className="inline-flex gap-2">
-                  <BiPhone className="w-5 h-5" />
-                  <span>تماس با ما</span>
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* <!-- Nav Footer --> */}
-          <div
-            className="inline-flex flex-col gap-y-6 w-full pr-2.5 py-8 border-t border-t-gray-100 dark:border-t-white/10 text-purple-custom dark:text-purple-300">
-            {/* <!-- Login Link --> */}
-            <a className="flex gap-x-2">
-              <HiArrowRightEndOnRectangle className="w-5 h-5" />
-              ورود | ثبت‌نام
-            </a>
-
-            {/* <!-- Toggle Theme Btn --> */}
-            <a className="toggle-theme">
-              <button onClick={() => darkModeHandler()} className="toggle-theme cursor-pointer">
-                <div className="flex dark:hidden gap-x-2">
-                  <IoMoonOutline className='w-5 h-5' />
-                  <span>تم تیره</span>
-                </div>
-                <div className="hidden dark:flex gap-x-2">
-                  <FiSun className='w-5 h-5' />
-                  <span>تم روشن</span>
-                </div>
-              </button>
-            </a>
-
-            {/* <!-- Shopping Cart Link --> */}
-            <a className="flex gap-x-2">
-              <HiOutlineShoppingCart className="w-5 h-5" />
-              <span>سبد خرید</span>
-            </a>
-          </div>
-        </div>
-
-        {/* <!-- Mobile Cart --> */}
-        <div className={`mobile-cart fixed ${cartClass} top-0 bottom-0 flex flex-col w-64 px-4 pt-5 bg-white dark:bg-zinc-700 z-20 text-zinc-700 dark:text-white font-DanaMedium transition-all`}>
-
-          {/* <!-- Cart Header --> */}
-          <div className="flex items-center justify-between pb-5 border-b border-b-gray-300 dark:border-b-white/10">
-
-            {/* <!-- Close Cart Icon --> */}
-            <div onClick={() => closeCartBar()}>
-              <HiMiniXMark className="w-5 h-5" />
-            </div>
-
-            <span>سبد خرید</span>
-          </div>
-
-          {/* <!-- Cart Body --> */}
-          <div
-            className="text-sm divide-y divide-gray-100 dark:divide-white/10 overflow-hidden overflow-y-auto child:py-5 child:flex child:gap-x-1">
-            <CartProductBox img={'/images/products/airpods.png'} title={'هندزفری بلوتوثی کربی مدل CR-T107'} off={93500} price={790000} />
-            <CartProductBox img={'/images/products/cover.png'} title={'کیف کلاسوری کربی مدل Pattern مناسب برای گوشی موبایل سامسونگ Galaxy J5 Pro'} off={35200} price={149000} />
-            <CartProductBox img={'/images/products/car-charger.png'} title={'شارژر فندکی 35 وات مدل QC 3'} off={10000} price={70000} />
-            <CartProductBox img={'/images/products/power-bank2.png'} title={'پاوربانک انکر مدل PowerCore Metro A1246 ظرفیت 10000 میلی آمپر ساعت'} off={130000} price={2200000} />
-            <CartProductBox img={'/images/products/charge-cable.png'} title={'کابل تبدیل USB و USB-C به لایتنینگ و USB-C مدل 2in2-Fast-100W طول 1 متر'} price={490000} />
-            <CartProductBox img={'/images/products/holder.png'} title={'پایه نگهدارنده گوشی موبایل الدینیو مدل MG01'} off={33000} price={277000} />
-            <CartProductBox img={'/images/products/glass.png'} title={'محافظ صفحه نمایش حریم شخصی مات مدل m2m مناسب برای گوشی موبایل اپل iPhone 7Plus/ 8Plus'} price={27700} />
-
-          </div>
-
-          {/* <!-- Cart Box Footer --> */}
-          <div
-            className="flex items-end justify-start gap-x-4 pt-4 pb-8 mt-auto border-t border-t-gray-100 dark:border-t-white/10 ">
-
-            <a className="w-28 h-11 flex items-center justify-center text-white bg-teal-600 hover:bg-teal-700 dark:bg-emerald-500 dark:hover:bg-emerald-600 rounded-xl font-Dana"
-              href="#">ثبت سفارش</a>
-
-            <div>
-              <span className="font-DanaMedium text-xs text-gray-300 leading-6 tracking-tighter">مبلغ
-                قابل پرداخت</span>
-              <div className="font-DanaDemiBold text-base text-zinc-700 dark:text-white">
-                350,000
-                <span className="font-Dana text-xs">تومان</span>
+              {/* <!-- Close Nav Icon --> */}
+              <div onClick={() => closeNavBar()}>
+                <HiMiniXMark className="w-5 h-5" />
               </div>
             </div>
 
+            {/* <!-- Nav Menu --> */}
+            <div className="flex flex-col mb-8 text-zinc-700 dark:text-white">
+              <Link to={'/'} className="flex gap-x-2 py-2.5 pr-2.5 bg-purple-300/20 text-purple-custom dark:text-purple-300 rounded-md">
+                <AiOutlineHome className='w-5 h-5' />
+                <span>صفحه اصلی</span>
+              </Link>
+
+              {/* <!-- menu --> */}
+              <ul className="flex flex-col gap-y-6 mt-4 pr-2.5">
+
+                <li>
+                  <div className={`flex justify-between items-center ${isSubmenuOpen && 'text-purple-custom dark:text-purple-300'}`}>
+                    <div className="flex gap-2">
+                      <MdOutlineShoppingBag className='w-5 h-5' />
+                      <span>فروشگاه</span>
+                    </div>
+                    {/* <!-- Submenu Open/Close Btn --> */}
+                    <div>
+                      {
+                        isSubmenuOpen ? <HiMiniChevronUp className="w-4 h-4" onClick={() => setIsSubmenuOpen(false)} /> : <HiMiniChevronDown className="w-4 h-4" onClick={() => setIsSubmenuOpen(true)} />
+                      }
+                    </div>
+                  </div>
+
+                  {/* <!-- Submenu --> */}
+                  {
+                    isSubmenuOpen &&
+                    <div className="flex flex-col items-start mt-3 pr-7 gap-y-3 text-sm text-zinc-600 dark:text-gray-200">
+                      <Link to={'/'}>شارژر گوشی</Link>
+                      <Link to={'/'}>قاب و کاور گوشی</Link>
+                      <Link to={'/'}>گلس گوشی</Link>
+                      <Link to={'/'}>هولدر گوشی موبایل</Link>
+                      <Link to={'/'}>کابل شارژ و مبدل</Link>
+                      <Link to={'/'}>پاوربانک</Link>
+
+                    </div>
+                  }
+                </li>
+
+                <li>
+                  <Link to={'/'} className="inline-flex gap-2">
+                    <RiGroupLine className="w-5 h-5" />
+                    <span>درباره ما</span>
+                  </Link>
+                </li>
+
+                <li>
+                  <Link to={'/'} className="inline-flex gap-2">
+                    <IoDocumentTextOutline className="w-5 h-5" />
+                    <span>موبو بلاگ</span>
+                  </Link>
+                </li>
+
+                <li>
+                  <Link to={'/'} className="inline-flex gap-2">
+                    <BiPhone className="w-5 h-5" />
+                    <span>تماس با ما</span>
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
+            {/* <!-- Nav Footer --> */}
+            <div
+              className="inline-flex flex-col gap-y-6 w-full pr-2.5 py-8 border-t border-t-gray-100 dark:border-t-white/10 text-purple-custom dark:text-purple-300">
+              {/* <!-- Login Link --> */}
+              <a className="flex gap-x-2">
+                <HiArrowRightEndOnRectangle className="w-5 h-5" />
+                ورود | ثبت‌نام
+              </a>
+
+              {/* <!-- Toggle Theme Btn --> */}
+              <a className="toggle-theme">
+                <button onClick={() => darkModeHandler()} className="toggle-theme cursor-pointer">
+                  <div className="flex dark:hidden gap-x-2">
+                    <IoMoonOutline className='w-5 h-5' />
+                    <span>تم تیره</span>
+                  </div>
+                  <div className="hidden dark:flex gap-x-2">
+                    <FiSun className='w-5 h-5' />
+                    <span>تم روشن</span>
+                  </div>
+                </button>
+              </a>
+
+              {/* <!-- Shopping Cart Link --> */}
+              <a className="flex gap-x-2">
+                <HiOutlineShoppingCart className="w-5 h-5" />
+                <span>سبد خرید</span>
+              </a>
+            </div>
           </div>
 
+          {/* <!-- Mobile Cart --> */}
+          <div className={`mobile-cart fixed ${cartClass} top-0 bottom-0 flex flex-col w-64 px-4 pt-5 bg-white dark:bg-zinc-700 z-20 text-zinc-700 dark:text-white font-DanaMedium transition-all`}>
+
+            {/* <!-- Cart Header --> */}
+            <div className="flex items-center justify-between pb-5 border-b border-b-gray-300 dark:border-b-white/10">
+
+              {/* <!-- Close Cart Icon --> */}
+              <div onClick={() => closeCartBar()}>
+                <HiMiniXMark className="w-5 h-5" />
+              </div>
+
+              <span>سبد خرید</span>
+            </div>
+
+            {/* <!-- Cart Body --> */}
+            <div
+              className="text-sm divide-y divide-gray-100 dark:divide-white/10 overflow-hidden overflow-y-auto child:py-5 child:flex child:gap-x-1">
+              <CartProductBox img={'/images/products/airpods.png'} title={'هندزفری بلوتوثی کربی مدل CR-T107'} off={93500} price={790000} />
+              <CartProductBox img={'/images/products/cover.png'} title={'کیف کلاسوری کربی مدل Pattern مناسب برای گوشی موبایل سامسونگ Galaxy J5 Pro'} off={35200} price={149000} />
+              <CartProductBox img={'/images/products/car-charger.png'} title={'شارژر فندکی 35 وات مدل QC 3'} off={10000} price={70000} />
+              <CartProductBox img={'/images/products/power-bank2.png'} title={'پاوربانک انکر مدل PowerCore Metro A1246 ظرفیت 10000 میلی آمپر ساعت'} off={130000} price={2200000} />
+              <CartProductBox img={'/images/products/charge-cable.png'} title={'کابل تبدیل USB و USB-C به لایتنینگ و USB-C مدل 2in2-Fast-100W طول 1 متر'} price={490000} />
+              <CartProductBox img={'/images/products/holder.png'} title={'پایه نگهدارنده گوشی موبایل الدینیو مدل MG01'} off={33000} price={277000} />
+              <CartProductBox img={'/images/products/glass.png'} title={'محافظ صفحه نمایش حریم شخصی مات مدل m2m مناسب برای گوشی موبایل اپل iPhone 7Plus/ 8Plus'} price={27700} />
+
+            </div>
+
+            {/* <!-- Cart Box Footer --> */}
+            <div
+              className="flex items-end justify-start gap-x-4 pt-4 pb-8 mt-auto border-t border-t-gray-100 dark:border-t-white/10 ">
+
+              <a className="w-28 h-11 flex items-center justify-center text-white bg-teal-600 hover:bg-teal-700 dark:bg-emerald-500 dark:hover:bg-emerald-600 rounded-xl font-Dana"
+                href="#">ثبت سفارش</a>
+
+              <div>
+                <span className="font-DanaMedium text-xs text-gray-300 leading-6 tracking-tighter">مبلغ
+                  قابل پرداخت</span>
+                <div className="font-DanaDemiBold text-base text-zinc-700 dark:text-white">
+                  350,000
+                  <span className="font-Dana text-xs">تومان</span>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+        {/* Search Input For Mobile*/}
+        <div className='flex items-center m-6 bg-transparent rounded-xl border border-custom-dark/80 overflow-hidden'>
+          <Link to={`/search/${searchedValue}`} className='flex-center p-3 bg-purple-500 cursor-pointer'>
+            <RiSearch2Line className='w-5 h-5 text-white' />
+          </Link>
+          <input value={searchedValue} onChange={event => { setSearchedValue(event.target.value) }} onKeyDown={event => enterInInput(event)} type='text' placeholder='جستجو در مـوبـولـــند'
+            className='w-full text-neutral-600 text-center text-sm bg-transparent focus:outline-none placeholder-purple-500' />
         </div>
       </div>
       <Overlay isOpen={visibleOverlay} isClose={() => closeOverlayFunc()} />

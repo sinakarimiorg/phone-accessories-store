@@ -2,8 +2,6 @@ import React from 'react'
 import SectionHeader from '../SectionHeader/SectionHeader'
 import PopularCategoryBox from '../PopularCategoryBox/PopularCategoryBox'
 
-import './PopularCategories.css'
-
 export default function PopularCategories() {
     return (
         <div>

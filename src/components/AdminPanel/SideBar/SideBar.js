@@ -71,12 +71,12 @@ export default function SideBar() {
                                 کاربران
                             </li>
                         </NavLink>
-                        <NavLink to="/p-admin/menus" className="link sidebarListItem">
+                        <li className="sidebarListItem">
                             <li className="sidebarListItem">
                                 <CgMenuLeft className="sidebarIcon" />
                                 منوها
                             </li>
-                        </NavLink>
+                        </li>
                         <li className="sidebarListItem">
                             <GrTransaction className="sidebarIcon" />
                             تراکنش ها

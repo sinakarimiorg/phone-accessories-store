@@ -38,19 +38,19 @@ export default function Products() {
             </div>
           </div>
 
-          <div className='grid grid-cols-2 sm:grid-cols-3 custom-sc:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 space-y-6'>
-            <ProductBox img={'/images/products/car-charger.png'} img2={'/images/products/car-charger2.png'} title={'هندزفری بلوتوثی کربی مدل CR-T107'} classes={'product-box'} price={765000} />
-            <ProductBox img={'/images/products/cover.png'} img2={'/images/products/cover2.png'} title={'هندزفری بلوتوثی کربی مدل CR-T107'} classes={'product-box'} price={765000} discount={27} exPrice={850000} />
-            <ProductBox img={'/images/products/cover.png'} img2={'/images/products/cover2.png'} title={'هندزفری بلوتوثی کربی مدل CR-T107'} classes={'product-box'} price={765000} discount={27} exPrice={850000} />
-            <ProductBox img={'/images/products/power-bank1.png'} img2={'/images/products/power-bank2.png'} title={'هندزفری بلوتوثی کربی مدل CR-T107'} classes={'product-box'} price={765000} discount={88} exPrice={970000} />
-            <ProductBox img={'/images/products/cover.png'} img2={'/images/products/cover2.png'} title={'هندزفری بلوتوثی کربی مدل CR-T107'} classes={'product-box'} price={765000} discount={27} exPrice={850000} />
-            <ProductBox img={'/images/products/cover.png'} img2={'/images/products/cover2.png'} title={'هندزفری بلوتوثی کربی مدل CR-T107'} classes={'product-box'} price={765000} discount={27} exPrice={850000} />
-            <ProductBox img={'/images/products/charge-cable.png'} img2={'/images/products/charge-cable2.png'} title={'کابل شارژ مولتی رابط مدل ایکس'} classes={'product-box'} price={765000} discount={10} exPrice={850000} />
-            <ProductBox img={'/images/products/cover.png'} img2={'/images/products/cover2.png'} title={'هندزفری بلوتوثی کربی مدل CR-T107'} classes={'product-box'} price={765000} discount={27} exPrice={850000} />
-            <ProductBox img={'/images/products/cover.png'} img2={'/images/products/cover2.png'} title={'هندزفری بلوتوثی کربی مدل CR-T107'} classes={'product-box'} price={765000} discount={27} exPrice={850000} />
-            <ProductBox img={'/images/products/cover.png'} img2={'/images/products/cover2.png'} title={'هندزفری بلوتوثی کربی مدل CR-T107'} classes={'product-box'} price={765000} discount={27} exPrice={850000} />
-            <ProductBox img={'/images/products/cover.png'} img2={'/images/products/cover2.png'} title={'هندزفری بلوتوثی کربی مدل CR-T107'} classes={'product-box'} price={765000} discount={27} exPrice={850000} />
-            <ProductBox img={'/images/products/cover.png'} img2={'/images/products/cover2.png'} title={'هندزفری بلوتوثی کربی مدل CR-T107'} classes={'product-box'} price={765000} discount={27} exPrice={850000} />
+          <div className='grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 space-y-6'>
+            <ProductBox img={'/images/products/car-charger.png'} img2={'/images/products/car-charger2.png'} title={'هندزفری بلوتوثی کربی مدل CR-T107'} classes={'product-box__lg'} price={765000} />
+            <ProductBox img={'/images/products/cover.png'} img2={'/images/products/cover2.png'} title={'هندزفری بلوتوثی کربی مدل CR-T107'} classes={'product-box__lg'} price={765000} discount={27} exPrice={850000} />
+            <ProductBox img={'/images/products/cover.png'} img2={'/images/products/cover2.png'} title={'هندزفری بلوتوثی کربی مدل CR-T107'} classes={'product-box__lg'} price={765000} discount={27} exPrice={850000} />
+            <ProductBox img={'/images/products/power-bank1.png'} img2={'/images/products/power-bank2.png'} title={'هندزفری بلوتوثی کربی مدل CR-T107'} classes={'product-box__lg'} price={765000} discount={88} exPrice={970000} />
+            <ProductBox img={'/images/products/cover.png'} img2={'/images/products/cover2.png'} title={'هندزفری بلوتوثی کربی مدل CR-T107'} classes={'product-box__lg'} price={765000} discount={27} exPrice={850000} />
+            <ProductBox img={'/images/products/cover.png'} img2={'/images/products/cover2.png'} title={'هندزفری بلوتوثی کربی مدل CR-T107'} classes={'product-box__lg'} price={765000} discount={27} exPrice={850000} />
+            <ProductBox img={'/images/products/charge-cable.png'} img2={'/images/products/charge-cable2.png'} title={'کابل شارژ مولتی رابط مدل ایکس'} classes={'product-box__lg'} price={765000} discount={10} exPrice={850000} />
+            <ProductBox img={'/images/products/cover.png'} img2={'/images/products/cover2.png'} title={'هندزفری بلوتوثی کربی مدل CR-T107'} classes={'product-box__lg'} price={765000} discount={27} exPrice={850000} />
+            <ProductBox img={'/images/products/cover.png'} img2={'/images/products/cover2.png'} title={'هندزفری بلوتوثی کربی مدل CR-T107'} classes={'product-box__lg'} price={765000} discount={27} exPrice={850000} />
+            <ProductBox img={'/images/products/cover.png'} img2={'/images/products/cover2.png'} title={'هندزفری بلوتوثی کربی مدل CR-T107'} classes={'product-box__lg'} price={765000} discount={27} exPrice={850000} />
+            <ProductBox img={'/images/products/cover.png'} img2={'/images/products/cover2.png'} title={'هندزفری بلوتوثی کربی مدل CR-T107'} classes={'product-box__lg'} price={765000} discount={27} exPrice={850000} />
+            <ProductBox img={'/images/products/cover.png'} img2={'/images/products/cover2.png'} title={'هندزفری بلوتوثی کربی مدل CR-T107'} classes={'product-box__lg'} price={765000} discount={27} exPrice={850000} />
           </div>
           {/* Pagination */}
           <div className='flex-center gap-3.5 my-10 child:shadow-sm'>

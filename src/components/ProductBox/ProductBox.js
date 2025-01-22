@@ -21,14 +21,14 @@ export default function ProductBox(props) {
 
             <Link to={`/product-info/${props.shortName}`}>
                 <div className={props.classes}>
-                    <div className={`${props.img2 && 'group'} relative w-40 h-32 mx-auto xs:h-[150px]`}>
-                        <img className='absolute group-hover:opacity-0 group-hover:invisible h-32 xs:h-[150px] inset-0 cursor-pointer transition-all duration-500' src={props.img} />
+                    <div id='product-box__img' className={`${props.img2 && 'group'}`}>
+                        <img className='absolute group-hover:opacity-0 group-hover:invisible w-full h-full inset-0 cursor-pointer transition-all duration-500' src={props.img} />
                         {props.img2 &&
-                            <img className='absolute opacity-0 invisible group-hover:block group-hover:opacity-100 group-hover:visible h-32 xs:h-[150px] inset-0 cursor-pointer transition-all duration-500' src={props.img2} />}
+                            <img className='absolute opacity-0 invisible group-hover:block group-hover:opacity-100 group-hover:visible w-full h-full inset-0 cursor-pointer transition-all duration-500' src={props.img2} />}
                     </div>
                     {/* Box Body */}
                     <div>
-                        <p className='text-sm text-zinc-600 dark:text-white leading-6 pt-3.5 hover:text-fuchsia-400 cursor-pointer'>{props.title}</p>
+                        <p className='text-sm text-zinc-600 dark:text-white leading-6 hover:text-fuchsia-400 cursor-pointer'>{props.title}</p>
                         <div className='flex justify-between items-center px-2 pt-2 pb-1'>
                             {props.discount && <span className='px-2 xs:px-2.5 pt-0.5 font-DanaMedium xs:font-DanaDemiBold text-xs text-white bg-purple-500 rounded-lg'>{props.discount}%</span>}
                             <p className='flex justify-end items-center xs:gap-1 w-full text-zinc-800'>

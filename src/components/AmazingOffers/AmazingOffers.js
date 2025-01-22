@@ -54,41 +54,40 @@ export default function AmazingOffers() {
                             }}
                             breakpoints={{
                                 640: { slidesPerView: 3, spaceBetween: 2 },
-                                768: { slidesPerView: 4, spaceBetween: 2 },
-                                1240: { slidesPerView: 5, spaceBetween: 2 },
-                                1536: { slidesPerView: 6, spaceBetween: 2 },
+                                1280: { slidesPerView: 4, spaceBetween: 2 },
+                                1536: { slidesPerView: 5, spaceBetween: 2 },
                             }}
                             grabCursor={true}
                             modules={[Navigation]}
                             className='mySwiper overflow-visible'
                         >
                             <SwiperSlide>
-                                <ProductBox shortName={'headphone-cerby'} img={'/images/products/airpods.png'} title={'هندزفری بلوتوثی کربی مدل CR-T107'} classes={'amazing-offers__item'} price={565000} discount={10} exPrice={850000} />
+                                <ProductBox shortName={'headphone-cerby'} img={'/images/products/airpods.png'} title={'هندزفری بلوتوثی کربی مدل CR-T107'} classes={'product-box__sm'} price={565000} discount={10} exPrice={850000} />
                             </SwiperSlide>
 
                             <SwiperSlide>
-                                <ProductBox shortName={'headphone-cerby'} img={'/images/products/charge-cable.png'} title={'هندزفری بلوتوثی کربی مدل CR-T107'} classes={'amazing-offers__item'} price={765000} discount={10} exPrice={850000} />
+                                <ProductBox shortName={'headphone-cerby'} img={'/images/products/charge-cable.png'} title={'هندزفری بلوتوثی کربی مدل CR-T107'} classes={'product-box__sm'} price={765000} discount={10} exPrice={850000} />
                             </SwiperSlide>
 
                             <SwiperSlide>
-                                <ProductBox shortName={'headphone-cerby'} img={'/images/products/cover.png'} title={'هندزفری بلوتوثی کربی مدل CR-T107'} classes={'amazing-offers__item'} price={765000} discount={27} exPrice={850000} />
+                                <ProductBox shortName={'headphone-cerby'} img={'/images/products/cover.png'} title={'هندزفری بلوتوثی کربی مدل CR-T107'} classes={'product-box__sm'} price={765000} discount={27} exPrice={850000} />
                             </SwiperSlide>
 
                             <SwiperSlide>
-                                <ProductBox shortName={'headphone-cerby'} img={'/images/products/power-bank3.png'} title={'هندزفری بلوتوثی کربی مدل CR-T107'} classes={'amazing-offers__item'} price={765000} />
+                                <ProductBox shortName={'headphone-cerby'} img={'/images/products/power-bank3.png'} title={'هندزفری بلوتوثی کربی مدل CR-T107'} classes={'product-box__sm'} price={765000} />
                             </SwiperSlide>
                             <SwiperSlide>
-                                <ProductBox shortName={'headphone-cerby'} img={'/images/products/power-bank1.png'} title={'هندزفری بلوتوثی کربی مدل CR-T107'} classes={'amazing-offers__item'} price={765000} discount={88} exPrice={970000} />
+                                <ProductBox shortName={'headphone-cerby'} img={'/images/products/power-bank1.png'} title={'هندزفری بلوتوثی کربی مدل CR-T107'} classes={'product-box__sm'} price={765000} discount={88} exPrice={970000} />
                             </SwiperSlide>
                             <SwiperSlide>
-                                <ProductBox shortName={'headphone-cerby'} img={'/images/products/cover.png'} title={'هندزفری بلوتوثی کربی مدل CR-T107'} classes={'amazing-offers__item'} price={765000} />
+                                <ProductBox shortName={'headphone-cerby'} img={'/images/products/cover.png'} title={'هندزفری بلوتوثی کربی مدل CR-T107'} classes={'product-box__sm'} price={765000} />
                             </SwiperSlide>
                             <SwiperSlide>
-                                <ProductBox shortName={'headphone-cerby'} img={'/images/products/airpods.png'} title={'هندزفری بلوتوثی کربی مدل CR-T107'} classes={'amazing-offers__item'} price={765000} discount={88} exPrice={970000} />
+                                <ProductBox shortName={'headphone-cerby'} img={'/images/products/airpods.png'} title={'هندزفری بلوتوثی کربی مدل CR-T107'} classes={'product-box__sm'} price={765000} discount={88} exPrice={970000} />
                             </SwiperSlide>
 
                             <SwiperSlide>
-                                <ProductBox shortName={'headphone-cerby'} img={'/images/products/charge-cable.png'} title={'هندزفری بلوتوثی کربی مدل CR-T107'} classes={'amazing-offers__item'} price={765000} discount={10} exPrice={850000} />
+                                <ProductBox shortName={'headphone-cerby'} img={'/images/products/charge-cable.png'} title={'هندزفری بلوتوثی کربی مدل CR-T107'} classes={'product-box__sm'} price={765000} discount={10} exPrice={850000} />
                             </SwiperSlide>
 
                             <SwiperSlide>
