@@ -6,6 +6,9 @@ import { FaBlog } from "react-icons/fa";
 import { BiStoreAlt } from "react-icons/bi";
 import { HiMiniChevronLeft } from "react-icons/hi2";
 import { FiSmartphone } from "react-icons/fi";
+import { FaComputer } from "react-icons/fa6";
+import { FaKitchenSet } from "react-icons/fa6";
+import { VscPackage } from "react-icons/vsc";
 
 import './NavBar.css'
 
@@ -36,6 +39,8 @@ export default function NavBar() {
     setPrevScrollPos(currentScrollPos)
   }
 
+  const [menuNavbarList, setMenuNavbarList] = useState('mobile')
+
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
 
@@ -54,14 +59,14 @@ export default function NavBar() {
               دسته بندی ها
             </span>
             {/* <!-- Main Menu --> */}
-            <div className="navbar-menu">
+            <div className="navbar-menu" onMouseLeave={e => { setMenuNavbarList('mobile') }}>
 
               <div className='group w-36'>
-                <Link to={'/'} className='flex-center gap-1.5'>
+                <Link to={'/'} className='flex-center gap-1.5' onMouseEnter={e => { setMenuNavbarList('mobile') }}>
                   <FiSmartphone />
                   لوازم جانبی موبایل
                 </Link>
-                <div className='navbar-submenu'>
+                <div className={`navbar-submenu ${menuNavbarList === 'mobile' && 'visible opacity-100'}`}>
                   <Link to={'/'} className='submenu-category-all-btn'>
                     همه لوازم جانبی موبایل
                     <HiMiniChevronLeft />
@@ -78,60 +83,56 @@ export default function NavBar() {
               </div>
 
               <div className='group w-36'>
-                <Link to={'/'}>لوازم جانبی موبایل</Link>
-                <div className='navbar-submenu'>
+                <Link to={'/'} className='flex-center gap-1.5' onMouseEnter={e => { setMenuNavbarList('computer') }}>
+                  <FaComputer />
+                  لوازم جانبی کامپیوتر
+                </Link>
+                <div className={`navbar-submenu ${menuNavbarList === 'computer' && 'visible opacity-100'}`}>
                   <Link to={'/'} className='submenu-category-all-btn'>
-                    همه لوازم جانبی موبایل
+                    همه لوازم جانبی کامپیوتر
                     <HiMiniChevronLeft />
                   </Link>
                   <div className='flex flex-wrap gap-y-1.5 gap-x-8 child:inline-flex child:h-8 child:w-30 child-hover:text-purple-400 dark:child-hover:text-purple-300'>
-                    <Link to={'/'}>asd</Link>
-                    <Link to={'/'}>asfsddgfb cv</Link>
-                    <Link to={'/'}>گلس گوشی</Link>
-                    <Link to={'/'}>هولدر گوشی موبایل</Link>
+                    <Link to={'/'}>رم</Link>
+                    <Link to={'/'}>مانیتور</Link>
+                    <Link to={'/'}>کیبوورد</Link>
+                    <Link to={'/'}>هولدر لپ تاپ</Link>
                     <Link to={'/'}>کابل شارژ و مبدل</Link>
-                    <Link to={'/'}>پاوربانک</Link>
+                    <Link to={'/'}>موس و موس پد</Link>
                   </div>
                 </div>
               </div>
 
               <div className='group w-36'>
-                <Link to={'/'}>لوازم جانبی موبایل</Link>
-                <div className='navbar-submenu'>
+                <Link to={'/'} className='flex-center gap-1.5' onMouseEnter={e => { setMenuNavbarList('appliances') }}>
+                  <FaKitchenSet />
+                  لوازم خانگی
+                </Link>
+                <div className={`navbar-submenu ${menuNavbarList === 'appliances' && 'visible opacity-100'}`}>
                   <Link to={'/'} className='submenu-category-all-btn'>
-                    همه لوازم جانبی موبایل
+                    همه لوازم خانگی
                     <HiMiniChevronLeft />
                   </Link>
                   <div className='flex flex-wrap gap-y-1.5 gap-x-8 child:inline-flex child:h-8 child:w-30 child-hover:text-purple-400 dark:child-hover:text-purple-300'>
-                    <Link to={'/'}>شارژر گوشی</Link>
-                    <Link to={'/'}>قاب و کاور گوشی</Link>
-                    <Link to={'/'}>گلس گوشی</Link>
-                    <Link to={'/'}>هولدر گوشی موبایل</Link>
-                    <Link to={'/'}>کابل شارژ و مبدل</Link>
-                    <Link to={'/'}>پاوربانک</Link>
-                    <Link to={'/'}>شارژر گوشی</Link>
-                    <Link to={'/'}>قاب و کاور گوشی</Link>
-                    <Link to={'/'}>گلس گوشی</Link>
-                    <Link to={'/'}>هولدر گوشی موبایل</Link>
-                    <Link to={'/'}>کابل شارژ و مبدل</Link>
-                    <Link to={'/'}>پاوربانک</Link>
-                    <Link to={'/'}>asd</Link>
-                    <Link to={'/'}>asfsddgfb cv</Link>
-                    <Link to={'/'}>asd</Link>
-                    <Link to={'/'}>asfsddgfb cv</Link>
-                    <Link to={'/'}>asd</Link>
-                    <Link to={'/'}>asfsddgfb cv</Link>
-                    <Link to={'/'}>asd</Link>
-                    <Link to={'/'}>asfsddgfb cv</Link>
+                    <Link to={'/'}>جارو هوشمند</Link>
+                    <Link to={'/'}>استریو باند</Link>
+                    <Link to={'/'}>تلوزیون هوشمند</Link>
+                    <Link to={'/'}>بخارپز و هواپز</Link>
+                    <Link to={'/'}>بلندر و میکسر</Link>
+                    <Link to={'/'}>ترازو دیجیتال</Link>
+                    <Link to={'/'}>اسپرسوساز و آسیاب</Link>
                   </div>
                 </div>
               </div>
 
               <div className='group w-36'>
-                <Link to={'/'}>لوازم جانبی موبایل</Link>
-                <div className='navbar-submenu'>
+                <Link to={'/'} className='flex-center gap-1.5' onMouseEnter={e => { setMenuNavbarList('stuff') }}>
+                  <VscPackage />
+                  لوازم جانبی متفرقه
+                </Link>
+                <div className={`navbar-submenu ${menuNavbarList === 'stuff' && 'visible opacity-100'}`}>
                   <Link to={'/'} className='submenu-category-all-btn'>
-                    همه لوازم جانبی موبایل
+                    همه لوازم جانبی متفرقه
                     <HiMiniChevronLeft />
                   </Link>
                   <div className='flex flex-wrap gap-y-1.5 gap-x-8 child:inline-flex child:h-8 child:w-30 child-hover:text-purple-400 dark:child-hover:text-purple-300'>

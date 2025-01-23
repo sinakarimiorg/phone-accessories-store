@@ -2823,6 +2823,10 @@ html {
   opacity: 0.5;
 }
 
+.opacity-100 {
+  opacity: 1;
+}
+
 .shadow-custom {
   --tw-shadow: 0px 1px 10px rgb(0, 0, 0, 0.5);
   --tw-shadow-colored: 0px 1px 10px var(--tw-shadow-color);
