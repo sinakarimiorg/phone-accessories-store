@@ -1,19 +1,27 @@
 import React from 'react'
 import { FaChevronLeft } from "react-icons/fa6";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { Link } from 'react-router-dom';
 
 export default function ArticleBox({ shortName, img, title, date }) {
-    
+
     return (
         <Link to={`/article-info/${shortName}`}
             className="group flex sm:flex-col gap-y-4 gap-x-3 w-full h-[150px] sm:h-[285px] p-2.5 bg-white dark:bg-zinc-700 rounded-2xl shadow-custom cursor-pointer overflow-hidden">
             <div className="relative rounded-2xl rounded-bl-4xl overflow-hidden shrink-0">
-                <img src={img} alt="blog"
-                    className="w-32 h-32 object-cover object-top sm:w-[338px] sm:h-[187px]" />
+                <div className="w-32 h-32 object-cover object-top sm:w-[338px] sm:h-[187px]">
+                    <LazyLoadImage
+                    src={img}
+                    alt="blog"
+                    height={'100%'}
+                    width={'100%'}
+                    effect='blur'
+                    />
+                </div>
                 <div
                     className="absolute w-full h-full hidden sm:flex-center flex-col invisible opacity-0 group-hover:visible group-hover:opacity-100 inset-0 bg-gradient-to-r from-orange-200/80 to-orange-300/80 transition-all delay-75">
-                        <img src='/images/logo/logo-lg.png'/>
-                        <p className='pt-3 font-sans font-extrabold text-lg text-purple-custom'>Mobo Mag</p>
+                    <img src='/images/logo/logo-lg.png' />
+                    <p className='pt-3 font-sans font-extrabold text-lg text-purple-custom'>Mobo Mag</p>
                 </div>
             </div>
 
@@ -36,7 +44,7 @@ export default function ArticleBox({ shortName, img, title, date }) {
                     <button
                         className="flex-center sm:hidden gap-x-1 h-5 ml-1.5 sm:ml-0 pr-2.5 pl-2 font-DanaMedium text-xs text-orange-300 bg-orange-200/20 rounded-md">
                         مطالعه
-                        <FaChevronLeft className='w-[14px] h-[14px]'/>
+                        <FaChevronLeft className='w-[14px] h-[14px]' />
                     </button>
                 </div>
             </div>

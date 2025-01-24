@@ -1,0 +1,29 @@
+.loader {
+  width: 60px;
+  aspect-ratio: 1;
+  background:
+    linear-gradient(90deg, #CEE879 50%, #FF5254 0) top/100% 50% no-repeat,
+    linear-gradient(90deg, #FCB653 50%, #5CACC4 0);
+
+  /* For Webkit-based browsers (Safari, older versions of Chrome, etc.) */
+  -webkit-mask-image: linear-gradient(#000, #000);
+  -webkit-mask-position: 0 0;
+  -webkit-mask-size: 50% 50%;
+  -webkit-mask-repeat: no-repeat;
+
+  /* Standard properties for wider compatibility */
+  mask-image: linear-gradient(#000, #000);
+  mask-position: 0 0;
+  mask-size: 50% 50%;
+  mask-repeat: no-repeat;
+
+  animation: l18 2s infinite;
+}
+
+@keyframes l18 {
+  0%   {-webkit-mask-position: 0 0; mask-position: 0 0;}
+  25%  {-webkit-mask-position: 100% 0; mask-position: 100% 0;}
+  50%  {-webkit-mask-position: 100% 100%; mask-position: 100% 100%;}
+  75%  {-webkit-mask-position: 0 100%; mask-position: 0 100%;}
+  100% {-webkit-mask-position: 0 0; mask-position: 0 0;}
+}

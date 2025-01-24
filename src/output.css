@@ -1247,6 +1247,10 @@ html {
   height: 2.25rem;
 }
 
+.h-\[100vh\] {
+  height: 100vh;
+}
+
 .h-\[14px\] {
   height: 14px;
 }
@@ -1507,10 +1511,6 @@ html {
 
 .grid-cols-2 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
-.grid-cols-4 {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 .flex-row {
@@ -2528,10 +2528,6 @@ html {
   padding-top: 0.75rem;
 }
 
-.pt-3\.5 {
-  padding-top: 0.875rem;
-}
-
 .pt-36 {
   padding-top: 9rem;
 }
@@ -2823,10 +2819,6 @@ html {
   opacity: 0.5;
 }
 
-.opacity-100 {
-  opacity: 1;
-}
-
 .shadow-custom {
   --tw-shadow: 0px 1px 10px rgb(0, 0, 0, 0.5);
   --tw-shadow-colored: 0px 1px 10px var(--tw-shadow-color);
@@ -2865,6 +2857,11 @@ html {
 .shadow-white {
   --tw-shadow-color: #fff;
   --tw-shadow: var(--tw-shadow-colored);
+}
+
+.blur {
+  --tw-blur: blur(8px);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
 .transition-all {
@@ -3988,10 +3985,6 @@ html {
 
   .custom-sc\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
-  .custom-sc\:grid-cols-4 {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
   .custom-sc\:flex-row {

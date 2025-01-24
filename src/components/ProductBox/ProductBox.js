@@ -1,9 +1,26 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 import './ProductBox.css'
 
-export default function ProductBox(props) {    
+export default function ProductBox(props) {
+
+    // const MyImage = ({ image }) => {
+    //     <div id='product-box__img' className={`${props.img2 && 'group'}`}>
+    //         <LazyLoadImage
+    //             alt='عکس محصول'
+    //             src={props.img}
+    //             effect="blur"
+    //             wrapperProps={{
+    //                 style: { transitionDelay: "1s" },
+    //             }}
+    //         />
+    //         {props.img2 &&
+    //             <img className='absolute opacity-0 invisible group-hover:block group-hover:opacity-100 group-hover:visible w-full h-full inset-0 cursor-pointer transition-all duration-500' src={props.img2} />}
+    //     </div>
+    // }
     return (
         <>
             {/* Icons */}
@@ -22,9 +39,25 @@ export default function ProductBox(props) {
             <Link to={`/product-info/${props.shortName}`}>
                 <div className={props.classes}>
                     <div id='product-box__img' className={`${props.img2 && 'group'}`}>
-                        <img className='absolute group-hover:opacity-0 group-hover:invisible w-full h-full inset-0 cursor-pointer transition-all duration-500' src={props.img} />
+                        <div className='absolute group-hover:opacity-0 group-hover:invisible w-full h-full inset-0 cursor-pointer transition-all duration-500'>
+                            <LazyLoadImage
+                                src={props.img}
+                                height={'100%'}
+                                width={'100%'}
+                                effect='blur'
+                            />
+                        </div>
+                        {/* <img className='absolute group-hover:opacity-0 group-hover:invisible w-full h-full inset-0 cursor-pointer transition-all duration-500' src={props.img} /> */}
                         {props.img2 &&
-                            <img className='absolute opacity-0 invisible group-hover:block group-hover:opacity-100 group-hover:visible w-full h-full inset-0 cursor-pointer transition-all duration-500' src={props.img2} />}
+                            <div className='absolute opacity-0 invisible group-hover:block group-hover:opacity-100 group-hover:visible w-full h-full inset-0 cursor-pointer transition-all duration-500'>
+                                <LazyLoadImage
+                                    src={props.img2}
+                                    height={'100%'}
+                                    width={'100%'}
+                                    effect='blur'
+                                />
+                            </div>
+                        }
                     </div>
                     {/* Box Body */}
                     <div>

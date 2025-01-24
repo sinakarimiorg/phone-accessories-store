@@ -15,6 +15,9 @@ import PAdminIndex from './pages/AdminPanel/Index/Index'
 import PAdminProducts from './pages/AdminPanel/Products/Products'
 import PAdminUsers from './pages/AdminPanel/Users/Users'
 import PAdminArticles from './pages/AdminPanel/Articles/Articles'
+import Loader from './components/Loader/Loader'
+
+
 
 const routes = [
     { path: '/', element: <Index /> },

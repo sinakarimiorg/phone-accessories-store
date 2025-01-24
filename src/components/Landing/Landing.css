@@ -27,7 +27,7 @@
 
 .shopping-btn {
     @apply mt-3 md:mt-4 custom-sc:mt-6 pr-3 md:pr-3.5 custom-sc:pr-5 pl-0.5 md:pl-1 custom-sc:pl-1.5 xl:pl-2 py-1 xl:py-1.5 font-DanaMedium text-xs md:text-base custom-sc:text-lg xl:text-xl
-     hover:bg-purple-600/70 border border-white/75 hover:border-0 shadow-2xl rounded-2xl
+     hover:bg-purple-600/70 hover:text-white border border-white/75 hover:border-0 shadow-2xl rounded-2xl
 }
 
 .swiper-pagination-bullet-active {

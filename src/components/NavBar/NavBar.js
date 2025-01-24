@@ -14,14 +14,14 @@ import './NavBar.css'
 
 export default function NavBar() {
 
-  const openCategoryFunc = () => {
-    const menuElem = document.querySelector('.navbar-menu')
-    menuElem.classList.add('visible--elem')
-  }
-  const closeCategoryFunc = () => {
-    const menuElem = document.querySelector('.navbar-menu')
-    menuElem.classList.remove('visible--elem')
-  }
+  // const openCategoryFunc = () => {
+  //   const menuElem = document.querySelector('.navbar-menu')
+  //   menuElem.classList.add('visible--elem')
+  // }
+  // const closeCategoryFunc = () => {
+  //   const menuElem = document.querySelector('.navbar-menu')
+  //   menuElem.classList.remove('visible--elem')
+  // }
 
   ////////// Handle NavBar visiblity 
   const [prevScrollPos, setPrevScrollPos] = useState(0);
@@ -52,21 +52,21 @@ export default function NavBar() {
     <>
       <div className={`hidden sm:block fixed ${visible ? 'top-[88px] xl:top-24' : 'top-0'} w-full bg-custom-navy text-gray-100 transition-all z-40`}>
         <div className='flex gap-x-5 md:gap-x-8 py-3 pr-5 lg:pr-24 text-xs md:text-sm lg:text-base child:flex-center child:gap-x-1.5 md:child:gap-x-2'>
-
-          <div id='menu-container' onMouseOver={() => openCategoryFunc()} onMouseOut={() => closeCategoryFunc()} className='relative cursor-pointer hover:text-purple-300'>
-            <span className='flex-center gap-x-1.5 md:gap-x-2 transition-colors'>
+          {/* onMouseOver={() => openCategoryFunc()} onMouseOut={() => closeCategoryFunc()} */}
+          <div className='relative group'>
+            <span className='flex-center gap-x-1.5 md:gap-x-2 transition-colors cursor-pointer hover:text-purple-300'>
               <TbCategory />
               دسته بندی ها
             </span>
             {/* <!-- Main Menu --> */}
             <div className="navbar-menu" onMouseLeave={e => { setMenuNavbarList('mobile') }}>
 
-              <div className='group w-36'>
+              <div>
                 <Link to={'/'} className='flex-center gap-1.5' onMouseEnter={e => { setMenuNavbarList('mobile') }}>
                   <FiSmartphone />
                   لوازم جانبی موبایل
                 </Link>
-                <div className={`navbar-submenu ${menuNavbarList === 'mobile' && 'visible opacity-100'}`}>
+                <div className={`navbar-submenu ${menuNavbarList === 'mobile' && 'flex'}`}>
                   <Link to={'/'} className='submenu-category-all-btn'>
                     همه لوازم جانبی موبایل
                     <HiMiniChevronLeft />
@@ -82,12 +82,12 @@ export default function NavBar() {
                 </div>
               </div>
 
-              <div className='group w-36'>
+              <div>
                 <Link to={'/'} className='flex-center gap-1.5' onMouseEnter={e => { setMenuNavbarList('computer') }}>
                   <FaComputer />
                   لوازم جانبی کامپیوتر
                 </Link>
-                <div className={`navbar-submenu ${menuNavbarList === 'computer' && 'visible opacity-100'}`}>
+                <div className={`navbar-submenu ${menuNavbarList === 'computer' && 'flex'}`}>
                   <Link to={'/'} className='submenu-category-all-btn'>
                     همه لوازم جانبی کامپیوتر
                     <HiMiniChevronLeft />
@@ -103,12 +103,12 @@ export default function NavBar() {
                 </div>
               </div>
 
-              <div className='group w-36'>
+              <div>
                 <Link to={'/'} className='flex-center gap-1.5' onMouseEnter={e => { setMenuNavbarList('appliances') }}>
                   <FaKitchenSet />
                   لوازم خانگی
                 </Link>
-                <div className={`navbar-submenu ${menuNavbarList === 'appliances' && 'visible opacity-100'}`}>
+                <div className={`navbar-submenu ${menuNavbarList === 'appliances' && 'flex'}`}>
                   <Link to={'/'} className='submenu-category-all-btn'>
                     همه لوازم خانگی
                     <HiMiniChevronLeft />
@@ -125,12 +125,12 @@ export default function NavBar() {
                 </div>
               </div>
 
-              <div className='group w-36'>
+              <div>
                 <Link to={'/'} className='flex-center gap-1.5' onMouseEnter={e => { setMenuNavbarList('stuff') }}>
                   <VscPackage />
                   لوازم جانبی متفرقه
                 </Link>
-                <div className={`navbar-submenu ${menuNavbarList === 'stuff' && 'visible opacity-100'}`}>
+                <div className={`navbar-submenu ${menuNavbarList === 'stuff' && 'flex'}`}>
                   <Link to={'/'} className='submenu-category-all-btn'>
                     همه لوازم جانبی متفرقه
                     <HiMiniChevronLeft />

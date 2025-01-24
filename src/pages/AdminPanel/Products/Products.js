@@ -34,7 +34,7 @@ export default function Products() {
             <input className='' type='file' placeholder='لطفا کاور کالا را وارد کنید...' />
           </div>
         </div>
-        <div className='w-[65%] mx-auto mt-5 py-3 text-center text-white tracking-wide bg-custom-navy/90 rounded-md'>افـزودن</div>
+        <div className='w-[65%] mx-auto mt-5 py-3 text-center text-white tracking-wide bg-custom-navy/90 rounded-md cursor-pointer'>افـزودن</div>
       </div>
 
       {/* Bottom Row & Products Section */}
