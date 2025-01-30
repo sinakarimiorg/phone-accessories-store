@@ -45,6 +45,12 @@
     html {
         @apply text-zinc-700 font-Dana
     }
+
+    input[type="number"]::-webkit-inner-spin-button,
+    input[type="number"]::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
 }
 
 @layer components {
