@@ -83,6 +83,10 @@ export default function TopBar() {
     }
   }
 
+  const exitUser = () => {
+    window.location.reload()
+    localStorage.removeItem('username')
+  }
 
   return (
     <>
@@ -168,18 +172,30 @@ export default function TopBar() {
           <span className="block w-px h-14 bg-white/20"></span>
 
           {/* <!-- Login Link --> */}
-          <Link to={'/register'} className="flex items-center gap-x-2.5 tracking-tightest">
-            <HiArrowRightEndOnRectangle className='w-6 md:w-8 h-6 md:h-8 hover:text-purple-400' />
-            <span className="hidden xl:inline-block">ورود | ثبت‌‌نام</span>
-          </Link>
+          {
+            localStorage.getItem('username') ? <span className='group relative flex-center gap-1 tracking-tighter cursor-pointer'>
+              {localStorage.getItem('username')}
+              <HiMiniChevronDown />
+              <div className='invisible opacity-0 group-hover:visible absolute right-0 top-full group-hover:opacity-100 w-full bg-white/85 text-zinc-800 text-base rounded-lg transition-all'>
+                <div className='w-full text-center hover:bg-white py-2 hover:rounded-lg border-b border-gray-600'>سبد خرید</div>
+                <div className='w-full text-center hover:bg-white py-2 hover:rounded-lg border-b border-gray-600' onClick={() => { exitUser() }}>خروج</div>
+              </div>
+            </span>
+              :
+
+              < Link to={'/register'} className="flex items-center gap-x-2.5 tracking-tightest">
+                <HiArrowRightEndOnRectangle className='w-6 md:w-8 h-6 md:h-8 hover:text-purple-400' />
+                <span className="hidden xl:inline-block">ورود | ثبت‌‌نام</span>
+              </Link>
+          }
         </div>
 
-      </div>
+      </div >
 
       {/* <!-- TopBar for Mobile --> */}
-      <div className='w-full block sm:hidden'>
+      < div className='w-full block sm:hidden' >
         {/* TopBar Content */}
-        <div className='w-full flex items-center justify-between px-4 h-16 bg-custom-dark text-zinc-700 dark:text-white'>
+        < div className='w-full flex items-center justify-between px-4 h-16 bg-custom-dark text-zinc-700 dark:text-white' >
           <button className='text-white' onClick={() => openMenuBar()}>
             <HiBars3 className='w-6 h-6' />
           </button>
@@ -357,16 +373,16 @@ export default function TopBar() {
             </div>
 
           </div>
-        </div>
+        </div >
         {/* Search Input For Mobile*/}
-        <div className='flex items-center m-6 bg-transparent rounded-xl border border-custom-dark/80 overflow-hidden'>
+        < div className='flex items-center m-6 bg-transparent rounded-xl border border-custom-dark/80 overflow-hidden' >
           <Link to={`/search/${searchedValue}`} className='flex-center p-3 bg-purple-500 cursor-pointer'>
             <RiSearch2Line className='w-5 h-5 text-white' />
           </Link>
           <input value={searchedValue} onChange={event => { setSearchedValue(event.target.value) }} onKeyDown={event => enterInInput(event)} type='text' placeholder='جستجو در مـوبـولـــند'
             className='w-full text-neutral-600 text-center text-sm bg-transparent focus:outline-none placeholder-purple-500' />
-        </div>
-      </div>
+        </div >
+      </div >
       <Overlay isOpen={visibleOverlay} isClose={() => closeOverlayFunc()} />
     </>
   )

@@ -10,7 +10,7 @@ export default function Login() {
       <Header />
       {/* Desctop & Tablet Mode */}
       <div className='hidden sm:block pt-36'>
-        <div className='flex max-h-[100vh] overflow-hidden'>
+        <div className='flex min-h-[90vh] overflow-hidden'>
           {/* Right Col & Form Section */}
           <div className='w-4/12 bg-white'>
             {/* Wrapper */}
@@ -90,7 +90,7 @@ export default function Login() {
           </div>
           {/* Left Col */}
           <div className='relative w-8/12 overflow-hidden'>
-            <img src='/images/login/Login-bg-desctop.jpg' />
+            <img className='h-full w-full' src='/images/login/Login-bg-desctop.jpg' />
             <div className='absolute top-0 right-0 flex h-full w-full'>
               {/* Cloudy Divider */}
               <div className='relative w-1/12 lg:w-2/12 h-full'>
