@@ -5,11 +5,45 @@ import { Link, useNavigate } from 'react-router-dom'
 import { ErrorMessage, Field, Form, Formik } from 'formik'
 
 import './Register.css'
+import Swal from 'sweetalert2'
 export default function Register() {
   const navigate = useNavigate()
-  const registerFunc = (name) => {
-    localStorage.setItem("username", name);
-    navigate('/')
+
+  const registerFunc = (values) => {
+    localStorage.setItem("username", values.name);
+    const newUserInfos = {
+      name: values.name,
+      username: values.username,
+      phone: values.phone,
+      password: values.password,
+      role: 'user'
+    }
+
+    fetch('https://moboland-react-8cec2-default-rtdb.firebaseio.com/users.json', {
+      method: 'POST',
+      headers: { 'Content-type': 'application/json' },
+      body: JSON.stringify(newUserInfos)
+    }).then(res => {
+      if (res.ok) {
+        Swal.fire({
+          title: 'ثبت نام شما با موفقیت صورت  گرفت.',
+          icon: 'success',
+          confirmButtonText: 'بازگشت به خانه',
+          confirmButtonColor: "#9545ED",
+        }).then(() => {
+          navigate('/')
+        })
+      }
+    }).catch(() => {
+      Swal.fire({
+        title: 'متاسفانه ثبت نام شما با شکست مواجه شد!',
+        icon: 'error',
+        confirmButtonText: 'بازگشت به خانه',
+        confirmButtonColor: "#9545ED"
+      }).then(() => {
+        navigate('/')
+      })
+    })
   }
   return (
     <div>
@@ -41,11 +75,7 @@ export default function Register() {
                   onSubmit={(values, { setSubmitting }) => {
                     setTimeout(() => {
                       setSubmitting(false)
-                      registerFunc(values.name)
-                      values.name = ''
-                      values.username = ''
-                      values.phone = ''
-                      values.password = ''
+                      registerFunc(values)
                     }, 3000)
                   }}
                   validate={(values) => {
@@ -208,7 +238,19 @@ export default function Register() {
               </div>
               {/* Register Form Section */}
               <div className='mt-8 lg:mt-16 mr-6 lg:mr-16 ml-8 lg:ml-12 text-start'>
-                <Formik
+              <Formik
+                  initialValues={{
+                    name: '',
+                    username: '',
+                    phone: '',
+                    password: ''
+                  }}
+                  onSubmit={(values, { setSubmitting }) => {
+                    setTimeout(() => {
+                      setSubmitting(false)
+                      registerFunc(values)
+                    }, 3000)
+                  }}
                   validate={(values) => {
                     const errors = {}
 
@@ -242,21 +284,6 @@ export default function Register() {
                       errors.password = 'مقدار وارد شده حداکثر باید 20 کاراکتر باشد'
                     }
                     return errors;
-                  }}
-                  initialValues={{
-                    name: '',
-                    username: '',
-                    phone: '',
-                    password: ''
-                  }}
-                  onSubmit={(values, { setSubmitting }) => {
-                    setTimeout(() => {
-                      setSubmitting(false)
-                      values.name = ''
-                      values.username = ''
-                      values.phone = ''
-                      values.password = ''
-                    }, 3000)
                   }}
                 >
                   {({ isSubmitting }) => (

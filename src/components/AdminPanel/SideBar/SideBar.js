@@ -13,7 +13,6 @@ import { MdOutlineAlternateEmail } from "react-icons/md";
 import { MdOutlineFeedback } from "react-icons/md";
 import { TbMessages } from "react-icons/tb";
 import { PiSuitcaseSimpleThin } from "react-icons/pi";
-import { GoReport } from "react-icons/go";
 import { IoExitOutline } from "react-icons/io5";
 
 import './SideBar.css'
@@ -35,10 +34,8 @@ export default function SideBar() {
                     <h3 className="sidebarTitle">داشبورد</h3>
                     <ul className="sidebarList">
                         <NavLink to="/p-admin" className="link sidebarListItem">
-                            <li className="sidebarListItem">
                                 <CiHome className="sidebarIcon" />
                                 خانه
-                            </li >
                         </NavLink>
                         <li className="sidebarListItem">
                             <MdOutlineTimeline className="sidebarIcon" />
@@ -54,28 +51,20 @@ export default function SideBar() {
                     <h3 className="sidebarTitle">منوی سریع</h3>
                     <ul className="sidebarList">
                         <NavLink to="/p-admin/products" className="link sidebarListItem">
-                            <li className="sidebarListItem">
                                 <FaBoxes className="sidebarIcon" />
                                 محصولات
-                            </li>
                         </NavLink>
                         <NavLink to="/p-admin/articles" className="link sidebarListItem">
-                            <li className="sidebarListItem">
                                 <GrArticle className="sidebarIcon" />
                                 مقالات
-                            </li>
                         </NavLink>
                         <NavLink to="/p-admin/users" className="link sidebarListItem">
-                            <li className="sidebarListItem">
                                 <HiOutlineUsers className="sidebarIcon" />
                                 کاربران
-                            </li>
                         </NavLink>
                         <li className="sidebarListItem">
-                            <li className="sidebarListItem">
                                 <CgMenuLeft className="sidebarIcon" />
                                 منوها
-                            </li>
                         </li>
                         <li className="sidebarListItem">
                             <GrTransaction className="sidebarIcon" />

@@ -1,10 +1,46 @@
-import React from 'react'
+import React, { useEffect, useReducer, useState } from 'react'
 import Header from '../../components/Header/Header'
 import Footer from '../../components/Footer/Footer'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { Formik, Form, Field, ErrorMessage } from 'formik'
+import Swal from 'sweetalert2'
 
 export default function Login() {
+  const [allUsersList, setAllUsersList] = useState([])
+  const navigate = useNavigate()
+
+  // get all users from fireBase 
+  useEffect(() => {
+    fetch('https://moboland-react-8cec2-default-rtdb.firebaseio.com/users.json')
+      .then(res => res.json())
+      .then(usersData => {
+        const userArray = Object.values(usersData)
+        setAllUsersList(userArray)
+      })
+  }, [])
+
+
+  function loginFuncHandler(values) {
+    const userExists = allUsersList.find(
+      (user) => user.username === values.username && user.password === values.password
+    )
+    if (userExists) {
+      localStorage.setItem("username", userExists.name)
+      Swal.fire({
+        title: 'با موفقیت لاگین شدید.',
+        icon: 'success',
+        confirmButtonText: 'بازگشت به خانه',
+        confirmButtonColor: "#9545ED"
+      }).then(() => navigate('/'))
+    } else {
+      Swal.fire({
+        title: 'اطلاعات وارد شده صحیح نمی‌باشد!',
+        icon: 'error',
+        confirmButtonText: 'بازگشت به خانه',
+        confirmButtonColor: "#9545ED"
+      }).then(() => navigate('/'))
+    }
+  }
   return (
     <div>
       <Header />
@@ -26,6 +62,13 @@ export default function Login() {
               {/* Login Form Section */}
               <div className='mt-8 lg:mt-16 mr-6 lg:mr-16 ml-8 lg:ml-12 text-start'>
                 <Formik
+                  initialValues={{ username: "", password: "" }}
+                  onSubmit={(values, { setSubmitting }) => {
+                    setTimeout(() => {
+                      setSubmitting(false)
+                    }, 3000)
+                    loginFuncHandler(values)
+                  }}
                   validate={(values) => {
                     const errors = {}
 
@@ -45,15 +88,6 @@ export default function Login() {
                       errors.password = 'مقدار وارد شده حداکثر باید بیست و چهار کاراکتر باشد'
                     }
                     return errors
-                  }}
-                  initialValues={{ username: "", password: "" }}
-                  onSubmit={(values, { setSubmitting }) => {
-                    console.log("Form Inputs Data =>", values);
-                    setTimeout(() => {
-                      setSubmitting(false)
-                      values.username = ''
-                      values.password = ''
-                    }, 3000)
                   }}
                 >
                   {({ isSubmitting }) => (
@@ -184,12 +218,10 @@ export default function Login() {
                   }}
                   initialValues={{ username: "", password: "" }}
                   onSubmit={(values, { setSubmitting }) => {
-                    console.log("Form Inputs Data =>", values);
                     setTimeout(() => {
                       setSubmitting(false)
-                      values.username = ''
-                      values.password = ''
                     }, 3000)
+                    loginFuncHandler(values)
                   }}
                 >
                   {({ isSubmitting }) => (
