@@ -4,7 +4,7 @@
 }
 
 .sidebarMenu {
-    @apply mb-4
+    @apply mb-1.5 lg:mb-4
 }
 
 .sidebarTitle {
@@ -16,7 +16,7 @@
 }
 
 .sidebarListItem {
-    @apply flex items-center gap-3 p-1 cursor-pointer rounded-md
+    @apply flex items-center gap-3 py-2 px-1 text-sm lg:text-base cursor-pointer rounded-md
 }
 
 .sidebarListItem.active,
@@ -25,5 +25,14 @@
 }
 
 .sidebarIcon {
-    @apply w-5 h-5
+    @apply w-3 lg:w-5 h-3 lg:h-5
 }
+
+.custom-scroll::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for Chrome, Safari, Edge */
+  }
+  
+  .custom-scroll {
+    -ms-overflow-style: none;  /* Internet Explorer and old Edge */
+    scrollbar-width: none;     /* Firefox */
+  }

@@ -8,9 +8,9 @@ td {
 }
 
 .status-positive {
-    @apply bg-green-500 px-2.5 py-0.5 text-sm rounded-md
+    @apply bg-green-500 px-0.5 xs:px-1 sm:px-2.5 py-0.5 text-xs sm:text-sm tracking-tighter rounded-md
 }
 
 .status-negative {
-    @apply bg-red-500/80 px-2 py-0.5 text-sm rounded-md
+    @apply bg-red-500/80 px-0.5 xs:px-1 sm:px-2 py-0.5 text-xs sm:text-sm tracking-tighter rounded-md
 }

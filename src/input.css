@@ -74,13 +74,13 @@
         @apply mb-6 font-MorabbaBold text-xl text-zinc-800 tracking-wide
     
     }
+    .p-admin__box {
+        @apply px-8 py-4 sm:p-4 xl:p-5 bg-white rounded-md shadow-xl
+    }
     .p-admin__box-title {
-        @apply mb-5 font-DanaDemiBold text-lg text-zinc-800
+        @apply mb-2 xl:mb-5 font-DanaMedium text-base xl:text-2xl text-zinc-800
     }
 
-    .p-admin__box {
-        @apply p-5 bg-white rounded-md shadow-xl
-    }
 }
 
 @layer utilities {
