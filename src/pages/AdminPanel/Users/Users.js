@@ -1,11 +1,14 @@
 import React, { useEffect, useState } from 'react'
-import { json } from 'react-router-dom'
 import Swal from 'sweetalert2'
 
 export default function Users() {
   const [allUsersList, setAllUsersList] = useState([])
   // Getting All Of Users
   useEffect(() => {
+    getAllUsers()
+  }, [allUsersList])
+
+  const getAllUsers = () => {
     fetch('https://moboland-react-8cec2-default-rtdb.firebaseio.com/users.json')
       .then(res => res.json())
       .then(usersData => {
@@ -15,8 +18,7 @@ export default function Users() {
         }));
         setAllUsersList(userArray)
       })
-  }, [allUsersList])
-
+  }
   // Changing User Role
   const updateUserRole = (user) => {
     const userId = user.id
@@ -48,18 +50,53 @@ export default function Users() {
           confirmButtonColor: "#9545ED",
           confirmButtonText: 'باشه'
         })
-        ).catch(()=>{
+        ).catch(() => {
           Swal.fire({
             title: "عملیات با شکست مواجه شد!",
             icon: "error",
             confirmButtonColor: "#9545ED",
             confirmButtonText: 'باشه'
-          }).then(() => { window.location.reload() })
+          })
         })
       }
     });
   }
 
+  const removeUser = (user) => {
+    const userId = user.id
+    Swal.fire({
+      title: "آیا از حذف این کاربر مطمئن‌اید؟",
+      text: "در صورت حذف کاربر بعدا امکان بازگردانی وجود ندارد!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#9545ED",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "بله، مطمئنم!",
+      cancelButtonText: 'لغو کردن!'
+    }).then(result => {
+      if (result.isConfirmed) {
+        fetch(`https://moboland-react-8cec2-default-rtdb.firebaseio.com/users/${userId}.json`, {
+          method: 'DELETE',
+        }).then(res => {
+          console.log(res);
+          getAllUsers()
+          Swal.fire({
+            title: "کاربر با موفقیت حذف شد!",
+            icon: "success",
+            confirmButtonColor: "#9545ED",
+            confirmButtonText: 'باشه'
+          })
+        }).catch(() => {
+          Swal.fire({
+            title: "عملیات با شکست مواجه شد!",
+            icon: "error",
+            confirmButtonColor: "#9545ED",
+            confirmButtonText: 'باشه'
+          })
+        })
+      }
+    })
+  }
   return (
     <div>
       <h1 className='p-admin__title'>لیست کـاربران</h1>
@@ -98,7 +135,7 @@ export default function Users() {
                         }
                       </td>
                       <td>
-                        <button className='px-3 py-1.5 text-sm text-white bg-red-500 rounded-md'>حذف</button>
+                        <button className='px-3 py-1.5 text-sm text-white bg-red-500 rounded-md' onClick={() => removeUser(user)}>حذف</button>
                       </td>
                       <td>
                         <button className='px-3.5 py-1.5 text-sm text-white bg-red-700 rounded-md'>بن</button>
