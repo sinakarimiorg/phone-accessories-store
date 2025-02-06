@@ -16,7 +16,7 @@ export default function Register() {
       username: values.username,
       phone: values.phone,
       password: values.password,
-      role: 'user'
+      role: 'کاربر'
     }
 
     fetch('https://moboland-react-8cec2-default-rtdb.firebaseio.com/users.json', {

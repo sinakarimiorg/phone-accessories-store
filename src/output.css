@@ -2143,6 +2143,15 @@ input[type="number"]::-webkit-inner-spin-button,
   background-color: rgb(63 63 70 / var(--tw-bg-opacity));
 }
 
+.bg-custom-navy\/70 {
+  background-color: rgb(35 47 63 / 0.7);
+}
+
+.bg-sky-800 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(7 89 133 / var(--tw-bg-opacity));
+}
+
 .bg-gradient-to-r {
   background-image: linear-gradient(to right, var(--tw-gradient-stops));
 }
