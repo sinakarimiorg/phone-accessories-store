@@ -62,7 +62,7 @@ export default function TopBar() {
             <button onClick={() => openMenuBar()}>
               <HiBars3 className='w-6 h-6' />
             </button>
-            <div className={`fixed ${navClass} top-0 bottom-0 w-56 z-20 transition-all overflow-y-auto`}>
+            <div className={`fixed ${navClass} top-0 bottom-0 w-56 px-4 py-8 bg-custom-navy z-20 transition-all overflow-y-auto`}>
               <SideBar closeNavBarFunc={closeNavBar} />
             </div>
           </div>

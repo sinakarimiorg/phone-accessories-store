@@ -75,7 +75,7 @@
     
     }
     .p-admin__box {
-        @apply px-8 py-4 sm:p-4 xl:p-5 bg-white rounded-md shadow-xl
+        @apply p-4 xl:p-5 bg-white rounded-md shadow-xl
     }
     .p-admin__box-title {
         @apply mb-2 xl:mb-5 font-DanaMedium text-base xl:text-2xl text-zinc-800

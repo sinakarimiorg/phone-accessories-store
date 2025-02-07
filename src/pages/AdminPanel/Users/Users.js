@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { MdOutlineVisibility } from 'react-icons/md'
 import Swal from 'sweetalert2'
 
 export default function Users() {
@@ -7,7 +8,6 @@ export default function Users() {
   useEffect(() => {
     getAllUsers()
   }, [allUsersList])
-
   const getAllUsers = () => {
     fetch('https://moboland-react-8cec2-default-rtdb.firebaseio.com/users.json')
       .then(res => res.json())
@@ -19,6 +19,7 @@ export default function Users() {
         setAllUsersList(userArray)
       })
   }
+
   // Changing User Role
   const updateUserRole = (user) => {
     const userId = user.id
@@ -97,24 +98,40 @@ export default function Users() {
       }
     })
   }
+
+  // Show User Infos 
+  const showUserInfo = (user) => {
+    Swal.fire({
+      title: `اطلاعات ${user.name}`,
+      html: `
+        <p><strong>نام کاربری:</strong> ${user.username}</p>
+        <p><strong>شماره:</strong> ${user.phone}</p>
+        <p><strong>نقش:</strong> ${user.role}</p>
+      `,
+      icon: 'info',
+      confirmButtonText: 'باشه',
+    });
+  };
+
   return (
-    <div>
+    <div className='min-h-[100vh]'>
       <h1 className='p-admin__title'>لیست کـاربران</h1>
-      <div className='p-admin__box py-7'>
+      <div className='p-admin__box tracking-tighter custom-sc:tracking-normal py-4 custom-sc:py-7'>
         {
           allUsersList.length > 0 ?
 
-            <table className='w-full'>
+            <table className='w-full text-sm custom-sc:text-base'>
               <thead className='bg-custom-navy/15'>
                 <tr>
                   <th>شناسه</th>
                   <th>نام و نام‌خانوادگی</th>
-                  <th>نام کاربری</th>
-                  <th>شماره</th>
-                  <th>نقش</th>
+                  <th className='hidden sm:table-cell'>نام کاربری</th>
+                  <th className='hidden sm:table-cell'>شماره</th>
+                  <th className='hidden custom-sc:table-cell'>نقش</th>
+                  <th className='table-cell sm:hidden'>مشاهده</th>
                   <th>تغییر سطح</th>
                   <th>حذف</th>
-                  <th>بن</th>
+                  <th className='hidden custom-sc:table-cell'>بن</th>
                 </tr>
               </thead>
 
@@ -124,21 +141,22 @@ export default function Users() {
                     <tr key={index}>
                       <td>{index + 1}</td>
                       <td>{user.name}</td>
-                      <td>{user.username}</td>
-                      <td>{user.phone}</td>
-                      <td>{user.role}</td>
+                      <td className='hidden sm:table-cell'>{user.username}</td>
+                      <td className='hidden sm:table-cell'>{user.phone}</td>
+                      <td className='hidden custom-sc:table-cell'>{user.role}</td>
+                      <td className='table-cell sm:hidden'><MdOutlineVisibility onClick={() => showUserInfo(user)} className='w-4 h-4 mx-auto cursor-pointer' /></td>
                       <td>
                         {
                           user.role === 'کاربر' ?
-                            <button className='px-3 py-1.5 text-sm text-white bg-green-700 rounded-md' onClick={() => updateUserRole(user)}>تغییر به ادمین</button>
-                            : <button className='px-3 py-1.5 text-sm text-white bg-sky-800 rounded-md' onClick={() => updateUserRole(user)}>تغییر به کاربر عادی</button>
+                            <button className=' px-1 custom-sc:px-3 py-1 custom-sc:py-1.5 text-xs md:text-sm text-white bg-green-700 rounded-md' onClick={() => updateUserRole(user)}>تغییر به ادمین</button>
+                            : <button className=' px-1 custom-sc:px-3 py-1 custom-sc:py-1.5 text-xs md:text-sm text-white bg-sky-800 rounded-md' onClick={() => updateUserRole(user)}>تغییر به کاربر عادی</button>
                         }
                       </td>
                       <td>
-                        <button className='px-3 py-1.5 text-sm text-white bg-red-500 rounded-md' onClick={() => removeUser(user)}>حذف</button>
+                        <button className=' px-1 custom-sc:px-3 py-1 custom-sc:py-1.5 text-xs md:text-sm text-white bg-red-500 rounded-md' onClick={() => removeUser(user)}>حذف</button>
                       </td>
                       <td>
-                        <button className='px-3.5 py-1.5 text-sm text-white bg-red-700 rounded-md'>بن</button>
+                        <button className='hidden custom-sc:table-cell  px-1 custom-sc:px-3.5 py-1 custom-sc:py-1.5 text-xs md:text-sm text-white bg-red-700 rounded-md'>بن</button>
                       </td>
                     </tr>
                   ))

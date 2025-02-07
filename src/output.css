@@ -723,19 +723,10 @@ input[type="number"]::-webkit-inner-spin-button,
   border-radius: 0.375rem;
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-  padding-left: 2rem;
-  padding-right: 2rem;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding: 1rem;
   --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
-@media (min-width: 640px) {
-  .p-admin__box {
-    padding: 1rem;
-  }
 }
 
 @media (min-width: 1280px) {
@@ -1067,6 +1058,10 @@ input[type="number"]::-webkit-inner-spin-button,
   margin-top: 3.5rem;
 }
 
+.mt-16 {
+  margin-top: 4rem;
+}
+
 .mt-2 {
   margin-top: 0.5rem;
 }
@@ -1115,10 +1110,6 @@ input[type="number"]::-webkit-inner-spin-button,
   margin-top: auto;
 }
 
-.mt-16 {
-  margin-top: 4rem;
-}
-
 .line-clamp-2 {
   overflow: hidden;
   display: -webkit-box;
@@ -1158,6 +1149,10 @@ input[type="number"]::-webkit-inner-spin-button,
 
 .table {
   display: table;
+}
+
+.table-cell {
+  display: table-cell;
 }
 
 .grid {
@@ -1330,6 +1325,14 @@ input[type="number"]::-webkit-inner-spin-button,
 
 .min-h-\[90vh\] {
   min-height: 90vh;
+}
+
+.min-h-full {
+  min-height: 100%;
+}
+
+.min-h-\[100vh\] {
+  min-height: 100vh;
 }
 
 .w-1\/12 {
@@ -1759,10 +1762,6 @@ input[type="number"]::-webkit-inner-spin-button,
 
 .overflow-y-auto {
   overflow-y: auto;
-}
-
-.overflow-y-scroll {
-  overflow-y: scroll;
 }
 
 .text-wrap {
@@ -2325,6 +2324,10 @@ input[type="number"]::-webkit-inner-spin-button,
   padding: 1.25rem;
 }
 
+.p-6 {
+  padding: 1.5rem;
+}
+
 .px-1 {
   padding-left: 0.25rem;
   padding-right: 0.25rem;
@@ -2453,6 +2456,11 @@ input[type="number"]::-webkit-inner-spin-button,
 .py-px {
   padding-top: 1px;
   padding-bottom: 1px;
+}
+
+.px-0\.5 {
+  padding-left: 0.125rem;
+  padding-right: 0.125rem;
 }
 
 .pb-0\.5 {
@@ -2991,10 +2999,6 @@ input[type="number"]::-webkit-inner-spin-button,
   overflow-y: auto;
 }
 
-.hover\:overflow-y-scroll:hover {
-  overflow-y: scroll;
-}
-
 .hover\:rounded-lg:hover {
   border-radius: 0.5rem;
 }
@@ -3382,6 +3386,14 @@ input[type="number"]::-webkit-inner-spin-button,
     margin-left: 0.25rem;
   }
 
+  .xs\:block {
+    display: block;
+  }
+
+  .xs\:hidden {
+    display: none;
+  }
+
   .xs\:h-28 {
     height: 7rem;
   }
@@ -3514,6 +3526,10 @@ input[type="number"]::-webkit-inner-spin-button,
     margin-left: 0px;
   }
 
+  .sm\:mt-0 {
+    margin-top: 0px;
+  }
+
   .sm\:mt-1 {
     margin-top: 0.25rem;
   }
@@ -3526,10 +3542,6 @@ input[type="number"]::-webkit-inner-spin-button,
     margin-top: 18rem;
   }
 
-  .sm\:mt-0 {
-    margin-top: 0px;
-  }
-
   .sm\:block {
     display: block;
   }
@@ -3538,8 +3550,16 @@ input[type="number"]::-webkit-inner-spin-button,
     display: flex;
   }
 
+  .sm\:table-cell {
+    display: table-cell;
+  }
+
   .sm\:hidden {
     display: none;
+  }
+
+  .sm\:h-5 {
+    height: 1.25rem;
   }
 
   .sm\:h-96 {
@@ -3554,12 +3574,12 @@ input[type="number"]::-webkit-inner-spin-button,
     height: 285px;
   }
 
-  .sm\:h-5 {
-    height: 1.25rem;
-  }
-
   .sm\:max-h-\[51px\] {
     max-height: 51px;
+  }
+
+  .sm\:w-5 {
+    width: 1.25rem;
   }
 
   .sm\:w-96 {
@@ -3572,10 +3592,6 @@ input[type="number"]::-webkit-inner-spin-button,
 
   .sm\:w-auto {
     width: auto;
-  }
-
-  .sm\:w-5 {
-    width: 1.25rem;
   }
 
   .sm\:grid-cols-2 {
@@ -3863,6 +3879,10 @@ input[type="number"]::-webkit-inner-spin-button,
     padding: 1.25rem;
   }
 
+  .md\:p-12 {
+    padding: 3rem;
+  }
+
   .md\:px-2 {
     padding-left: 0.5rem;
     padding-right: 0.5rem;
@@ -4020,6 +4040,10 @@ input[type="number"]::-webkit-inner-spin-button,
     display: block;
   }
 
+  .custom-sc\:table-cell {
+    display: table-cell;
+  }
+
   .custom-sc\:h-11 {
     height: 2.75rem;
   }
@@ -4068,6 +4092,26 @@ input[type="number"]::-webkit-inner-spin-button,
     padding: 1.5rem;
   }
 
+  .custom-sc\:py-7 {
+    padding-top: 1.75rem;
+    padding-bottom: 1.75rem;
+  }
+
+  .custom-sc\:px-3 {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+
+  .custom-sc\:px-3\.5 {
+    padding-left: 0.875rem;
+    padding-right: 0.875rem;
+  }
+
+  .custom-sc\:py-1\.5 {
+    padding-top: 0.375rem;
+    padding-bottom: 0.375rem;
+  }
+
   .custom-sc\:font-DanaDemiBold {
     font-family: Dana DemiBold;
   }
@@ -4089,6 +4133,10 @@ input[type="number"]::-webkit-inner-spin-button,
 
   .custom-sc\:tracking-tight {
     letter-spacing: -0.025em;
+  }
+
+  .custom-sc\:tracking-normal {
+    letter-spacing: 0em;
   }
 }
 
@@ -4629,10 +4677,6 @@ input[type="number"]::-webkit-inner-spin-button,
 
   .xl\:p-12 {
     padding: 3rem;
-  }
-
-  .xl\:p-6 {
-    padding: 1.5rem;
   }
 
   .xl\:p-5 {

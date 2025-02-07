@@ -122,7 +122,7 @@ export default function SideBar({ closeNavBarFunc }) {
                 </div>
             </div>
             {/* SideBar For Mobile Size  */}
-            <div className='block md:hidden w-full px-4 py-8 bg-custom-navy'>
+            <div className='block md:hidden w-full'>
                 {/* SideBar Logo */}
                 <div className='flex justify-between items-center'>
                     {/* SideBar Logo  */}

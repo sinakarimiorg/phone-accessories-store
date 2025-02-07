@@ -18,7 +18,7 @@ export default function Index() {
     <div className='block md:hidden'>
       <div className='w-full'>
         <TopBar />
-        <div className='p-12'>
+        <div className='p-6 md:p-12'>
           <Outlet />
         </div>
       </div>
