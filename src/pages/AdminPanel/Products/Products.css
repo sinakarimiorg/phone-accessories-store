@@ -1,7 +1,7 @@
 label {
-    @apply block mb-2 pr-1 font-DanaDemiBold
+    @apply block mb-1 lg:mb-2 pr-1 text-base md:text-sm lg:text-base font-DanaMedium lg:font-DanaDemiBold
 }
 
 .p-admin__input {
-    @apply w-full h-5 sm:h-3.5 md:h-5 lg:h-12 px-3 text-[10px] md:text-xs lg:text-sm focus:outline-none rounded-md
+    @apply w-full h-10 md:h-8 lg:h-12 px-3 text-[10px] md:text-xs lg:text-sm focus:outline-none rounded-md
 }
