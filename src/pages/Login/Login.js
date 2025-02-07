@@ -26,6 +26,7 @@ export default function Login() {
     )
     if (userExists) {
       localStorage.setItem("username", userExists.name)
+      localStorage.setItem("role", userExists.role)
       Swal.fire({
         title: 'با موفقیت لاگین شدید.',
         icon: 'success',
@@ -37,8 +38,17 @@ export default function Login() {
         title: 'اطلاعات وارد شده صحیح نمی‌باشد!',
         icon: 'error',
         confirmButtonText: 'بازگشت به خانه',
-        confirmButtonColor: "#9545ED"
-      }).then(() => navigate('/'))
+        confirmButtonColor: "#9545ED",
+        showCancelButton: true,
+        cancelButtonColor: "#005F78",
+        cancelButtonText: 'تلاش مجدد'
+      }).then((result) =>{
+        if(result.isConfirmed){
+          navigate('/')
+        }else{
+          window.location.reload()
+        }
+      } )
     }
   }
   return (

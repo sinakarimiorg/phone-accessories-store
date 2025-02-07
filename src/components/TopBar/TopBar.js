@@ -91,10 +91,10 @@ export default function TopBar() {
   return (
     <>
       {/* <!-- TopBar for Laptop --> */}
-      <div className='fixed w-full hidden sm:flex items-center justify-between py-4 px-6 bg-custom-dark text-white z-50'>
+      <div className='fixed w-full hidden sm:flex items-center justify-between py-3 md:py-4 px-4 md:px-6 bg-custom-dark text-white z-50'>
         {/* Topbar Logo */}
         <Link to={'/'} className='flex items-center gap-1 cursor-pointer'>
-          <img src='/images/logo/logo-lg.png' className='w-14 h-14 lg:w-16 xl:h-16' />
+          <img src='/images/logo/logo-lg.png' className='w-10 md:w-14 h-10 md:h-14 lg:w-16 xl:h-16' />
           <h5 className='text-shadow-topbar font-MorabbaBold text-xl md:text-2xl xl:text-3xl'>
             مـوبـو
             لــــــند
@@ -102,21 +102,21 @@ export default function TopBar() {
         </Link>
 
         {/* Search Box */}
-        <div className='flex items-center w-[300px] md:w-[350px] lg:w-[600px] xl:w-[700px] 2xl:mr-24 bg-gray-100 rounded-2xl overflow-hidden'>
-          <Link to={`/search/${searchedValue}`} className='flex-center p-3 bg-purple-500 cursor-pointer'>
-            <RiSearch2Line className='w-5  md:w-6 h-5 md:h-6' />
+        <div className='flex items-center w-[300px] md:w-[350px] lg:w-[500px] xl:w-[700px] 2xl:mr-24 bg-gray-100 rounded-2xl overflow-hidden'>
+          <Link to={`/search/${searchedValue}`} className='flex-center p-2 md:p-3 bg-purple-500 cursor-pointer'>
+            <RiSearch2Line className='w-5 md:w-6 h-5 md:h-6' />
           </Link>
-          <input value={searchedValue} onChange={event => { setSearchedValue(event.target.value) }} onKeyDown={event => enterInInput(event)} type='text' className='w-full md:text-lg text-neutral-600 text-center bg-transparent focus:outline-none placeholder-purple-500' placeholder='جستجو در مـوبـولـــند' />
+          <input value={searchedValue} onChange={event => { setSearchedValue(event.target.value) }} onKeyDown={event => enterInInput(event)} type='text' className='w-full text-sm md:text-base text-neutral-600 text-center bg-transparent focus:outline-none placeholder-purple-500' placeholder='جستجو در مـوبـولـــند' />
         </div>
 
         {/* Cart & Login  */}
-        <div className="flex text-xl gap-x-4 lg:gap-5 xl:gap-x-8 text-gray-300">
+        <div className="flex text-xl gap-x-2 md:gap-x-4 lg:gap-5 xl:gap-x-8 text-gray-300">
 
           {/* <!-- Cart & Theme Toggle --> */}
-          <div className="flex items-center gap-x-4 lg:gap-x-5">
+          <div className="flex items-center gap-x-2 md:gap-x-4 lg:gap-x-5">
 
             <div className="relative group cursor-pointer hover:text-purple-400">
-              <HiOutlineShoppingCart className='w-6 md:w-8 h-6 md:h-8' />
+              <HiOutlineShoppingCart className='w-5 custom-sc:w-8 h-5 custom-sc:h-8' />
 
               {/* <!-- Cart Box --> */}
               <div className="absolute top-full left-0 opacity-0 invisible group-hover:opacity-100 group-hover:visible w-[400px] p-5 border-t-[3px] shadow-custom border-t-purple-custom rounded-2xl
@@ -163,8 +163,8 @@ export default function TopBar() {
 
             {/* <!-- Theme Switch Btn --> */}
             <button onClick={() => darkModeHandler()} className="toggle-theme cursor-pointer hover:text-purple-400">
-              <IoMoonOutline className='w-6 md:w-8 h-6 md:h-8 block dark:hidden' />
-              <FiSun className='w-6 md:w-8 h-6 md:h-8 hidden dark:block' />
+              <IoMoonOutline className='w-5 custom-sc:w-8 h-5 custom-sc:h-8 block dark:hidden' />
+              <FiSun className='w-5 custom-sc:w-8 h-5 custom-sc:h-8 hidden dark:block' />
             </button>
           </div>
 
@@ -173,23 +173,22 @@ export default function TopBar() {
 
           {/* <!-- Login Link --> */}
           {
-            localStorage.getItem('username') ? <span className='group relative flex-center gap-1 tracking-tighter cursor-pointer'>
+            localStorage.getItem('username') ? <span className='group relative flex-center gap-1 text-sm custom-sc:text-base tracking-tighter cursor-pointer'>
               {localStorage.getItem('username')}
               <HiMiniChevronDown />
-              <div className='invisible opacity-0 group-hover:visible absolute right-0 top-full group-hover:opacity-100 w-full bg-white/85 text-zinc-800 text-base rounded-lg transition-all'>
-                <div className='w-full text-center hover:bg-white py-2 hover:rounded-lg border-b border-gray-600'>سبد خرید</div>
-                <div className='w-full text-center hover:bg-white py-2 hover:rounded-lg border-b border-gray-600' onClick={() => { exitUser() }}>خروج</div>
+              <div className='invisible opacity-0 group-hover:visible absolute -left-4 top-full group-hover:opacity-100 w-32 custom-sc:w-40 bg-purple-800 text-white rounded-lg transition-all'>
+                <div className='w-full text-center hover:bg-sky-800 py-2 px-4 hover:rounded-lg border-b border-gray-400'>سبد خرید</div>
+                <div className={`${localStorage.getItem('role') === 'کاربر' ? 'hidden' : 'block'} w-full text-center hover:bg-sky-800 py-2 px-4 hover:rounded-lg border-b border-gray-400`}><Link to={'/p-admin'}>ورود به ادمین پنل</Link></div>
+                <div className='w-full text-center hover:bg-sky-800 py-2 px-4 hover:rounded-lg border-b border-gray-400' onClick={() => { exitUser() }}>خروج</div>
               </div>
             </span>
               :
-
               < Link to={'/register'} className="flex items-center gap-x-2.5 tracking-tightest">
                 <HiArrowRightEndOnRectangle className='w-6 md:w-8 h-6 md:h-8 hover:text-purple-400' />
                 <span className="hidden xl:inline-block">ورود | ثبت‌‌نام</span>
               </Link>
           }
         </div>
-
       </div >
 
       {/* <!-- TopBar for Mobile --> */}
@@ -300,10 +299,13 @@ export default function TopBar() {
             <div
               className="inline-flex flex-col gap-y-6 w-full pr-2.5 py-8 border-t border-t-gray-100 dark:border-t-white/10 text-purple-custom dark:text-purple-300">
               {/* <!-- Login Link --> */}
-              <a className="flex gap-x-2">
+              {
+                localStorage.getItem('username') ? localStorage.getItem('username') :
+                <a className="flex gap-x-2">
                 <HiArrowRightEndOnRectangle className="w-5 h-5" />
                 ورود | ثبت‌نام
               </a>
+              }
 
               {/* <!-- Toggle Theme Btn --> */}
               <a className="toggle-theme">

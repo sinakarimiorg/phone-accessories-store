@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Link, NavLink } from 'react-router-dom'
+import { Link, NavLink, useNavigate } from 'react-router-dom'
 import { CiHome } from "react-icons/ci";
 import { MdOutlineTimeline } from "react-icons/md";
 import { AiOutlineRise } from "react-icons/ai";
@@ -16,10 +16,28 @@ import { PiSuitcaseSimpleThin } from "react-icons/pi";
 import { IoExitOutline } from "react-icons/io5";
 
 import './SideBar.css'
+import Swal from 'sweetalert2';
 
 export default function SideBar({ closeNavBarFunc }) {
     const [isFocused, setIsFocused] = useState(false);
+    const navigate = useNavigate()
 
+    const exitFromPAdmin = () => {
+        Swal.fire({
+            title: "از حساب کاربری خود خارج می شوید؟",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#9545ED",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "بله!",
+            cancelButtonText: 'لغو کردن!'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                localStorage.removeItem('username')
+                navigate('/')
+            }
+        })
+    }
     return (
         <>
             {/* SideBar For Laptop Size  */}
@@ -113,7 +131,7 @@ export default function SideBar({ closeNavBarFunc }) {
                                 <MdOutlineTimeline className="sidebarIcon" />
                                 آمار
                             </li>
-                            <li className="sidebarListItem">
+                            <li className="sidebarListItem" onClick={() => exitFromPAdmin()}>
                                 <IoExitOutline className="sidebarIcon" />
                                 خروج
                             </li>
@@ -215,7 +233,7 @@ export default function SideBar({ closeNavBarFunc }) {
                                 آمار
                             </li>
                             <li className="sidebarListItem">
-                                <IoExitOutline className="sidebarIcon" />
+                                <IoExitOutline className="sidebarIcon" onClick={() => exitFromPAdmin()} />
                                 خروج
                             </li>
                         </ul>

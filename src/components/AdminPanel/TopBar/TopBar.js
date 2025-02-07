@@ -46,7 +46,7 @@ export default function TopBar() {
             <div className='flex-center gap-3'>
               <div className='flex-center cursor-pointer'>
                 <FiChevronDown className='w-5 h-5' />
-                <span className='tracking-tight'>سینا کریمی</span>
+                <span className='tracking-tight'>{localStorage.getItem('username')}</span>
               </div>
               <img className='w-10 h-10 rounded-full' src='/images/admin-profile.jpg' />
             </div>
@@ -75,7 +75,7 @@ export default function TopBar() {
             <div className='flex-center gap-1'>
               <div className='flex-center cursor-pointer'>
                 <FiChevronDown className='w-3 h-3' />
-                <span className='text-sm tracking-tighter'>سینا کریمی</span>
+                <span className='text-sm tracking-tighter'>{localStorage.getItem('username')}</span>
               </div>
               <img className='w-8 h-8 rounded-full' src='/images/admin-profile.jpg' />
             </div>
