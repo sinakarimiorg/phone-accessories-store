@@ -5,3 +5,11 @@ label {
 .p-admin__input {
     @apply w-full h-10 md:h-8 lg:h-12 px-3 text-[10px] md:text-xs lg:text-sm focus:outline-none rounded-md
 }
+
+.addProduct-form-btn{
+    @apply  w-full py-3 h-8 md:h-10 lg:h-14 md:mt-3 lg:mt-5 font-DanaMedium text-xs md:text-sm lg:text-base bg-teal-700 text-white rounded-md md:rounded-lg hover:bg-teal-600 transition-all
+  }
+ 
+  .addProduct-invalid-form-btn{
+    @apply w-full py-3 h-8 md:h-10 lg:h-14 md:mt-3 lg:mt-5 font-DanaMedium text-xs md:text-sm lg:text-base bg-teal-700/60 text-white rounded-md md:rounded-lg
+  }
