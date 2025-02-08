@@ -7,7 +7,7 @@ export default function Users() {
   // Getting All Of Users
   useEffect(() => {
     getAllUsers()
-  }, [allUsersList])
+  }, [])
   const getAllUsers = () => {
     fetch('https://moboland-react-8cec2-default-rtdb.firebaseio.com/users.json')
       .then(res => res.json())
