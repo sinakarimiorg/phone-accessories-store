@@ -31,7 +31,8 @@ export default function Login() {
         title: 'با موفقیت لاگین شدید.',
         icon: 'success',
         confirmButtonText: 'بازگشت به خانه',
-        confirmButtonColor: "#9545ED"
+        confirmButtonColor: "#9545ED",
+        timer: 3000
       }).then(() => navigate('/'))
     } else {
       Swal.fire({
